@@ -1,0 +1,30 @@
+loading the model (the first start takes a minute or two) ...
+ready: http://127.0.0.1:8082/v1  (OpenAI: /v1/chat/completions, Anthropic: /v1/messages, context 262144 tokens)
+       open http://127.0.0.1:8082/ in a browser to chat; close this window to stop the model
+[strata] reading the prompt: 8685 tokens, 3 s so far
+[strata] reading the prompt: 8685 tokens, 8 s so far
+[strata] reading the prompt: 8685 tokens, 11 s so far
+[strata] reading the prompt: 8685 tokens, 15 s so far
+[strata] reading the prompt: 8685 tokens, 16 s so far
+[strata] thinking: 57 of max 2048 tokens, 62.9 tok/s, 17 s
+[strata] thinking: 144 of max 2048 tokens, 75.3 tok/s, 18 s
+[strata] thinking: 241 of max 2048 tokens, 82.8 tok/s, 19 s
+[strata] thinking: 350 of max 2048 tokens, 89.0 tok/s, 20 s
+[strata] thinking: 438 of max 2048 tokens, 88.4 tok/s, 21 s
+[strata] thinking: 532 of max 2048 tokens, 89.2 tok/s, 22 s
+[strata] thinking: 626 of max 2048 tokens, 89.8 tok/s, 23 s
+[strata] thinking: 714 of max 2048 tokens, 89.5 tok/s, 24 s
+[strata] thinking: 807 of max 2048 tokens, 89.7 tok/s, 25 s
+[strata] thinking: 898 of max 2048 tokens, 89.8 tok/s, 26 s
+[strata] thinking: 990 of max 2048 tokens, 90.0 tok/s, 27 s
+[strata] thinking: 1070 of max 2048 tokens, 88.9 tok/s, 28 s
+[strata] thinking: 1158 of max 2048 tokens, 88.5 tok/s, 29 s
+[strata] thinking: 1243 of max 2048 tokens, 88.2 tok/s, 30 s
+[strata] thinking: 1331 of max 2048 tokens, 88.2 tok/s, 31 s
+[strata] thinking: 1436 of max 2048 tokens, 89.2 tok/s, 32 s
+[strata] thinking: 1536 of max 2048 tokens, 89.8 tok/s, 33 s
+[strata] thinking: 1647 of max 2048 tokens, 90.9 tok/s, 34 s
+[strata] thinking: 1745 of max 2048 tokens, 91.3 tok/s, 35 s
+[strata] thinking: 1859 of max 2048 tokens, 92.4 tok/s, 36 s
+[strata] thinking: 1987 of max 2048 tokens, 94.0 tok/s, 37 s
+[strata] done: 2048 tokens in 38 s (93.9 tok/s) (length, cancel=False)

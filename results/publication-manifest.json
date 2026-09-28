@@ -1,0 +1,2573 @@
+{
+  "note": "Original hashes refer to private local records. Published hashes refer to path-normalized UTF-8 copies. Timings/token counts were not rerun or changed.",
+  "files": [
+    {
+      "file": "results/llama_cpp/runs/20260928-083346-unsloth-original-mtp3-128k.request.json",
+      "original_sha256": "ec0d76c015f90498e2294b983b05486167d3cb21a8f229b735c030da788969cb",
+      "published_sha256": "7c9de756fa5468ff4c0d3d1149cb8d17aefc354417c35836a4c80f76a7555188",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-083346-unsloth-original-mtp3-128k.response.json",
+      "original_sha256": "a5d83a1c5aff7ebb675dbe12a5ae51a41da07ac4c5c442ceb6c27ffe0c913756",
+      "published_sha256": "bc5858a6c79f7932ef5dfc0980fd29da50b18ff91dbae1b5eba1d3e4d4d216d7",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-083611-unsloth-original-mtp3-harness.request.json",
+      "original_sha256": "c813fbd593cc86eb55fdae651ce495e10c2ea63650d47b278cd5f6ccc587aa51",
+      "published_sha256": "d28e70c9ad9c3113b050fdf2925b194e843c81998e7c8dba0a8029d99ed7c879",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-083611-unsloth-original-mtp3-harness.response.json",
+      "original_sha256": "b42b8380e57af98fd65f5e2bf33df2dfeaa03458fb09eae325643b848700ec63",
+      "published_sha256": "078f0fdfa7b3dcbb18f307102569bc05d76cd2ba633f6ca88cbeb1b88a8e9202",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-083813-unsloth-mtp1-t8-fit2048.request.json",
+      "original_sha256": "ec0d76c015f90498e2294b983b05486167d3cb21a8f229b735c030da788969cb",
+      "published_sha256": "7c9de756fa5468ff4c0d3d1149cb8d17aefc354417c35836a4c80f76a7555188",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-083813-unsloth-mtp1-t8-fit2048.response.json",
+      "original_sha256": "594b5fe8f73c10caf32bd8233c02d1c402e1705fb0249c3f18e9701cd2693a78",
+      "published_sha256": "8c6b4659c99a90d4d48ff1a40b3ec3a65123369608323964a26208d4ac023b4f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-083921-unsloth-mtp3-t8-fit2048.request.json",
+      "original_sha256": "ec0d76c015f90498e2294b983b05486167d3cb21a8f229b735c030da788969cb",
+      "published_sha256": "7c9de756fa5468ff4c0d3d1149cb8d17aefc354417c35836a4c80f76a7555188",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-083921-unsloth-mtp3-t8-fit2048.response.json",
+      "original_sha256": "aa0309cfe776bf75c4b1441c5480d906e4a4753b1db3efde0151dd71830c86a7",
+      "published_sha256": "58cea3f73b7ad2e36a87c49aa4007b2c677049844e5f5bc1456eb8054f03f81b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-084054-unsloth-off-t8-fit2048.request.json",
+      "original_sha256": "ec0d76c015f90498e2294b983b05486167d3cb21a8f229b735c030da788969cb",
+      "published_sha256": "7c9de756fa5468ff4c0d3d1149cb8d17aefc354417c35836a4c80f76a7555188",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-084054-unsloth-off-t8-fit2048.response.json",
+      "original_sha256": "0b63e35333034b803458e32eb55cda2c36af5fe7c38c7cfc413861fad6bbe641",
+      "published_sha256": "5d81e47644c9b7e22d6594afed3d7b20c866db3bff8b15d321029a23a45a8ead",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-084226-unsloth-mtp2-q4-t20-32k.request.json",
+      "original_sha256": "ec0d76c015f90498e2294b983b05486167d3cb21a8f229b735c030da788969cb",
+      "published_sha256": "7c9de756fa5468ff4c0d3d1149cb8d17aefc354417c35836a4c80f76a7555188",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-084226-unsloth-mtp2-q4-t20-32k.response.json",
+      "original_sha256": "37fb3a76f7f672584be3b02214270379f99fbc2a95a58c2f81589de8e8297880",
+      "published_sha256": "7270f7c8aeb1a7e4711c24156b746e40ff241aea949e4cefa6f6803b8076ba04",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-084315-unsloth-mtp2-q4-t20-32k-greedy.request.json",
+      "original_sha256": "f699bafc543317513fbc416b1f7e0375b4398760cd1d4286a4cf0d88a332cfd1",
+      "published_sha256": "34f5736cbc628d691d20efebc1c52302b00898d806d314e9b45933d200e51322",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-084315-unsloth-mtp2-q4-t20-32k-greedy.response.json",
+      "original_sha256": "ded29e9bd71868a94007c71a0ff8ed9a1af3625085ef34685febb0fec6c85e4a",
+      "published_sha256": "be1e0adee1f8724a4754206925c6a50d766b7fe128f8e9a4db60bfe00be15fc9",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085354-generel-cache18000-off-128k.request.json",
+      "original_sha256": "ec0d76c015f90498e2294b983b05486167d3cb21a8f229b735c030da788969cb",
+      "published_sha256": "7c9de756fa5468ff4c0d3d1149cb8d17aefc354417c35836a4c80f76a7555188",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085354-generel-cache18000-off-128k.response.json",
+      "original_sha256": "3008d11c544158fca35394d61de2ad3d526871bbb20031ebc761802dd2c0a0b5",
+      "published_sha256": "e020232d9801166397661836dadf11605d2a2111e33ae16f2fede42ee71e8786",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085557-generel-cache17000-mtp2-q4-128k.request.json",
+      "original_sha256": "ec0d76c015f90498e2294b983b05486167d3cb21a8f229b735c030da788969cb",
+      "published_sha256": "7c9de756fa5468ff4c0d3d1149cb8d17aefc354417c35836a4c80f76a7555188",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085557-generel-cache17000-mtp2-q4-128k.response.json",
+      "original_sha256": "b47ba6afa1df990e4ede56bd5bd4a9762c307caf38570df6510e850000fcbe65",
+      "published_sha256": "112c6224e1cbc446fbb0665e35a6b77ce72edd3d1a8c9423019298aa5aed124a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085623-generel-cache17000-mtp2-q4-128k-greedy.request.json",
+      "original_sha256": "f699bafc543317513fbc416b1f7e0375b4398760cd1d4286a4cf0d88a332cfd1",
+      "published_sha256": "34f5736cbc628d691d20efebc1c52302b00898d806d314e9b45933d200e51322",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085623-generel-cache17000-mtp2-q4-128k-greedy.response.json",
+      "original_sha256": "b2cc0c1036ac1e1864122261eb749744ea5b99c003d04950313e36bd39d60a5f",
+      "published_sha256": "8d058f891bc6a4cfefa409d4bf2c615d8b65ee2593670789dfe1a8d8efb70758",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085758-generel-cache20000-off-overlap-128k.request.json",
+      "original_sha256": "ec0d76c015f90498e2294b983b05486167d3cb21a8f229b735c030da788969cb",
+      "published_sha256": "7c9de756fa5468ff4c0d3d1149cb8d17aefc354417c35836a4c80f76a7555188",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085758-generel-cache20000-off-overlap-128k.response.json",
+      "original_sha256": "308ede9b308b2ac1ef336d0ab9ea48d87564bf69297ddb5741bab246c92e2136",
+      "published_sha256": "77c57e58b497ffea12e98f61f5fa90bcf3612e4f197db7968cb819ed9e9f8b99",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085815-generel-cache20000-off-overlap-128k-greedy.request.json",
+      "original_sha256": "f699bafc543317513fbc416b1f7e0375b4398760cd1d4286a4cf0d88a332cfd1",
+      "published_sha256": "34f5736cbc628d691d20efebc1c52302b00898d806d314e9b45933d200e51322",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085815-generel-cache20000-off-overlap-128k-greedy.response.json",
+      "original_sha256": "f1b3a7da806520c16fa2e69f1464e035afdd9738d8f96c096d62d8a4799a4f4c",
+      "published_sha256": "8af140d7323aa9a0e7e683ac988d6dcda6aa719de9a39cb31d254abfffcd16c0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085902-generel-cache20000-overlap-harness-full.request.json",
+      "original_sha256": "33d68674b155903914e52438ca894bed6f0552621370620d7862e4c19d27577f",
+      "published_sha256": "60428b36b9e3cc15e150ac1f7c7175f68668717d003191c842a3969176093000",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-085902-generel-cache20000-overlap-harness-full.response.json",
+      "original_sha256": "e90d45d7f3f9e435fc6d6d2fb18fd343360be3e0c4e83aa943fdcc2f8a84d309",
+      "published_sha256": "a4527d1e42b8642c532e0248818d7d4ebb92d9a8d41e257afac16f3b8d8694f6",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-090321-generel-cache18000-mtp1-q8-overlap-harness.request.json",
+      "original_sha256": "c813fbd593cc86eb55fdae651ce495e10c2ea63650d47b278cd5f6ccc587aa51",
+      "published_sha256": "d28e70c9ad9c3113b050fdf2925b194e843c81998e7c8dba0a8029d99ed7c879",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-090321-generel-cache18000-mtp1-q8-overlap-harness.response.json",
+      "original_sha256": "df960eabdee1548d33bc3779dd2a275d4fa48c1ab8e49a9605c5d89e05de2d0f",
+      "published_sha256": "33438796006236c2119d143a0bae14eda3f1f16c119ca3032efbf8cdad8fb791",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-090552-generel-cache17000-mtp3-q8-overlap-harness.request.json",
+      "original_sha256": "c813fbd593cc86eb55fdae651ce495e10c2ea63650d47b278cd5f6ccc587aa51",
+      "published_sha256": "d28e70c9ad9c3113b050fdf2925b194e843c81998e7c8dba0a8029d99ed7c879",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-090552-generel-cache17000-mtp3-q8-overlap-harness.response.json",
+      "original_sha256": "cf553a0cc68a69407f99cc3f0fa8fe027f8840fced3ecb6d6b7219dfd88236a8",
+      "published_sha256": "3b8e477356e877d7ac7ecf59ffa5cad8dfb71edf197ee971053ff6be519492ae",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-090811-generel-cache20000-t1-overlap-harness.request.json",
+      "original_sha256": "c813fbd593cc86eb55fdae651ce495e10c2ea63650d47b278cd5f6ccc587aa51",
+      "published_sha256": "d28e70c9ad9c3113b050fdf2925b194e843c81998e7c8dba0a8029d99ed7c879",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-090811-generel-cache20000-t1-overlap-harness.response.json",
+      "original_sha256": "685d05cc93febc83011833c659ca51d40f45abd38f400079ace1d3149b27705c",
+      "published_sha256": "fa1c7cb7d1cbdbdae59785cbe8975a9701172ebad12f3d629d88ba4bcbb7594a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-091019-generel-cache21000-q4kv-overlap-harness.request.json",
+      "original_sha256": "c813fbd593cc86eb55fdae651ce495e10c2ea63650d47b278cd5f6ccc587aa51",
+      "published_sha256": "d28e70c9ad9c3113b050fdf2925b194e843c81998e7c8dba0a8029d99ed7c879",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-091019-generel-cache21000-q4kv-overlap-harness.response.json",
+      "original_sha256": "0cea07e01e0146048932a6ce182cfc5c837aedffeddbe778b044a91b31d1a06d",
+      "published_sha256": "ced9eabdcdc846271a171478da41c46288f3f3420dbae3bfa4070e576797e192",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-091128-generel-cache21000-q4kv-overlap-short.request.json",
+      "original_sha256": "772d7965f813003a3e5507172be7b0515789a7aefc17e2988cea5dfd179ea817",
+      "published_sha256": "3e010525e4f80d390ef713e5a1b22e893dab862a99da64c1c3dd750d69e74c69",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-091128-generel-cache21000-q4kv-overlap-short.response.json",
+      "original_sha256": "19cc39c9dacb9e2035a1c6f1336b367e1599bea675b11a131a83e2211c26596a",
+      "published_sha256": "21dee173af7b52fe28739e6b8fe359dde5a730bee16d505b664244df92277fc2",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-091227-generel-cache21000-q4kv-overlap-harness-full.request.json",
+      "original_sha256": "33d68674b155903914e52438ca894bed6f0552621370620d7862e4c19d27577f",
+      "published_sha256": "60428b36b9e3cc15e150ac1f7c7175f68668717d003191c842a3969176093000",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-091227-generel-cache21000-q4kv-overlap-harness-full.response.json",
+      "original_sha256": "99210a642003df910f36e3d1b8fad50840be2a0ad9e7ead286d24a88907c1c11",
+      "published_sha256": "6a7eee891ac80b7da3e0184285c9cb37011af103ca8b4db669ff9ceedf9332c5",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-091605-final-fast-cold-repeat.request.json",
+      "original_sha256": "b116ceeda7e6831d44ab0037aa9a1782e595cf7a18c6686197dbf51593b57541",
+      "published_sha256": "8dc6b1bcc34950f8d6473a4c69615dba69703a13d2eb4685ea342fd469862a69",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-091605-final-fast-cold-repeat.response.json",
+      "original_sha256": "156541a23ba1584195218ca105b273aec08d78bb5e0e1592a5f08d3b558e019d",
+      "published_sha256": "3cc8904fd58775827be8648fca7cee44dc9a507f60e78dbeb1412f206ee4ed9c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-092437-final-fast-direct-complete.request.json",
+      "original_sha256": "208bc4feb74f28b0f638a7c84ba33ba457b70e7fbf0f0d00dce74a30267f1e28",
+      "published_sha256": "4ea37c8d37e995e05cfdec0a24487eb6c99acbe8890caf90a9c80dc82060b9ec",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-092437-final-fast-direct-complete.response.json",
+      "original_sha256": "e2f7caec903b98e865a27aa27996160d85ae89686f365888232be77628ed11a9",
+      "published_sha256": "7fe18e9d7db6af22fa3e685f680dc523f2e46897fa60f64efdd61d09ff626749",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-093209-final-fast-direct-no-thinking.request.json",
+      "original_sha256": "acccefa2b3abc38569496ae2ed1729704684f2a18112f9aa3d5d2c7b0d99e890",
+      "published_sha256": "2e9fc7e715f86a0cd3e2c8cd681c2c554efd54f77b068a7a6dee718049b897ab",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/runs/20260928-093209-final-fast-direct-no-thinking.response.json",
+      "original_sha256": "a388f1bfb3cb105522369cbaec65907944125eb7ec693f3c8db20b5388e11d55",
+      "published_sha256": "292e72af8b31c95e390869710d757afa23860419702ad55c4eb975dd035e152c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache17000-mtp2-q4-128k/profile.json",
+      "original_sha256": "aefa354860172bd9e0323953e870e09d7bd7b0c1b63563a621c8167f2e3dd135",
+      "published_sha256": "5fe68202c4eb6a0c5b836410d93791ec956dce24fb73e8c645da39a6ca6b532c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache17000-mtp2-q4-128k/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache17000-mtp2-q4-128k/stderr.log",
+      "original_sha256": "b899dbc92e92b1adb0bd3332789dc3e29695238f6ca203d99df7043ca518137a",
+      "published_sha256": "9e8da7cada8d2c78628ad1d6a3f7d8d0483211c07dd11c4f2c51e716114d68ed",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache17000-mtp3-q8-overlap-128k/profile.json",
+      "original_sha256": "ca69a1252b66c4d0f2d2ac50f8756f80f48ed4d22cde6182623799b4b296d67b",
+      "published_sha256": "b6238d8b03a6a41c073c1bf601e0058e76eddfae2328d51e1b7e5f41bc80c9fa",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache17000-mtp3-q8-overlap-128k/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache17000-mtp3-q8-overlap-128k/stderr.log",
+      "original_sha256": "d4296164d3ecc71ab50af169ff0f18ade58757afb83e1a8efe6f17f681e5c985",
+      "published_sha256": "e3c2c6a8d8d47cf96d9e6747f7b0b873ba5eca5885ff559a515b1fa08d9b37b2",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache18000-mtp1-q8-overlap-128k/profile.json",
+      "original_sha256": "9a003de1f70a77e92ad9f369cfdce883bba6452d695c182b33571714e50cd329",
+      "published_sha256": "b9835fcd14cf77ee203aab481523a7c5580881f60d42654baafffb31bb6ef716",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache18000-mtp1-q8-overlap-128k/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache18000-mtp1-q8-overlap-128k/stderr.log",
+      "original_sha256": "518d5593520aee2db43718afd8bc84644dbe83276cd2a9fc0f58869faa92eeb4",
+      "published_sha256": "9606d4a4b0385ed6ab43d4abe950a156fb7ee9cabb79a0ab7272b59a1051a0ab",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache18000-off-128k/profile.json",
+      "original_sha256": "2e574bdbabf8bfe16f928cebc66bffb97f0ee8548f8b78a6eafc44e852d780e1",
+      "published_sha256": "c8b714ef6a00ba29f9cb910e9d95cd28198576dd93663be81ffa129ccc724def",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache18000-off-128k/stdout.log",
+      "original_sha256": "e975b5acae1a846df605be8cb32da0925a1a4215a7fbdc5094a9e7a93ad2e245",
+      "published_sha256": "125c0f9fa150aceaa29e962defe42468277218ea7dba46d4626dd5706896e93f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache18000-off-128k/stderr.log",
+      "original_sha256": "ed3d709deb4889c05ad55bf4a8d59002537d82998a4de4eea44036cf92109f0e",
+      "published_sha256": "4d9e0c9899ef66833e783651f5b6a4799a2c36ef7eda681b7eb087521553fe28",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache20000-off-overlap-128k/profile.json",
+      "original_sha256": "ac8c43e7bd9d7c4661629da8a63fbf0064b9c84c473663c16e3faf491f191ce9",
+      "published_sha256": "3790d8e51fa4bc7d6fc5920c3e89846a653add4cf96a82ae1757324136f48c0c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache20000-off-overlap-128k/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache20000-off-overlap-128k/stderr.log",
+      "original_sha256": "a3db0ce4f434c6a1a5b4941c7eebe1d7d1150fb8a67a1004d79e836450f1927f",
+      "published_sha256": "5818b96e587fdeec418b00b452a099782f9a08bf8b04e2b8940d37e5c3369a9c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache20000-t1-overlap-128k/profile.json",
+      "original_sha256": "64839725c812041072d4d9dae2fffbe4353d6b477809eee42a99069d9c83d687",
+      "published_sha256": "e945cfdcfee16bab88fd626d6881cbc234b6de5194b3940b873536ce4f7fd264",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache20000-t1-overlap-128k/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache20000-t1-overlap-128k/stderr.log",
+      "original_sha256": "a879336fa9ad63749dedab82bc754b54fad0ca35a44111faa0fd76cdd3ad7a2d",
+      "published_sha256": "4c0291980c2cefa20bb019a50a0d0ad7d4a8cb155064c2be4aec6b6dbb8c6475",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache21000-q4kv-overlap-128k/profile.json",
+      "original_sha256": "8bee0eaa717133adcf464445988e51de9e5e8ac2e9b739f9cfb0b91bd5480d5f",
+      "published_sha256": "c216b3bb31e33272d42878911a8d4b24fa2c2ad0a73b654c870000c27d4a8a7e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache21000-q4kv-overlap-128k/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/generel-cache21000-q4kv-overlap-128k/stderr.log",
+      "original_sha256": "6a4a8645e25d6f0f4f4d29b4df5f51993f615a8775c4743ada7017977d3c26a5",
+      "published_sha256": "8560d582fe1b6ed9d5547442dabc629a75bd1f3f70c802427de67007aa552af0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-mtp1-t8-fit2048/profile.json",
+      "original_sha256": "fe938b831df5eb270e85cc11c5936958fe56bb28bd4914bd341ef89180bfba0e",
+      "published_sha256": "e0d82c9fabe35d6b2142f6ee5031ee5b13cf528dbf2582986d6dda4683b1122c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-mtp1-t8-fit2048/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-mtp1-t8-fit2048/stderr.log",
+      "original_sha256": "3a99676136f602566de0c5b2545cfd71b6a736b990639ddba75b9f100a01ed42",
+      "published_sha256": "53f8a66074e5cf59b92073f93242da52908d0d037138b83ec5ca83b0e3938bcd",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-mtp2-q4-t20-32k/profile.json",
+      "original_sha256": "56938f00258b7662f947a41f5bd217e5ec907099bce5fbcfa0c42a7d23154fd3",
+      "published_sha256": "c2e3ed4dfff1b2bc83eb51a54d8f4f12692ab2820a4f28b28d5070cce3a3c28e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-mtp2-q4-t20-32k/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-mtp2-q4-t20-32k/stderr.log",
+      "original_sha256": "0ee80de7fc5f49c8e44f08100ee291db0c5e91f45e8be9fd4c1286fd75a487e0",
+      "published_sha256": "0e35c7e11f87c2a520fa96c54e8667527717597eeeba4b5c141ba65dc8192026",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-mtp3-t8-fit2048/profile.json",
+      "original_sha256": "6e5e2a8b0552f21bb6a3b81d9150cd55c7572498419f3ba41b8faf305ea10406",
+      "published_sha256": "f02601680a12bc89246c9dcb2359dcf48aa60240a6ddbbcf0430c10eb53dda44",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-mtp3-t8-fit2048/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-mtp3-t8-fit2048/stderr.log",
+      "original_sha256": "567fbfa275eb7929aad8f2ae9c0d4c01d3bf77f421edce725d7763b8d52b53e1",
+      "published_sha256": "53fda61757dd850c6e3f419911f3ec2e77bfb98c5cd20e0a194da59e64a86374",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-off-t8-fit2048/profile.json",
+      "original_sha256": "a19d9ada93fe5835f493f3b072ca5d25392610914a499516d3dcab86f3a3b8df",
+      "published_sha256": "333e4767126313b3fdfb43d41e5bbf75e1185d6f1b0053a6cac7c639a9c955d0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-off-t8-fit2048/stdout.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/llama_cpp/logs/unsloth-off-t8-fit2048/stderr.log",
+      "original_sha256": "199f89708a979b5c8f935e88bb5c398334c1302d132ff811f2846e4d543b5b14",
+      "published_sha256": "fb1e092c4460b37320d56fc08a1f4b8b6e3b99e325d2597305bc0f8754297394",
+      "changed_for_publication": true
+    },
+    {
+      "file": "artifacts/generated/llama_cpp/G7-harness-raw.html",
+      "original_sha256": "cbce8853aee1f0eda971b1bd82a3e7ce07671da19e251409d1ab0dafdf8e912a",
+      "published_sha256": "c7426c87b5942e5aad21059b8db5327b61e47db6c796a6b9526ce7540c97f199",
+      "changed_for_publication": true
+    },
+    {
+      "file": "artifacts/generated/llama_cpp/G7-direct-thinking.html",
+      "original_sha256": "99d813716731eb2d40c26d473e2307c3b73d50d9b7597f25ebb81627eb33bd1d",
+      "published_sha256": "d10bb2e0e42b9e55d6bcb40e26675e4162339b27c53c132721cf236473816c57",
+      "changed_for_publication": true
+    },
+    {
+      "file": "artifacts/generated/llama_cpp/G7-direct-no-thinking.html",
+      "original_sha256": "970c5d55cc682ac2a7e75c5b012b568bee323fef9e9dfd69faf85852c7b92268",
+      "published_sha256": "45782c11ef1ed9287c6a614b552656b80fa1f01f1179b99a820e58dd463e074f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "artifacts/generated/llama_cpp/G3-harness.html",
+      "original_sha256": "c56b0485a20181754ead58698d643ad1418a35b532c0133ff1c5cfa941a1920c",
+      "published_sha256": "647dac899563111ef180afb8828c126ce7ba450feaba5ac8e9d90adac022ccfd",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114115-S01/case.json",
+      "original_sha256": "303d269373cd4129618d0a7125d201290da6bcbbd662295320c2e654a1ef703b",
+      "published_sha256": "d706430a0c332e346a352c706ec1efc61a68af337f5951f8c5112a105e6938ab",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114115-S01/config.json",
+      "original_sha256": "3abe7a6614164725432f506b157950f3a4ee403220b3840630f224603809ae4a",
+      "published_sha256": "17d3e7a8967655e2aefd17f11db11c1b62a403b32d715ac50025f28b0aa1a72a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114115-S01/engine.log",
+      "original_sha256": "2d48737ca1a762946d1ab8cf9b03b5bb85f1c62b0f56cc20eeeb7e767d2efa87",
+      "published_sha256": "a322157cb594db1679ae4548db6d484f02d5269d565bf27a1747c8eaa8738dd8",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114115-S01/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114115-S01/harness-2048.response.json",
+      "original_sha256": "94c883bc978ffb0c3d71cbe92d5b1c6a0d1a58cc2a32e01d82e669212b5e37a0",
+      "published_sha256": "7ffc7bd1adb5a8f2b7eff01278445c4a369b25b6dd7f7e53649567fbfb28fb8d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114115-S01/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-114115-S01/server.stdout.log",
+      "original_sha256": "5217384b4022e4517e84fc25b47a700e853eb774757c2f541dd930a3725796df",
+      "published_sha256": "4bbf3110e644a2518c773079ec18341c766cc238f9ac61e549f1fbe7c21c77cb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114115-S01/startup.json",
+      "original_sha256": "0fb5c7d3912bb719045ebcc8202d5d09abaaa8936835223ecc460e7d7147bc47",
+      "published_sha256": "2ecb66982a5c8707b2d341a650cbb40ca9bd1b27a7912fee210c9b1899f60a0d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114229-S02/case.json",
+      "original_sha256": "a0262b1ff814a515ffa60ae4d8d33d8af8ac1aee1a587fb8a81fdc93c0b58bf0",
+      "published_sha256": "4decc227e1bf4a96cd81d10deebdc0002f095244b5c3b97799982bcc8bbffc8a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114229-S02/config.json",
+      "original_sha256": "cfc9ba4a1a6eb98ff56764dc21d8aa319e02a009c8ecd63db79ee893ca04a58c",
+      "published_sha256": "42c762160b234ca3acd41f0e592b68620e42db82ddce679da99cd84f199d0f37",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114229-S02/engine.log",
+      "original_sha256": "0c26617501e4da1d6039e32ac5f848d70c064776bac31b9815aafad8cee699c6",
+      "published_sha256": "0182a5b94c327957abdc2287814f456ebb1ca23ba403ee382d5fd0089ba960e1",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114229-S02/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114229-S02/harness-2048.response.json",
+      "original_sha256": "deda7846a5472375e3c0197525afab88246daf8d6c00751d55add7bcf662437f",
+      "published_sha256": "480c98000ce21e17bb11dde7e86a6379704694c09aadf65623e75f280505736a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114229-S02/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-114229-S02/server.stdout.log",
+      "original_sha256": "bc7fa37da6aac810dce1e95c1aaada3720f709a91044cb9c7e0d93b0d06dce02",
+      "published_sha256": "694e25f113fd5e3b2c9900872eca402626517e76dc9a5dcbd5b1b7b7345fe294",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114229-S02/startup.json",
+      "original_sha256": "eb34c012435afd14df9f0744a38afd36d6ffa6d79103d460c869a1e46e060c4a",
+      "published_sha256": "b1e9c287de564ede9c4560e86cc7cabae6654d2fe078c5dfe08288e2395293cc",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114350-S03/case.json",
+      "original_sha256": "a512733f1ed71abe369c1d4639ebc217bc0fa32f5c89f3fa52dbfbb945801468",
+      "published_sha256": "7e7b800025846e8c130c75c10c365558a7a9b85dfd4c48d5c2e0e3c8f08b007c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114350-S03/config.json",
+      "original_sha256": "efaafb90e38959da5864acf8d74979373ec1cb3c1977dadd6d8d5058171e1efe",
+      "published_sha256": "ffd7c1ec935f3d8b461ae28113df4426a4e4a77c44e12233f85d518654542b42",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114350-S03/engine.log",
+      "original_sha256": "afb43f716cac1e8ead20a589b56fc6f8e76e43d8fdc49ced6b6e9927458dad6b",
+      "published_sha256": "6d7e240379fac3a98be4ea90c87d7275bcb239b3f2396640ab50b980145c3455",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114350-S03/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114350-S03/harness-2048.response.json",
+      "original_sha256": "889459e03d3562ef27df10f48ca25eed38aede87fc9f8488ea40111f67fedaca",
+      "published_sha256": "592700bba6c62beaccebd1e11e0f46cb22671a3fdf3350bb3bffe84350254634",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114350-S03/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-114350-S03/server.stdout.log",
+      "original_sha256": "0bbb4c2f7e1df15ebddc1eb7561ef5b4922c6601e8dc441d308b7e1134e6d679",
+      "published_sha256": "207253e12927086875f520a13073ab4a528648b879fd8779b479cf740a6a0a72",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114350-S03/startup.json",
+      "original_sha256": "97365f4eb449a7f423729ff28d6a0bcc225445be414e0da377983680b21ac112",
+      "published_sha256": "1e3fe485de4eae4f03f24e5239a4299a336effbf933fbe191a1bb18b1186921a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114505-S04/case.json",
+      "original_sha256": "29801901f4f8795da2f9e11ed406c6686b4fe62754eec7c359998ca202479db9",
+      "published_sha256": "d3729a232b07229f78f4ba116afaafa0195134fb1e7b7a90312ad6966e11c86f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114505-S04/config.json",
+      "original_sha256": "d47f2472798a8e3f0fe03cb5edde46f1decdd107c0268c8eabbe571c11440bd4",
+      "published_sha256": "8ab608c3e3f7e6da3f871e36cea95b06195e3be10c863cc7bbeb947e3d55d0cd",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114505-S04/engine.log",
+      "original_sha256": "b97fb88b7e530992bba60ee520865b7148c72c87dd3dee23d1b4c4fb5b2b219e",
+      "published_sha256": "51a5f76ee798b59f63b15cb9fd22e222efd27a7a5e2052f2af6e6f5466d4d4e7",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114505-S04/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114505-S04/harness-2048.response.json",
+      "original_sha256": "427b2ab91fbe387ef59be3028bd28da13ecb56cc4dbc42cfa457ae3f20a4d63f",
+      "published_sha256": "25758855d1f7030bc130709cd0dc5e7d5e3412f397a5365605f79244444cecb7",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114505-S04/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-114505-S04/server.stdout.log",
+      "original_sha256": "1722d138047331f5781d517781c16e157f8f414c9399b01d8aa7a80ebdc42016",
+      "published_sha256": "7c95e8b9b81c02017baaae60824f08fa8f4833788b9a6cbe817f6c79f0cf3db4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114505-S04/startup.json",
+      "original_sha256": "65f4871e8ad7123be953913104127e0af5901e938df2e95a27e58ba66cfbad64",
+      "published_sha256": "c3e49cda36a061416af4c0f86e74aadba6da45982da556a9ea113ee5d29ae720",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114627-S05/case.json",
+      "original_sha256": "c83a642a069e5fc3c84b7a8d8c4dc73b18910fdd326f69a5187d8f2b25897ce7",
+      "published_sha256": "f608bbb117a05ef2cccab04dc5f3e2ecc31beaee6085370acd13f2d6f1d9aa1b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114627-S05/config.json",
+      "original_sha256": "f96cf4c41628008cd636089a563a178d3cb4afad1eb6de2106ce6b4543a7da91",
+      "published_sha256": "3c8c8de838a1f8fbb0396b6bd1d3ee237f57dab2561e137c2b5dd12aee2d4529",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114627-S05/engine.log",
+      "original_sha256": "a9e94a44906cf0a036ba5f308cfd0a5a44f37d786c3b47eaf04e647414c24583",
+      "published_sha256": "e3f063c0bd831cbe8311aeffa5a1d8dd58c8ecb773af28706358a2117b17db33",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114627-S05/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114627-S05/harness-2048.response.json",
+      "original_sha256": "3f460c534213863524ed2b52bee1ad7a61728a9a37b6c5e459141e5120be0302",
+      "published_sha256": "062f83d42ae717a0c767a7b209d79479317cb184a8f00fe737ca511d7aa5ff25",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114627-S05/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-114627-S05/server.stdout.log",
+      "original_sha256": "c57866c9f17ccfa6879e2f0f7b6a1f1030367d4175e8862f529342f723037739",
+      "published_sha256": "a1f26f95a144422ff78fc6a49774a7b35c8aaa0f12561587a55086c075afe8fb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114627-S05/startup.json",
+      "original_sha256": "fe61fec46d140ac2ae2f9f971e0d63e206cad28caa4fb866e26985eedc22f872",
+      "published_sha256": "a28b9195b3e7a54541c1af1521d454398ed5f5acc40345af63c3f6f5cb926dcb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114745-S06/case.json",
+      "original_sha256": "0685966ec87d8034b2d5dcfacb2a023e1ac6222d29b042d49da4d53299baa4bd",
+      "published_sha256": "621f4d1a868d734bfb8fe416b15d6b185e6f6b71d4345244743da45666f46a30",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114745-S06/config.json",
+      "original_sha256": "8e4bd7a90c0ea95479a6a3e058142cfcb67bb22bd8dfbf4a765e76f75ad411c8",
+      "published_sha256": "1d39b1fcfdd6aacbe6caa2751d2f77d278f4ea7782422faf7f2ea3fad6d1131c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114745-S06/engine.log",
+      "original_sha256": "956f079be68cc56326011392b3d98410def4828cd437247bac7b294ec4dd81e9",
+      "published_sha256": "853b1dabce202d4d0e17695bc7c614124ac3444bd5fc99cb3a36e0ac60852998",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114745-S06/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114745-S06/harness-2048.response.json",
+      "original_sha256": "dcccd5cd8443e1c44dffbcfd8a3dee49c4ca334c0ef30bf4f75fc56d14a51df5",
+      "published_sha256": "593bcdffc567936957d500c6ee7a055b17051a97c1314cdc0ed693c69da54fe8",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114745-S06/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-114745-S06/server.stdout.log",
+      "original_sha256": "8c94171521870d3a08231383fc7ed45bba5c95f4b1aeca9c8d6f1fcb9556ef39",
+      "published_sha256": "b5615947416a2b2a1eef0094b17ac9b22e212867a4f80ec4ba66c9b3c60a1c10",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114745-S06/startup.json",
+      "original_sha256": "854be05ea17fcf6517a5d75c2d8429d068d21fb053ba5845d53d42458ac8005f",
+      "published_sha256": "5e9f949d0d1bc56aefd16e2e5df21b0ca8fbeed5be5e619434b05aced166171b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114900-S07/case.json",
+      "original_sha256": "8564c2a797f1f52d624eca8fefcd41445ed7fe92207e255515b10a75f68ab064",
+      "published_sha256": "134c463bb4f23c5d6fc59ccfd7a641bb737caf116d986d9480b7b1e1ce551be9",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114900-S07/config.json",
+      "original_sha256": "fecfb36ee5286f5531ca86e8f1cbc131b01759a7c551bd747d891d9b7b8c7bd2",
+      "published_sha256": "fbbb64114d55dda02d64336e23d544c27eb0d3296d2acba1a360b54459a965ae",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114900-S07/engine.log",
+      "original_sha256": "60c13d3d8f041134794a28c283815d9b982d514aac0ef9389a37a267e948d347",
+      "published_sha256": "7940714772fc954c51cfb2dccd70c8b483272dd8dd4bc3b5adcc47b67502544e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114900-S07/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114900-S07/harness-2048.response.json",
+      "original_sha256": "2be788f5cbd4cc3e3623004776660b5456d890efd2e8686138c89aeae3d2532f",
+      "published_sha256": "a1f6751ebca40b26bd5b9926bcaf4dc1619cf8d7304c9dacad13b02bf75c03bf",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114900-S07/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-114900-S07/server.stdout.log",
+      "original_sha256": "3b9a49048d051bd1d299dc7dc3bc36e68b076c905330e8c0a90118eee7fd25da",
+      "published_sha256": "5b1a76d3be62823ca1eff68e6f1d69c9fe78b019a28239117a2da6d93bdea698",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-114900-S07/startup.json",
+      "original_sha256": "bd56d01a9cc546c3ec1b49ba5a548f19c78286c0194548626f49e0d419ad9995",
+      "published_sha256": "bc5ecda6749f84562b1e2179a17d49767b7d126533e4e9fb9e3f3fe0fd8344bc",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115018-S08/case.json",
+      "original_sha256": "349315ac95af4b17c9eef51d20246516e01affac1d170190056c0cfbdd855d0f",
+      "published_sha256": "a86788fa60c738628adca0ef7867329079257000fb120da5df2ca035464426d9",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115018-S08/config.json",
+      "original_sha256": "3835d06d21d6b6ac5c3dfaf90280be1ed254d1ea09ff4417d7abe3bdc3dadf12",
+      "published_sha256": "cfd0fe4d43d1005d6fdea02155aff4b4ca8c6d6527ff1ca29fa8abc109c8179a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115018-S08/engine.log",
+      "original_sha256": "dbd66f686c77a2e54a3778a9332161fa79ab432ef7bc49762139c1c735531206",
+      "published_sha256": "2b537a300d90100de727993518e4877350f291d01af25b8579b9fefc307cad47",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115018-S08/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115018-S08/harness-2048.response.json",
+      "original_sha256": "f9a229b1edf8cea06b266201f014b652d0c98771c94deb48ad896767c88e483f",
+      "published_sha256": "a4cf28a87c1b20952f6be040e19cb27e8a60ce380254103fa2af4bf52a985e9c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115018-S08/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-115018-S08/server.stdout.log",
+      "original_sha256": "a90a685d2a9ad1d397f9ea090643a7fcc1bd0ef40c29e8e8dcaca7b9bb069755",
+      "published_sha256": "e9ac89b48aa516784e2c66015dfaf0a4ea6ae7dcfe0b2b662d91b72994aa6b20",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115018-S08/startup.json",
+      "original_sha256": "91eaa1834460dd8ff4d752865ed38db2767d9a11b940e35541c19f38c0cd031e",
+      "published_sha256": "644a1cb66e47fea873d739d652639e846f3777b9c8e11646b5f6c9ea929ed498",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115133-S09/case.json",
+      "original_sha256": "4cb48b08930101c45af6b872b703babfc5924ab0971a83428586e1f30d2d8e6b",
+      "published_sha256": "196a4cb316992cc9f5d47be144964cf794cfa6a5291fbbdb51cda249348eda61",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115133-S09/config.json",
+      "original_sha256": "c5f3fc38dc157c2d59e6bc9b9365e4c4c38810ba4e4f79d97097f3e3eca7fa4b",
+      "published_sha256": "a39bb8be0f31f7f4dfe0e3940e5feebb49909f9ac8c622253e986035ac57a74b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115133-S09/engine.log",
+      "original_sha256": "6cf691cdeda23809fbfa2c10d155af54374b475840daf134cfe7fd947ef66017",
+      "published_sha256": "ebff157645a5abf1a3ae9214a9929ccf23d7106802c0191b2a72e750f0b28cb3",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115133-S09/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115133-S09/harness-2048.response.json",
+      "original_sha256": "fc580d64fd0d9f8f3a74133a6a28bde882a51cfedb852f685eeb93d103e58738",
+      "published_sha256": "2a2cfcce57e7d525e049793df118445d9f8cdba77dd5b70afa701ead70ec2e71",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115133-S09/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-115133-S09/server.stdout.log",
+      "original_sha256": "2ac63fa04d95c88aa46ef6a9b621a8d900481a21b8d12ab1820ca3162c0077bd",
+      "published_sha256": "fe063894833682a7c2e586446b89a0b7b77481d527c3b9a3af5ca740f16a19fc",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115133-S09/startup.json",
+      "original_sha256": "85c8a31c187543cdfe17784e029229d2a5e85fa0cd6cee2588d0a38eb6db2d82",
+      "published_sha256": "b7e456329ac9967ce2d7646ac6c2119922021e64b4c9d55c1b83cb94c89796b4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115254-S10/case.json",
+      "original_sha256": "a5b1c96708af5c88c64b9f4f08cc963907aeb8ed464336daba65cac9893ff23d",
+      "published_sha256": "da9ce3b8f6edc7196d9a3577732867bdd8187fe8189fd4107b3d05bfce4f4c25",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115254-S10/config.json",
+      "original_sha256": "9dcbf8b22760c57b9ba2be31950e4a91469e3ceca9342530c52ae933e8086bb6",
+      "published_sha256": "138f58238001818a0984663b587fed2e908d041f48907ddd6a4e263a591647a1",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115254-S10/engine.log",
+      "original_sha256": "cee1f00dc39124adf67b098f3582bb2e86ebcdc4548b7e2920023b867446443c",
+      "published_sha256": "d3a121c5944121dd1b0334136cbed6e50392ff117edeeb60629fca9dc2518a22",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115254-S10/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115254-S10/harness-2048.response.json",
+      "original_sha256": "c9d53e435c8d2979491c5a415086d6f95a5f3dfab43298117771eb233246aa63",
+      "published_sha256": "37b6606b1b1e6345b8dcbf4985887746f6ab1e8eed6522643f6524566366df30",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115254-S10/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-115254-S10/server.stdout.log",
+      "original_sha256": "cd9c35c9f307e23e35f65f67fe4b79ab342afa461a38a2f7e0d4c2f8ac9a9499",
+      "published_sha256": "75558830894a41f9e5ffc40505de67eaf3e3568c0cdb25bae034b8b01645e1f4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115254-S10/startup.json",
+      "original_sha256": "982f931883197a7952b1dce161fda51a430ba553af4417b799ec9d5b43cd6bb3",
+      "published_sha256": "ce1b3301bbd5c2d1db6bdd1074e3f01ef026020346642a0a3063ef9067621c97",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115404-S11/case.json",
+      "original_sha256": "2c929ffe97802c98354235e2e642f4bbd356422ca67a22c5cfeff21592eeb5de",
+      "published_sha256": "1ea8a95d86194a76537387e39e6ac24291d2a44d94bbfe6d68333375ea4b7dd5",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115404-S11/config.json",
+      "original_sha256": "0d473c883c324c58fc4d4337587fef0874555263e8d022952a3205f471d2a58a",
+      "published_sha256": "f54fe575bdbd287d33d197d34b9acd7b66ece887c8ed5a35bbf3e93b72290b8c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115404-S11/engine.log",
+      "original_sha256": "736273871673fc5987bdc2e7383707f9d487912e8afe3c14881d4ecdacc53294",
+      "published_sha256": "fbfde3e114a40de6ea03c4cdd9613c4364ecf91514ab1a85fbadc2202757b7c6",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115404-S11/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115404-S11/harness-2048.response.json",
+      "original_sha256": "d6d0eb335624198f5e7949255f418bf782942cca0c248f820f4d31809bf0464d",
+      "published_sha256": "053ff5903beb712165e7b4e51df34e6ebd191259e5c163d24fca460c1fb15328",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115404-S11/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-115404-S11/server.stdout.log",
+      "original_sha256": "923c04922cc2adbfd60e63511ca0671edb8ce13ddebc166ec03fd0fe01b98f1d",
+      "published_sha256": "15d6d6bcd6ddadc35cc8e3ddb0ad7f30c6e70dc2ac44326545bec107dcfcb9ed",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115404-S11/startup.json",
+      "original_sha256": "b36418ec0ec4754fc41364dcad654b6f7acbef5cecebd8f0d83e7712cbbded03",
+      "published_sha256": "61c051b7939a99a028cb253ca8ba70fa5a88de42f741dd09a2f51bdad875df0a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115518-S12/case.json",
+      "original_sha256": "a75936c7ef40964ad836f61a45d9a571b0c5fb57cf05b16f9de6e2bb9d7daa49",
+      "published_sha256": "9c23428deecb3b441d77f275fe77d729520f38c9b3fcec7075ef937564012661",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115518-S12/config.json",
+      "original_sha256": "8331456044d866b93a7ff7fa4bcfcbf6f3c70021cf4811495fed64522c5ebb60",
+      "published_sha256": "4c8a8bc997a9e2f163647941493b6e0ab6af210ad4dc0160876bc8d328e16487",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115518-S12/engine.log",
+      "original_sha256": "247277b6d4497bdf67576dcef18b473a0dff1b4a7597ca09904bad3ee073c2a8",
+      "published_sha256": "ffe0fee0dc690182c01f6d0357ba5d286c58ef867e0bd43c1a6743e9e90d113f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115518-S12/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115518-S12/harness-2048.response.json",
+      "original_sha256": "7a9b987e75f4c0161ab87167028de4af91ee77fca0e04d356f735ba487e40ab9",
+      "published_sha256": "6f43ace4c912196d5b2f8bbdd933ae38b1721a74a4c5b768b3a2f10c2b4c064f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115518-S12/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-115518-S12/server.stdout.log",
+      "original_sha256": "462e870a09144b9a0e9a3acf96abdc08b0fcfb086b6253626a090a60c4baf100",
+      "published_sha256": "1b189ca721d9bc3a13eec885a7cac777edbbaaa4bc529df9c30b36da63964056",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115518-S12/startup.json",
+      "original_sha256": "c7c5d839bba29fce8496dc84c99592e5f200511bc05574a786e6a87aa71a7db1",
+      "published_sha256": "fcb7432a306fb8fba04f6d0ae827e490f09e3ac8a07081d7f834c1cd3b3f1f07",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115637-S13/case.json",
+      "original_sha256": "2b2acb3edb567c81839d36ebc9a1332a0b51a640e89785cc84196a408d9f2089",
+      "published_sha256": "87858cb3ee674687dd823aaae16aefa2f420253de1a6330be93b9d165711d976",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115637-S13/config.json",
+      "original_sha256": "87e8131cad320360c5469ae0523fa023c4487f65632b3148648b52c6f2a4e566",
+      "published_sha256": "ed4ab4258c6145ab6f4583764b7adf0f8d0e9c6a306abfb287544929f5f5c36d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115637-S13/engine.log",
+      "original_sha256": "3b74d2fe7f7be080588ea2f4e5e797b0b24323629073179397bea9ea9c9c394a",
+      "published_sha256": "bd63e656f88ab15ffda9ac40c68327a1a77426f588ece78dc3680f457c626a44",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115637-S13/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115637-S13/harness-2048.response.json",
+      "original_sha256": "aafaa12f92e1f17e7d7da2ccb8e6dfada99fc879503242a2cca4a3e792e3a3f6",
+      "published_sha256": "66b549593f5eb055a3d48f1487fd41ce5522bc4cd81295a451dfed5f9b3598cb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115637-S13/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-115637-S13/server.stdout.log",
+      "original_sha256": "42fd6866d7dd8b509e8f87d30aaf78972f272128afeeccf8433e4ec9a831bd7b",
+      "published_sha256": "19792ec7508ff921ab541625bfd589a73bdf56549c9b7f50d735955074968965",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115637-S13/startup.json",
+      "original_sha256": "2237c092d1bc074aeb1322db1c29ed27c3939baa91643cd9c224341f9263a87b",
+      "published_sha256": "94d986f310c845fbc6bdabd991f51ddf6d651efe0545cf475feb6e3c076b2544",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115754-S14/case.json",
+      "original_sha256": "404f60a1f4e944892267ab0e53b729f4530cf00ad517e3204d9721799ce36022",
+      "published_sha256": "78afa7dfdaefa8de30139eefb3368b28eecdf4c8a4779f4261cad07b8832f24d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115754-S14/config.json",
+      "original_sha256": "40cb4a07c7995933229604e3f2251a8c626454ad8b37b1a5d1e3ca147a192205",
+      "published_sha256": "4b93efb1dc94cb3523467a3895dfe757dd3372176b11fd74d78d24046a33fe8d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115754-S14/engine.log",
+      "original_sha256": "75ce002e3f49dd9dc6e3b640b595c0ae2392764dfa95e437c5a6d16d9b62860e",
+      "published_sha256": "069e04d200fcd7eb730df6ff0a993f7b950724eb23b2ade37c3bf11fe6b67eff",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115754-S14/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115754-S14/harness-2048.response.json",
+      "original_sha256": "336924dd246f5d7af7af3a83398a62539a6716abb84d438acea7e56969490327",
+      "published_sha256": "92fa6415f52318fdfa3d76e12ff7d3247032978311c021127dbe833e056c7df9",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115754-S14/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-115754-S14/server.stdout.log",
+      "original_sha256": "7fd412e4ed6ab513ae9ddb2ebca27449bcafb32707aefee631206d6aade03a16",
+      "published_sha256": "cabfcb907c65be712857feb0c4b56de86b9c5bb5824a7cfc00de0745c2e8ca28",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115754-S14/startup.json",
+      "original_sha256": "093e9f1ab811d092d76f4818a6690297a324c9ed678e34dfe98df2155018f57b",
+      "published_sha256": "d0226db40be796741ead4b551f6644567246d31a053fbe1448248d5631b3acb4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115914-S15/case.json",
+      "original_sha256": "d9b86825ddbe4a524a1a69b690bdfda6aace24a8e1e948fd52d5af92fc89fda7",
+      "published_sha256": "a895d547950d22cc57ca17c997fa1dcba1c7a728912453c2d5b3c68fcda728eb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115914-S15/config.json",
+      "original_sha256": "a6a2c79de8632de71139a05576a7f3bff9aa1d0b6f28d4455eca548aa92f2ac3",
+      "published_sha256": "c7245250e954a8a121cef8c4c19657a33e4238cbe2782f01dd15332743ed4d2c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115914-S15/engine.log",
+      "original_sha256": "385c3daa9360678fb5ae993f73e4188653b1decff19d129b7636882a09d3133b",
+      "published_sha256": "8fe549a415c6506d87738dbc349fcb5db395e85dd6c496808a6049be94ed3232",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115914-S15/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115914-S15/harness-2048.response.json",
+      "original_sha256": "955bb69609ef0e4ce959d3c6f41a839d57c56497be89516df7679b7bbcaf9eeb",
+      "published_sha256": "920a4530130cde02a0d2c7bae5b961b8ac1a42266407ad90146e89048d649f5b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115914-S15/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-115914-S15/server.stdout.log",
+      "original_sha256": "7e4e244282a5402cc29c407555ba31db81cbad6b76f15c982a7986c478090feb",
+      "published_sha256": "008f56d63448e216952c22f14e8eb866284cbd3e30bd4bdd597a900d84b75538",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-115914-S15/startup.json",
+      "original_sha256": "50bcaa42d32c9c73f39cb346cd4be8eb8c5927aaeb85aa7adc4f04821a3ffb51",
+      "published_sha256": "85bf913608c9081a506da605465af56e6533ae92a538c6cd025ed3e9594b5a58",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120034-S16/case.json",
+      "original_sha256": "0d616747f38ed88445bb0dd085d2ac9da09dbefad2a40d1f721c5ca58fe7a986",
+      "published_sha256": "ae9b3490160d4882a2acd5eb96e3343f9ecf83e2fdd39a84b158dde67d91ead4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120034-S16/config.json",
+      "original_sha256": "dcefc07d192d442af695326d69eb12f325dbc4d78a1ca77f548aeafcff34e6e5",
+      "published_sha256": "d0b4e4458a335ee2a10f2af129417e2bef2c726298788a418b88124cf63cd6cb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120034-S16/engine.log",
+      "original_sha256": "4bc8d9960be2bae420e6a8673933db510300721e1017febcabe2b10042329206",
+      "published_sha256": "2c4494d97119efa2d9dcd123d84a2db6d0cac0177bb1870a8c3f9a1af13c024b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120034-S16/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120034-S16/harness-2048.response.json",
+      "original_sha256": "bbdd4b1a36837a30cd73b2bf1b942732ca42cac3df6e61fde25ea5c4e370ec7e",
+      "published_sha256": "ab2e5f66078a83f6cb8cc014ba8050f5f4461af5e7b0bed55208bf0d87790ba8",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120034-S16/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-120034-S16/server.stdout.log",
+      "original_sha256": "66c8ca03671b53fc25638c428e99514d2202fcae542c46aa973c176de653d3dd",
+      "published_sha256": "0c1992c1ee8eb286fec3fe0dc4430220493e8e70397168b3446e37101bf78da8",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120034-S16/startup.json",
+      "original_sha256": "c4cc37769154d5ce94db09b97d7a8eddcb74492e85536090347eb86f7d7db607",
+      "published_sha256": "8d4edf957b70af3fc97ff781412b6e811619a58588b6e1ccd40c1157697aaffa",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120154-S17/case.json",
+      "original_sha256": "d370bd74eaa63abadb0037baf7dc7be06b61d81542e1bd4ded0458cc1de3a7eb",
+      "published_sha256": "b760eaa2af7b515a0a1cf8ffebdb9b9801b25c8f5d50d55257c5102cb0b6f887",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120154-S17/config.json",
+      "original_sha256": "e2e64e79303750c3e507ff3ddb3b8e417107b93edcff91ca06dd5c359d8d08ee",
+      "published_sha256": "24ca2d4b4796487f82984e342c96e1594cd8d6bc63153af8f6b9df86b0317637",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120154-S17/engine.log",
+      "original_sha256": "21f55914264a7bf4da956aa7ac27405b3216a0f231e4eb29534d50718355e4cb",
+      "published_sha256": "07f89b73d7a0d79c6669f944cca852df2291f6fc2b947ba1c06929d2fa7b7818",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120154-S17/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120154-S17/harness-2048.response.json",
+      "original_sha256": "5d5a5201d29c792afdafea449274040c972d4584e1cd1c5d60abadeb2b4acea0",
+      "published_sha256": "7d07cc5539d6ae48c0f08e9e7368c20d7f63368800edf6eaf1632d44d2835c92",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120154-S17/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-120154-S17/server.stdout.log",
+      "original_sha256": "5a623bfc8a6387f664c02d9d16c5ceaadd8d8c1b698c860f1c37a39acbb2e78c",
+      "published_sha256": "cfe76dffb43bcd3d8ea5bae00e86a69525fd50cdd660ba7844a9a050cdf667d9",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120154-S17/startup.json",
+      "original_sha256": "4df2c024291c883a0c4c573b5ba48e3f612ab7456027f5cfd9ce91485487ecd2",
+      "published_sha256": "40c7865c7c120b8d13a7b03f1a2689b04f02db04f459d0b08a86e6e06af5fcb4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120311-S18/case.json",
+      "original_sha256": "ef4933b9fb49ec24a074c7dcebc394e3406537de15cf8543c5afc1824476b5c5",
+      "published_sha256": "389558c99a49a8cfa02bd5ba45e10313a8a04731515f8fe5bc8d08094da5cccf",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120311-S18/config.json",
+      "original_sha256": "8bd36f3fe024a99127c61c34799c510f488648eac29b8f5af94eda3681b5d0f4",
+      "published_sha256": "26c8c45e03256b3272cd14d5dfee08acffe83476809df7885c449718f8ced2d9",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120311-S18/engine.log",
+      "original_sha256": "fb998596d873e6483891b3411a0af402a061e86c995f86b59df3578642077cea",
+      "published_sha256": "48c06bf88796b4d458b804575502210019a0208590fe7e6a2b94df7ded63b8eb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120311-S18/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120311-S18/harness-2048.response.json",
+      "original_sha256": "836ac93e9d9c8645f5dc69163c0e6292e41e932da8772f485dcfac4f0c2b680f",
+      "published_sha256": "9ab5e59881e59d07808079eea3f123455dce982eb9a35d12208f6a0fef23a8a3",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120311-S18/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-120311-S18/server.stdout.log",
+      "original_sha256": "9f7dd715fb9ac5204e388095af31049f03d5a57a70344f5f0bb5e0dac9aedf3f",
+      "published_sha256": "8e15debd2e51acd80796fd950795c5ecd36bf5566229ae1b40a22cc64732a695",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120311-S18/startup.json",
+      "original_sha256": "f94b1f6f7cef6d3201123346af2dcf05a88b81345e15303cd5ccd902068f18f0",
+      "published_sha256": "e143760e2b49c65b81562b52e33fcf8a5691fab58ddb989ba5a1c4ebb7b4435e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120429-S19/case.json",
+      "original_sha256": "688c58de35893f17f7645e5c77b0928f74de48e964f7193e1049abdc3f8c18e3",
+      "published_sha256": "e348729e1b57b94dac4ba18302ffdebf2d10ed2715efcec6d03ea1db7ca36096",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120429-S19/config.json",
+      "original_sha256": "6c5a2938af7684b7ccbfff39be8fab2cb5a5cff4891eba4a5a5f89fab3bb6c63",
+      "published_sha256": "e672c1aaf515d8a1843e01948e59e736c2f39c9e61b899dcf34cfe419c5af43d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120429-S19/engine.log",
+      "original_sha256": "19775d8a6034eeb4193000b3be16c96087f80e3fa921e8bfb4ea28c2b9aaded1",
+      "published_sha256": "1ac2596dae0783722c4cc5552a7a505b9b832fbd1d7e318b0a812c2fbca6c9b4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120429-S19/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120429-S19/harness-2048.response.json",
+      "original_sha256": "4cde93b1cb33bd2413a7a7fd9a02d1c775c41f87fd28708ce2ff27ca529ddc4e",
+      "published_sha256": "43dd87f1256083be3ad714f88f4d3c75e5fd948cc74e2e9d6fac4a848e1f1cb1",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120429-S19/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-120429-S19/server.stdout.log",
+      "original_sha256": "60d75e44cbbb39901c50c77986310cb12790565fabe7db77ca2bafbc80616c6b",
+      "published_sha256": "245b8fd5187f2cf490028f4b57557c3962b2fefe45325c35eda7d9d885c70efd",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120429-S19/startup.json",
+      "original_sha256": "16cf438f74ebf85dd2db39867372c9953d6d717ecfa92ccfdf2d4a41798fe54a",
+      "published_sha256": "bb98631ce652034a5679be05e69e437534dcc0a5d3e955125e660aadd396c66b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120547-S20/case.json",
+      "original_sha256": "d1bd98dc1a75480dbc1943d5dde4b07b051727591191cf9652f5b368f3d4ddd7",
+      "published_sha256": "0c188640f10d15d99f6b65d41ce92518ba2f6d275fa3489732895e51dd6c3cf7",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120547-S20/config.json",
+      "original_sha256": "a10fca903435c9b53e7dafd957e2bfd7478c90f1d096102983feb33028ef2810",
+      "published_sha256": "bb9121f7a49f9d958f02fad86b227666eaae6918f1cfbc24c98f293073e8bcf8",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120547-S20/engine.log",
+      "original_sha256": "993df1eff6de88740b304675897bc7e0b4afdbfdd0ddead0a94f15c57ac7370d",
+      "published_sha256": "6f0f6275df32bb34ade79e69011135911d6c2fca41b1e767e3e2c8c94a7dee01",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120547-S20/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120547-S20/harness-2048.response.json",
+      "original_sha256": "24e6c19972b64482aad43421581c684eec85c99bb08219f77ea387ac949981e3",
+      "published_sha256": "aa09dd1b00990ce42780afa00f4b65de627a6d48fdbe9f552c61f59d9c3e4759",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120547-S20/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-120547-S20/server.stdout.log",
+      "original_sha256": "894bd22e28b9ac75876e14f6c4ba4736409cb32dd17caee6dfb533379e7eeccd",
+      "published_sha256": "4bb2af1cda3a7ccc28988a6b9af5ac090a2bcc37c3361ff38af29a7a961d4164",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120547-S20/startup.json",
+      "original_sha256": "5e84f1cfb1c0b7bde563d4682e1c0225f1631f53a2295e1c77628e112371f6b6",
+      "published_sha256": "1ef9215696bf16e4fd5685a7a2b540b05309601e87d868bb6c1b166ba2aa7990",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120707-S21/case.json",
+      "original_sha256": "af861af76e3aa1d9be6ac1908edd2712668b3ab0863124cd63f254b6ac1b0c7f",
+      "published_sha256": "0467c5b5d9b3d2553d8245a847dc17c3309c0178becea2fc51f7f42ece5ec0c7",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120707-S21/config.json",
+      "original_sha256": "a927efdd2660452584ac4c0cb30855bcc9eeaf000ca95866b1b561f80e253a8a",
+      "published_sha256": "97efd4fd5e497dbd0e3517a18462bda672f26614eeb9f86f2fcbb79d935ca2a0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120707-S21/engine.log",
+      "original_sha256": "1578f90113031c276e59e9bddcf509005357fadff580694f35815747841d58d1",
+      "published_sha256": "572b2625fb137bdd1d2d0b5b408317381f2fe3352bd92d7ad47ee12ad262d3b1",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120707-S21/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120707-S21/harness-2048.response.json",
+      "original_sha256": "a557a6375771de1207d36d7b9e4bda7cc17b43c6ddbf264cf7f488fc495a1cd3",
+      "published_sha256": "505f055fc3bd7da1612d0b0634b1847a1404484bb79b180e9a95300cbc65e47e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120707-S21/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-120707-S21/server.stdout.log",
+      "original_sha256": "ee6e3b4eb0d293139eb03f78a6333ca9af0ccbeaa12e16350458acac8dd8da6a",
+      "published_sha256": "1bc2b56e1e469686afe9cc95b15b94822d8b10e41c4e29da3638ef62c3d5f551",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120707-S21/startup.json",
+      "original_sha256": "837c5375bee50fa990ff726016cddbdd59e1e3103de17996c013cfc2f2a3533f",
+      "published_sha256": "1f03cdaf6e5afaef178b256d8e7116f6fe83eb6dea241c47047e69ffa30d2d0b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120828-S22/case.json",
+      "original_sha256": "0d7afce7f33d44d681bc0d8f705f3d76e163a216f56d9ed7b49dd0859b9e9b67",
+      "published_sha256": "02eaec5f04d047534a2ff2a57079a31aca34b1181528ce723d97d6d9a4cb7a97",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120828-S22/config.json",
+      "original_sha256": "0b4429189bc398fc684c9461d36d592248e8e2814649a7117a85d5d9fb74166e",
+      "published_sha256": "5b8f5c1d7d76d83ec8044c4c7da726f181534382961c1f8fc771c166a53d537d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120828-S22/engine.log",
+      "original_sha256": "1ca0804e9222fb09fc80c4550508bb06bb6c69f8f927400d5ca96a84633a6ee9",
+      "published_sha256": "ebcb9a61151eff9643e0bcb3866ade1f67f931571dd9d248b71afc1ddaca759b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120828-S22/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120828-S22/harness-2048.response.json",
+      "original_sha256": "9b8826fa3bb536323c7619b12aa686cfabacccf262b199fbb060c51b1a35be51",
+      "published_sha256": "6ab767d576e246b2f1ad3bac25e547740897f815165510db1d38d7286bad4c62",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120828-S22/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-120828-S22/server.stdout.log",
+      "original_sha256": "fa580eec163ac663a21079529d50d1af667ffc0889ac7c1d6a237c37eb233d92",
+      "published_sha256": "30fbdb27cb8efab05e6c22c606a90f567a17aa4085926710de7e0d948f12cc26",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120828-S22/startup.json",
+      "original_sha256": "83e89c06a33aba0217ec859f18ef6d03076ed68182afce6f70a6b5925ee5110d",
+      "published_sha256": "277fa400ed67fc26ed9060db8f28aa7ef08b14daa52f84ea768188d29ab6504b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120950-S23/case.json",
+      "original_sha256": "52e9e1b4fc2aea38aad5af15479200ec4f98aa84694f17505b5e2e37284f7e39",
+      "published_sha256": "95d15232e0255b826b83a6997e5d2a4208f5c26a99b65328ee255655f789a93d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120950-S23/config.json",
+      "original_sha256": "402ddf3aec984929aa642159546461753fddd16a10b059d2ddcda8f910a32f4d",
+      "published_sha256": "c539c8ae2968bdda68c8691960121dc1af0bcbd955f5889237858303f8d3eba6",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120950-S23/engine.log",
+      "original_sha256": "9426079076a3e409112d432c68042d74d6e83914a0dd462e100b2310b11b6efb",
+      "published_sha256": "14c95dd2b3fc30b5765e186ea2f0a0c86995666074d690d0a79c2d7c8c606277",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120950-S23/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120950-S23/harness-2048.response.json",
+      "original_sha256": "a355de6d1d4804ae66f9c56ee83281c5675a97057a910114c8fe17462a17193b",
+      "published_sha256": "697324cafef7b49d6d690753ac1b718be3031f13d96e7f9d46a1bb382c79384d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120950-S23/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-120950-S23/server.stdout.log",
+      "original_sha256": "46b8a542e7f2dcf8909ef436cde034a707cd9e1e7b93b512ee5e1cbb0b4ad10d",
+      "published_sha256": "3761f2c3230b102b3008d9643206f2e5bd3ee94e43e4af7969293067870f025d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-120950-S23/startup.json",
+      "original_sha256": "3153a2e580c61549d689bba3f16a0b09e5c8c58b30d313851647c72b5b62964e",
+      "published_sha256": "edd167f241ed62b2d7935528162144b15f5aac127e1406e2094479f7dd1f00e3",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121150-S24/case.json",
+      "original_sha256": "fb6d87b6c1d02a8235a7f3baef55dec783365a34fbbe1db8cb1b5c5b9e991a6e",
+      "published_sha256": "96832830429b2ebf7dc347c64cd79930aea67d7acfa13d15835b6764cba83c56",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121150-S24/config.json",
+      "original_sha256": "2946e2101debb31465063fd4a98481af437b4881e429d8f70bf4442e4a1dbd27",
+      "published_sha256": "eaaf52a9b4e746139784f567682a5f6db35f49ed0e1f504680aa2f17bc4ba20b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121150-S24/engine.log",
+      "original_sha256": "89cc934d039c849d76c7c525c1d53f6385dd7aa37278a48f15a219641e5d1117",
+      "published_sha256": "265e3df97538e2e5e407f5fce671ec791fa9ae424f41f4a9a68d0423059111fc",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121150-S24/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121150-S24/harness-2048.response.json",
+      "original_sha256": "6955bedee3cb17ebf916c305df7bcca10de6ecd023aef6dab10f642a318a0b55",
+      "published_sha256": "e510e47c3695f56031029ae007c5c4bcc0806769f30bea65f9da00f46ed6dca0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121150-S24/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-121150-S24/server.stdout.log",
+      "original_sha256": "0d9b886eb3b345386cfa033aeefcebeecde5e7362509c275360ceacd902789d4",
+      "published_sha256": "b071161011be8e4204712a405c003a6d2700386476a98ab8c555310d158c70fa",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121150-S24/startup.json",
+      "original_sha256": "915a277c0cf9a680a9ad82468cd0375d58d143ad7c306b692e24cc312b381076",
+      "published_sha256": "223576ca6c2144bd58f614c3d1c9742166f46910b7abe0e5bd217afcbd29cfed",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121309-S25/case.json",
+      "original_sha256": "1e9f44b7cea8edbf82e2b97ce0b58f0c425e9679042186d962dfc364fa313ac9",
+      "published_sha256": "26db58e2ef233530582d5f01d2ec0f2a51af6bf1049933dee2444a45dbcc5702",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121309-S25/config.json",
+      "original_sha256": "1fd5d44aa2fc62d56523e108c75635565f2571e92b1b75e5ccb512abffbf25d5",
+      "published_sha256": "590ba903db1b5581712e9ac2b0a502480d4fa4ab4927af15a18c43ab1d999dfa",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121309-S25/engine.log",
+      "original_sha256": "b1e00d522b999cdd79e026a26b4d36e6a3d725d083712d1a32d698e228b2f86c",
+      "published_sha256": "71aca22f7f2658b86ad889d792527f8d3f23dae357bd1d187040057fe30969dc",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121309-S25/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121309-S25/harness-2048.response.json",
+      "original_sha256": "5acf9b5cecf01141aa293b7cb8f3ef59b709ddf7da8f4dcb62ee26d9587a735c",
+      "published_sha256": "67672918e4d9e2fd6a35b1f541f6646832363c0d9df913fc3c2bec66313dce5b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121309-S25/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-121309-S25/server.stdout.log",
+      "original_sha256": "2b29a859d9f8251d3107c230ecc25f498cf006b0e9cbd836c36a800c6aeb76fb",
+      "published_sha256": "92ed10cf3b2b502410078bf1df72ad324478cf221cc059217ecd5d8853a9fa9a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121309-S25/startup.json",
+      "original_sha256": "1f5e90e4469a3447d4c26942987482dc98efc0050f4c031813ed07968ad9954f",
+      "published_sha256": "63eb25011ded021125db5ed23c0ddceffa073b2f096bc84e3be957a873213058",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121500-S26/case.json",
+      "original_sha256": "37dc58ff56f424d41cd2a8ee67da9bcacba392f4701fa5a6c2bd4df366ddfcf6",
+      "published_sha256": "80a3623deced6a269fcfc2ce405fc1325a6c0925cb746fa4ab745c5f2bd53718",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121500-S26/config.json",
+      "original_sha256": "8cb52700749ae46910bc21fd0c232ac5e0331a0455ff6f6710e5e45794d6516a",
+      "published_sha256": "72ba5a030ca17b6c99472690c45b0229567d37224398331e9bc34ba946fef9dd",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121500-S26/engine.log",
+      "original_sha256": "27019205b4c0eef12f30f4012797d1e0439abad7470ddf802230133110c1fa34",
+      "published_sha256": "9d5c85fe6688c0858524770e828f82336bf8b22f4aa6eb5147d57a9cfa69f1f2",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121500-S26/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121500-S26/harness-2048.response.json",
+      "original_sha256": "cb8dc9c21d49b792cd2c41d208d777fc994ea6a8e539b9a0d30a0a33976149fb",
+      "published_sha256": "b6c21796bec7ea68b6687f0ca346115d4f3cb2151207a3f8488b390b6a18f5ad",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121500-S26/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-121500-S26/server.stdout.log",
+      "original_sha256": "fdfbbc513852bc839b9d96bc8a7384be1df4c2081164da98ef10ed50415d7209",
+      "published_sha256": "1d9661674b4748ef25b47e1ec2e2b576b580da28ddb4e982e69d1c71d2017e0d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121500-S26/startup.json",
+      "original_sha256": "27293a7c1795eac372cd481e6acb239544eae21119f68a7f12ca3725ce2ee248",
+      "published_sha256": "9c66dd07ae181c83e184b9024cb02d941b7f5f398da9273eb583746d3fce21ab",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121640-S27/case.json",
+      "original_sha256": "96d2c6c28040354b21907ef1ea4bcfd03c2b0403bc57bb29a43237e3c6917f46",
+      "published_sha256": "33fba41efcfed6c147c72372940dfb1d3a2fd70b6c74a3c3cac3ada16672ca2b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121640-S27/config.json",
+      "original_sha256": "761c19d32fa6edb622965dfd61051f875b171edbf5350a4b5cfb47a584004700",
+      "published_sha256": "e9b2da9282bc24e57a9972dfff77251b9d084cda041343acba5a786bbee2dd26",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121640-S27/engine.log",
+      "original_sha256": "bc752a246257b8331e093203e8d09530e1b7aeb0a3f0b33715a3e49a978406bc",
+      "published_sha256": "a8455c664334f8296bd3b4077cae4ff485645b43b16e6e50cbf615df4eb5dbc1",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121640-S27/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121640-S27/harness-2048.response.json",
+      "original_sha256": "e443ba80d49136017afbee5c150f77e4dbeec2a72ad2598666670f8a8715ec81",
+      "published_sha256": "7793d2084ba448852962c7c9753fc7c309cee72dbbe3d14be49833f70084f65f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121640-S27/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-121640-S27/server.stdout.log",
+      "original_sha256": "08eec7fd8528415f93c14272cb2c56896bd98ee94a2043718e4b4b0ed9567327",
+      "published_sha256": "f06d234f29f9766546ac6b544209fb72d5cd9a3b2d759dcc78d039f87faeebf0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121640-S27/startup.json",
+      "original_sha256": "38e697b551cf3d0713367027e3520a07d2f334cf01017d9a1a88ec7794604038",
+      "published_sha256": "4215224dfa605a4dc04491047d49ae367d2155b763b2148bb7ae68f9c66792ad",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121813-S28/case.json",
+      "original_sha256": "9daf970914dda9bb0e0c02e17000f0940151c137d9e16fdb83c3eedb356bf533",
+      "published_sha256": "f8595fe228af2f4ba85c7955ed71c590ed24f94b783fcfdc08c94258e45117e1",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121813-S28/config.json",
+      "original_sha256": "da15cba9721d4ede81407b0dd67a4fb7b6687660fa4b793fc72e43ab01061851",
+      "published_sha256": "81e885ea37e0d48890c8e0df57c007a77fae0f806e16e5ea1db63adc1069aec2",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121813-S28/engine.log",
+      "original_sha256": "ba89891eb0211b362fda5be858488349e48d8450574611fd2c44eb0289e42c01",
+      "published_sha256": "9bcae43f48f01f50908431323cb117dfcbfa9cdd147ce257222324bfdeb2f03e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121813-S28/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121813-S28/harness-2048.response.json",
+      "original_sha256": "21508b3b5b26129c0c4dd8db6fdcaac33615ab245ed9ec4305b9c03a9d5258eb",
+      "published_sha256": "b5079ef74423924b44afdc013706ff913751505db9afdb06f942a02fa58cf21d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121813-S28/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-121813-S28/server.stdout.log",
+      "original_sha256": "10f5794797c1a457649afecfb1d6b65d5342f6a48136db85545427479999bf81",
+      "published_sha256": "1a90f513847ae117c3c37ce851d08a1e1bf0b630c5d010cf8cb38ff92d1e90f0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121813-S28/startup.json",
+      "original_sha256": "5bb1e8d1f3d080ca6edc72394c7c98166d6268be8be7c6779144e87147082af0",
+      "published_sha256": "340253576000054d02cf75efcc93f9e520ebc91f36b28550771d3e9f52bd4a66",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121944-S29/case.json",
+      "original_sha256": "93fe720a432acf8297d95a48450976e9a6e2a64a118c4adcfca58890174ae985",
+      "published_sha256": "919109f51447a367e3d32a49e8bf3a51dc84d74944ef922e3a66b85b74c8aa46",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121944-S29/config.json",
+      "original_sha256": "1b24eeaa494e718227bd4e2be3cdb218746ecd9ac7623e564ad8ae2884c33ea3",
+      "published_sha256": "eb0769ac2976534565f7f7cf9f923b8fb5f487be0eea63c04da8aea422bd9fe4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121944-S29/engine.log",
+      "original_sha256": "dbb9b6f957529e58b19c60feabf21672c6407eb1ac6b2ab824eefbf4988f34e6",
+      "published_sha256": "684ec5ca3657dea39fa1799ddc56610bef05b1dc7b4d5153cb6b5b3c3b85e041",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121944-S29/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121944-S29/harness-2048.response.json",
+      "original_sha256": "0179e480c71cefdee9daf9c111d5640a6a3d4bf044773ee59b2e3bce404d4e3c",
+      "published_sha256": "9afda93e0a356c1871ac1c6e4d0eeabaeba6cf3c561054e5419f3ef060a41e6a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121944-S29/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-121944-S29/server.stdout.log",
+      "original_sha256": "9385bab1057f94a4f88474ccfa9e8838e144d67ad873939b82a3064a170ba138",
+      "published_sha256": "95a493427b26186986e8e23b0381a95cf8b304369958aa7e7c2f1ab60813cfd0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-121944-S29/startup.json",
+      "original_sha256": "66d148e788015e944b911395027906a2cd07ecc09e420216c3f1504071854b98",
+      "published_sha256": "8073622629da64a9cc909570eb5e9f5373f5bdc9107bc5a554de0b02fff51215",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122126-S30/case.json",
+      "original_sha256": "ff4bd8ebbed8344c50350bcb0c24d4fc02888605bcf80af3564a29c4453ee0d0",
+      "published_sha256": "da98ce723aa20baa67358ae692d30b5b27993b93577c8b08b927edd39ca7125e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122126-S30/config.json",
+      "original_sha256": "86334e16f682729b830ad8478749e5b17fd795743034ff926cc373d4958cc68a",
+      "published_sha256": "2ed4c486c92a69192d0119123605f4ab2fa179df8a3ffbd15e6b8f63f3821768",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122126-S30/engine.log",
+      "original_sha256": "53e72f4bf72a0f37fb17c6247b3b338bb9e9815c3ebcb5b7e1a5c29b159133d2",
+      "published_sha256": "e33b7c7cddd9e6fc8cbc980cd56b99eabb0ae7337bebaec0d0e7ee8726d51b18",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122126-S30/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122126-S30/harness-2048.response.json",
+      "original_sha256": "8d4b3ab204c932f448b1f1f7aac88f71c4da4278d41907f6841c88160c330750",
+      "published_sha256": "3d7200e675e55db8e69fa03bac491c96d68b73fac30d2ba672ff309d5566b515",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122126-S30/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-122126-S30/server.stdout.log",
+      "original_sha256": "ea5c4b3f04cd5c1ad608d17c559480199f2c0adf5f2cc33f66ac583ba29d4fa1",
+      "published_sha256": "708e89a4e6213caeb8552b7f11545d65760c07576370efe4101d55ac36509c76",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122126-S30/startup.json",
+      "original_sha256": "04b257e59c2a08823aa22ed62d5f0b2822d718d2c536e8ffe1d525eba8f96aef",
+      "published_sha256": "085d4442d51b2dbe8ab556c9ae8a9df1fef4bbe502224f5f3eae26f7afddb9e0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122320-S31/case.json",
+      "original_sha256": "4808b2432b1dcd14f4a59e28b44348dabd177dff26772d221da67ab19f4cf26e",
+      "published_sha256": "e7fed5cc629e2609467d407ad2050b86cf4ad5b69a1bd610030d637cc03277a7",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122320-S31/config.json",
+      "original_sha256": "395ec1d97c835225e7955e08fade029962da7708883a4e0853e83777fb12c21e",
+      "published_sha256": "4e25d6a9c0d274fe9b17fad2d0cd5f95fe16c86942d81bdbe3ebe1fac468c72e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122320-S31/engine.log",
+      "original_sha256": "94dde53147c465151f25cce806cc526b97f8a158e8c0548c2510567da26bf5f1",
+      "published_sha256": "96663b030ebe1a2932943786f54b53c417c1244a9616e63d7deacb1b57b8036f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122320-S31/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122320-S31/harness-2048.response.json",
+      "original_sha256": "311785584e8db0676013a7f8dfd37d73469b913bafb7008f01ff12d5d8c04f85",
+      "published_sha256": "ae54bd48d69bceedf02c676c7c87ff4b9517887c5f15a7673dbd5ce3310bfce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122320-S31/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-122320-S31/server.stdout.log",
+      "original_sha256": "afea85491c9c463fae89749fc5c4dac240a1e50774b64c4b8b1132979a67dbe8",
+      "published_sha256": "eebf3aa3c1aae4e44b36d7d5db529ccf5cf932b14e50337f9b8ed9eca7c11aa0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122320-S31/startup.json",
+      "original_sha256": "223ee969221d44f9feead60456a3c945a64a11f5f8329b948a03986ad0d60310",
+      "published_sha256": "bb4fd4e5a2e29e364d392f8df698a487caf58dcc7733042d327f9c9325176c75",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/case.json",
+      "original_sha256": "2636140a98f3edc2dfe118b9d12ec6484501f7c87c6b17a36878152addb6cd91",
+      "published_sha256": "32fd96a59ec940cc1834bfe3c235a5c11740de4bd866eab59058cfedb0d4efa2",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/config.json",
+      "original_sha256": "d07fcd7436424bfdfd33c7d0f31928a53c771b1c6f46aee4903d8f01ff789c5f",
+      "published_sha256": "592282ae7bb224ae4396643f499185885418b5d475d850ce15a983a5dcf471f7",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/engine.log",
+      "original_sha256": "daf0638470b73a3cec5e248fe5a425dc3fbf91f79552e1ca4eba9df083a360bf",
+      "published_sha256": "3d72ee76ba83f7af819abfe3e4a9ae730e68af740f7655666beb59d1dfdd53f4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/harness-2048.response.json",
+      "original_sha256": "90e8961ac576c0583ec5a60013311f9d2b77db0ab31c544c67483b09c8422ce9",
+      "published_sha256": "104c843561d52dd04895cfb450d2b3a3b4368a2fdd355a37ecb961416c59aa49",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/harness-complete.request.json",
+      "original_sha256": "07aabd8633f9a66c36fa311723363c6d8ab2a5ac763dcf863d683d37d7ffeee6",
+      "published_sha256": "baf7f681bedfb06a5ee7c119e0faba8d6915975b107aceaf5b98e2488fa7cb41",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/harness-complete.response.json",
+      "original_sha256": "fd333c4c1f2d4f3e50975a036a2a5fd7913be6d393d7dd12fa3a468c0a7540f6",
+      "published_sha256": "f3df223b1b2a78ba96704d44b4ac0ca634525d2aaeaa928dd551d9e2fa96a122",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/server.stdout.log",
+      "original_sha256": "5006b97cf8e71b15f6c4ead89d4d8541773816429b342f3aeb8cdd0f103a96dc",
+      "published_sha256": "f2395d74f3716844362964bb11d21b52f3994559e531b0a9ef167cda25694336",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122501-S01/startup.json",
+      "original_sha256": "133e85f703375c73877605d7cba2994a8667cd59a1250554151d3b2e2237042a",
+      "published_sha256": "83694320a32add9fd7c3061a309566b6c59c1db8968d1424667ffea83e8a311f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/case.json",
+      "original_sha256": "7f6d0415b315ad602379c7ba35e6edb4a4c7b1390e1f41243ad5fa9aa14dac8c",
+      "published_sha256": "d95efcd1f2239c380c6579b0dfb7b4d28d60349ccc60f718cd5a93f4128534a9",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/config.json",
+      "original_sha256": "8256e6b68cdb10c6dda18ddde3fb14b3088b0ab61f38a05cbfb9ce9ab81397e2",
+      "published_sha256": "493c0c88e2dc11d68c0379786bc6e0637deb3d7cfd0a9693350616d91649e7cc",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/engine.log",
+      "original_sha256": "cf2f8767bb67c17cd6751ed758e24c4754a8ce3594738c7c888f6ee9d2f2cf71",
+      "published_sha256": "c4f5926d7bdf5c0323352529fb674e337fec03d6e5247758f3413660fba4dc12",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/harness-2048.response.json",
+      "original_sha256": "66c65ccdb4a89b6f47356fa6edb3026c49ebaa651ef97b7d0919eefd313b7a39",
+      "published_sha256": "daa185551be778abc03198fba0aea012f921c406e043b66ce7bae3200bc48592",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/harness-complete.request.json",
+      "original_sha256": "07aabd8633f9a66c36fa311723363c6d8ab2a5ac763dcf863d683d37d7ffeee6",
+      "published_sha256": "baf7f681bedfb06a5ee7c119e0faba8d6915975b107aceaf5b98e2488fa7cb41",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/harness-complete.response.json",
+      "original_sha256": "ca4c95b8b867517b4c73a90b13b17b18414060d7d6942239898c232804124845",
+      "published_sha256": "6d973518f930cd4db7f83dd38e12f5a4501633a4a04eeb7986b70c2f074e32df",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/server.stdout.log",
+      "original_sha256": "6380e2425e3a6b12bbb8cd553368f42e3044cd7c89c63a7b85275c0c9c43afa0",
+      "published_sha256": "8eb034f8af98f05f607ab37b77c2feec0f3140ab50873c6c0d2c3f9cce48e2c5",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-122827-S30/startup.json",
+      "original_sha256": "a3c74e13c521e4574db065ac44b8603aaf4a6cbc641762be6d8fed2337a00742",
+      "published_sha256": "301a6d3e925571d7f162bb9b7b958b57b4e7c22c3bee69954f94d4e895fb6626",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/case.json",
+      "original_sha256": "91ab43b7c7422a7c4e6e6130b2ceeed23ae9fe1e29d9b2e58ce2250725968407",
+      "published_sha256": "115a17bce91b2032db4ae4cfaf231217520a4803df83af724630b39ce22a89b8",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/config.json",
+      "original_sha256": "bb48006f0738d13ecb209ab6b5cc9410c3456be839d34c57452d2d23faefdb1b",
+      "published_sha256": "f17d7c3fd7310cbcfa6c5640ae7240294ea62b04c025f3e7c0022db84598555a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/engine.log",
+      "original_sha256": "eb66d6192df781882876bc71f76fbc8bf9c6f0e2efd0e65c0054464a79fbe3a5",
+      "published_sha256": "45ddbec98b80546bcdcc3af20c1836fecc7058ca501fdbbdeb688e41db9b0757",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/harness-2048.response.json",
+      "original_sha256": "39890167da191504dff1382928791cbd259233ebdaee741b0c6cc4fd2b88adf7",
+      "published_sha256": "a93d7e53a8f472458af502c853733189fd071ae42207f1dde3d54941071f2229",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/harness-complete.request.json",
+      "original_sha256": "07aabd8633f9a66c36fa311723363c6d8ab2a5ac763dcf863d683d37d7ffeee6",
+      "published_sha256": "baf7f681bedfb06a5ee7c119e0faba8d6915975b107aceaf5b98e2488fa7cb41",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/harness-complete.response.json",
+      "original_sha256": "0d3d6e8dac66e83cae882b023d6f618a98eaea7f3311417280247c4f3fd7496d",
+      "published_sha256": "cefe3f359521218e524c05c02f18bcadc600f2278700ae713e5e3f85f7c976cc",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/server.stdout.log",
+      "original_sha256": "b761cfce0a5c906da830d5a457523b5593bd3f61803ef4d5ddddbbea05a16864",
+      "published_sha256": "6e6590ba8e590ef83cd7183789b3fa50f0709ab2772a150b91e9b7e6b30b2fe9",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123051-S31/startup.json",
+      "original_sha256": "a89e88a69dea4ce368369adb5a43dc68679492f4d50bb71e7f01a07cca55ce40",
+      "published_sha256": "8c88493160c9d79a7ea447e2599b26f95b880193f87475bc8351f86f2b6f3c39",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123304-S01/case.json",
+      "original_sha256": "6b92b10b7997b86835bec05661622c303795c612d0024580f84672b47b9eba46",
+      "published_sha256": "da51ca5fe5dcc74babba3b9c2f9aebc7321c29c3f131d3573903db50afe3cf0e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123304-S01/config.json",
+      "original_sha256": "377094941406419fc80e2ac8dce7759b1cbe78cc193533a575ea72e4b6be90cd",
+      "published_sha256": "50f9f8cb6dcc748dafd6ffcfc76ba73420703f57797d4acf41db49c4e09c7211",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123304-S01/engine.log",
+      "original_sha256": "f76e2d137fe9e45d0d42500563a7af6b8f88863aa581af2a193fd28f0b138ced",
+      "published_sha256": "72b6d1e06ebbb067bf00d676f0b70543752172f4d70df850b634b3e7f38408e4",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123304-S01/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123304-S01/harness-2048.response.json",
+      "original_sha256": "1759d64f10f05181d4730dddca945e76c29ec03c05dffd4bdedb2408172362d8",
+      "published_sha256": "795d91f2e8984e2c7f7651233785ba0bfbef87372bdb1fd901d826a0797c15c7",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123304-S01/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-123304-S01/server.stdout.log",
+      "original_sha256": "d9da61ea38f7135b6dbaaf503b2fd79ba3ea389f0449dd58b5b859494bf84cde",
+      "published_sha256": "070d0dc960a2a60fd5629dfacea6d3394263576c2a93403d18279c4441222f42",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123304-S01/startup.json",
+      "original_sha256": "a2167aac2af195297353ed091a7da50fc531b456224393b2ac6a30cf93b05fe8",
+      "published_sha256": "d31291758e424fba1949d54fd237c1e6fcff35924fb6fb67b5009e905cc9a5c0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123426-S30/case.json",
+      "original_sha256": "48853d88a12d454fe548cacccb834af0cac71824efe3afad8497374da4f11dbe",
+      "published_sha256": "574b9b8b839df3c432a842f2d142e108e000fbc0636b736710d0d0b0de18d93c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123426-S30/config.json",
+      "original_sha256": "f4547655f4980a7a4e7b5b28652365a62ca198ef786ded4f76cfecf264d30214",
+      "published_sha256": "b0c6aebff9c55511dd814234b8952eaef6a2597b44f878a8495ea6e330155d6e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123426-S30/engine.log",
+      "original_sha256": "d4678b3c24a84e9de174e470e3006bf407735b643d427e8e66d94c0f3c60c06e",
+      "published_sha256": "cf4be1e87ff0724e2795fa533b2a55bcfe711576b8ad69bdd3ee1f342c24944a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123426-S30/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123426-S30/harness-2048.response.json",
+      "original_sha256": "ec6301d89eab78513378718e52aeaa27d473bdb06358d37c0a144e14b11b6ab8",
+      "published_sha256": "e59865543925490f830a844f6ab982006a59a53221ebc262fa9868f3c00266b6",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123426-S30/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-123426-S30/server.stdout.log",
+      "original_sha256": "9a53b8ba2b1a05c85da9c267e47f4fad384a76b4ad042e0febf4082f24a4e177",
+      "published_sha256": "29700b2332fbf911a565ae29db187a8afd5bb09f2a9edd1612fda01275bb8ccb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123426-S30/startup.json",
+      "original_sha256": "ce4fc3042b071cb6071da31d01be3664c9fc781b1af48e39e584d331f54f6b2c",
+      "published_sha256": "b3e7625cef2d88060cf69530fb3c8a1d7e234bae65db91452c6ccf79b9447a15",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123543-S31/case.json",
+      "original_sha256": "eea5038c8067dc3f0c76a9c5a99884a4a36a891d94243f4f3b0bd90f23546381",
+      "published_sha256": "efef907388c21c79d008a58d54ba3d10dd975a157c26e003af57ae70cf69f67a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123543-S31/config.json",
+      "original_sha256": "258a84493e2491717990123bfe744dd1ae105af4bc7f4c94dcd85d14c04e6b59",
+      "published_sha256": "8a17cd95bcbd1f8d7dccdc99daa4f258c876ddd2d1afa8508b7036a82c31bca5",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123543-S31/engine.log",
+      "original_sha256": "01889a25946b5fadaff9ed6fc3276321b0a0c37461b37395288b0485aa76c2b1",
+      "published_sha256": "aeddb871a4a07498a6167624375d313aa5c0d99624f71445787b7c37ed2d9c7a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123543-S31/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123543-S31/harness-2048.response.json",
+      "original_sha256": "42df1c88e0e4dcbe6b0a45312ff9751466506a36956cc7fc857fc334bdab9b0b",
+      "published_sha256": "8c8ff972b443d65b93cba49388268a7e9c504fd388667cb07dc28a037d6bf590",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123543-S31/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-123543-S31/server.stdout.log",
+      "original_sha256": "4f04174ce745ddbd468138971b4fcfc8452631957ffe299e6850da0bea19d080",
+      "published_sha256": "d451cfb3795d894bb119529748d208fc23a595ca38257c21c6e5c3b3aa15578a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123543-S31/startup.json",
+      "original_sha256": "6b93e1d783b220ea2f84704f38f26c7612e60a687b4e7d6377852c5ca82ed183",
+      "published_sha256": "08d39e8e6bec3bd160bb5b8fe63b26feecedd903ad8bee1f998c612642aca607",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123656-S24/case.json",
+      "original_sha256": "57f73fb48f99a702cdcbe65c2810bc600a4342fd137835f710fbe1e4014c0cea",
+      "published_sha256": "e5d35f4e85823203e3877994aefc2a44ee75d37dede26cc11d72b890306a26c3",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123656-S24/config.json",
+      "original_sha256": "291d1057cf271a756cb96db148236011d26856227b479c4aca5c40aeaae21600",
+      "published_sha256": "1f54e62546a5279c1ed295e49ec82a523042e331ad128ebf72e709809920c129",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123656-S24/engine.log",
+      "original_sha256": "2aa7f2808cb81324e1b0248b63f275fdfc91bb0087ee6f7274ef3171d2b5231f",
+      "published_sha256": "e19bed847c661463f44f698b508b1b25b2a349310025f7fbf0e9730c20d8cec0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123656-S24/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123656-S24/harness-2048.response.json",
+      "original_sha256": "c9efec8a0522fc1ade7b7b1f000271d2828975a7ebb9ed3672e27b098f8b4f61",
+      "published_sha256": "4ff5d8c6a3d768a3491000954426244a2bfac9506677b6b1bb35de2ffb4c81fe",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123656-S24/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-123656-S24/server.stdout.log",
+      "original_sha256": "9550ee9661b13ec0c14d2e5d3362159b25a83a66589af6b7d097161acdf82da7",
+      "published_sha256": "1b97b31dece2db1da74260154c42937dbde28a5bf23acc9945d7357616f2d486",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123656-S24/startup.json",
+      "original_sha256": "3f93e6e7d3415bdea492afb86413592b0f24f216885330098161bede814a48bf",
+      "published_sha256": "0402d33b1f16de8f11e6a48361e371211ca3b0d00a616280fe3e4d2c9fe00348",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123812-S24/case.json",
+      "original_sha256": "57f73fb48f99a702cdcbe65c2810bc600a4342fd137835f710fbe1e4014c0cea",
+      "published_sha256": "e5d35f4e85823203e3877994aefc2a44ee75d37dede26cc11d72b890306a26c3",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123812-S24/config.json",
+      "original_sha256": "d62c6d30b3c7b3bbb4b5928869ccf1ce181535fb7c05888197a7454f94d3c51a",
+      "published_sha256": "c00404c4264ac616084ff6d71383016ac0d9300d179fb7759f5239f824c1adeb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123812-S24/engine.log",
+      "original_sha256": "e78e4688516efb29c7493145362a9897c88b3e043b6501eb6222cab2b75da798",
+      "published_sha256": "3f0d9977925740e0c3584388de424d3a430d0919f483961cfcba86aa4238120e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123812-S24/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123812-S24/harness-2048.response.json",
+      "original_sha256": "d6df0f3b231f11915a6b1ed8e18100b2c99d646292b7e04d1d75a329575adc42",
+      "published_sha256": "a23ac070fa5bc58e279fa4ed4c5f3856a618b0800ff7b179960bca70609c860e",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123812-S24/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-123812-S24/server.stdout.log",
+      "original_sha256": "7fcee52f4fd825716bb991d0b384ece4461d7f9cc9d4bab988f590c53541ba3b",
+      "published_sha256": "6946ffb242109be185448c05f47442eb99af3824cb6f70e94f65ed238acd5f6f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123812-S24/startup.json",
+      "original_sha256": "e680da463f35fccca871dc8e42e78644e78980c872859f8577f832b0280571d6",
+      "published_sha256": "158eab00b86b31bd6c0622da5a8bc6e43f0f3977f002359a06975874f795568a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123927-S29/case.json",
+      "original_sha256": "c2ea522f81cd18ef3be2f144524aed4446517e1740254bc9a69325682d708c8c",
+      "published_sha256": "fbd3ae9eba070d34e4b7aabe6a6d10f78dd1fac27a276b4b1add6f542254944c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123927-S29/config.json",
+      "original_sha256": "5cf95c20e9d05271352fcd67f7f5ec0171793a5ccd6b8c799d17b9ed04eeb936",
+      "published_sha256": "e6760a844d92c36ea718c28781b5993222e956dbc70c3c735302f26d00833e50",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123927-S29/engine.log",
+      "original_sha256": "cd89543a14e21e31f5545cf4b75c854bb2dac058edbefcf26df20a7fe103b6a7",
+      "published_sha256": "eeab9b0b3122eb970591d45dec8e469f25f2e3d0dc3f0faefde4a3dcbf297791",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123927-S29/harness-2048.request.json",
+      "original_sha256": "60ae667ee66ffeb12cbbdbd7522445bcc6f69b87d5cf0112a847594e5b0ab28c",
+      "published_sha256": "e2847b84356c47cac4415e8c383a95f851f09fc6ad44ce2bae8e07c6ebd10ce0",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123927-S29/harness-2048.response.json",
+      "original_sha256": "dab3052de1ce9a55b7088bbcf2eda931df1c42298badfab69762c20e5dbddbf8",
+      "published_sha256": "42099c8f2493c4657c0438cf3a11064ab5513c512c623b9d0bd7e2e3c59ed45f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123927-S29/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-123927-S29/server.stdout.log",
+      "original_sha256": "6e724dc005726d40cb01d2c40c0514eb697ef3e5ce7c07c9c671e2f98f1913cb",
+      "published_sha256": "30505b3cf8870400f36bff7242fd70f7a3ff7a68aac4a9c1ff08306f4e5e498b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-123927-S29/startup.json",
+      "original_sha256": "03359a82e0a50227f47ae6a4d78033c3dc24002e48de06e8c52017d7d8682d7d",
+      "published_sha256": "a008fdc08973ea515c7457ff6eb22ece4f95aa0118e3a0608a876a96f27a2e2f",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/case.json",
+      "original_sha256": "22de35a32fb701eb1756ab1a40d78ba912979c51212bf6513f55b4f85749cfe3",
+      "published_sha256": "0f926d722673535662f8c589872d9ec403d696f5de094ef9af4c0e9b028bb65b",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/config.json",
+      "original_sha256": "40a434869a46d71e76a32b17949182de85a6f5378428b74a523d2b29cd1f0123",
+      "published_sha256": "ef5d31b40d9ed7084bd4319c768485df2eaacdee5b104f7811254e86c63f6a22",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/direct-complete.request.json",
+      "original_sha256": "eae315da13b44111416845135b913ab804e50f923b880b1151e76948082074dd",
+      "published_sha256": "f6de730a88b8911ce9ce29e693b8f3a394550450ddf7c02c5633009686912b01",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/direct-complete.response.json",
+      "original_sha256": "6edb895cc2e5080161471fd88fea103cb5e74e1969ba17fed9f5f6ad243f1b8c",
+      "published_sha256": "72f17db15b983c310d409c8f97ecef3dddf032c77b67b1916c74463f8172c962",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/direct-no-thinking-complete.request.json",
+      "original_sha256": "8ae6025a6efe025beb3cc2825dba0a65f2f07c8977c4b9c86dbe60e7a2cd8733",
+      "published_sha256": "2c4e1566f2f5edca7824d39c00193280af00618583e926f46cac4d1097f5d8e5",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/direct-no-thinking-complete.response.json",
+      "original_sha256": "f51014f39e07ccfa5e00bd18f5854781cb25f48163fafb682a11225745436d04",
+      "published_sha256": "d5d120061882dde8d319fab28fd916c99b97ceedcfcde6ddaa326aa28b098841",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/engine.log",
+      "original_sha256": "dc820c8d1581ad1a0d7b7a3ab1965012b6013a32d4fd92772d8505c6746d9a1a",
+      "published_sha256": "3dd13f85ef1d82e7ee62868475020dc53637c55e88fba42eb08c67432e97b31d",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/server.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changed_for_publication": false
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/server.stdout.log",
+      "original_sha256": "ec6d37a807a317b0e8f74d54436c13c59102f671a509de79fe15448028c979c3",
+      "published_sha256": "eb032d2d2a468ffd16b3c9d04e87048e7b7d189fe8514dafdb620ca857cfe66c",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/runs/20260928-124106-S31/startup.json",
+      "original_sha256": "df9368f392096c1e186797da10e3ba9a962956ef69c9e4c8d0405cdd23e9e056",
+      "published_sha256": "92a3ebd61a8b0307ab96f47cd87540c44fc7227937b791d4cc77a05711447dcb",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/settings-recorded.json",
+      "original_sha256": "0531d5e2928a5e48a3d1e2b312086d2bea1e5eb0ada85b7368ffe5fc2502136b",
+      "published_sha256": "1742fe1ca2d1a8e6634159e991e313a8f578ea7fbc817832786a2a252551acae",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/metadata.json",
+      "original_sha256": "a24bcd917b548e6f60ea0c5d103ed9dfd6f385bf818b1aac8705531246d7c2fe",
+      "published_sha256": "76f72b084e0f366c89aed33d478b27c6118f7926d3595672aa22195197742828",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/selection.json",
+      "original_sha256": "2b4f9ea04403587723c6aed6f218ac6818593336ec97af3186fc8d03ff024bee",
+      "published_sha256": "fe635fc9f874fdeed7fb80ab2fd8b43427122b183646bf074d8e9adaf2089d96",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/expert-profile-expanded.json",
+      "original_sha256": "099a222cddad1517f2040c6f280282c3aca04448624e46ec3621317a3eae3538",
+      "published_sha256": "7921661530b09a03c84ecb938f49cd12dd0886146aa02237bff643d2e4e34eb9",
+      "changed_for_publication": true
+    },
+    {
+      "file": "results/strata/code-checks.json",
+      "original_sha256": "ca45c35e32fa5332dcfb3ec8f570680943ddd22a2309e5367778a6c579efd054",
+      "published_sha256": "d8e6594f0ace63776e646a0425a47812cae9670b6e3f3f1e9e40e1ff17b2cda5",
+      "changed_for_publication": true
+    },
+    {
+      "file": "artifacts/generated/strata/No33-S01-1.html",
+      "original_sha256": "d9c77cffca5d569ebb83aeadb583d97c130f2fb31e5db5ed32391d16c444569c",
+      "published_sha256": "88602ff29e8199b9bd11e9d20bfa9405d2774a04388fe6041d1127910cdc586a",
+      "changed_for_publication": true
+    },
+    {
+      "file": "artifacts/generated/strata/No35-S30-1.html",
+      "original_sha256": "aec75dae9446a74ec3eebf68788a5dd7b05d474ace703f8270b8263ee43e1bee",
+      "published_sha256": "af3ac0d536a494202516b7b64af150c5b8eacec74b3a79f97891f88b6c9aed88",
+      "changed_for_publication": true
+    },
+    {
+      "file": "artifacts/generated/strata/No37-S31-1.html",
+      "original_sha256": "3c09065cdeb872a53c303390b24ffd251946dfb09f9efbaa3503b54c33a2cfe2",
+      "published_sha256": "e58b18ccfc7ded407ff27cdf389e17f5f0d766e6d32ce4e3f1e1404561ffce07",
+      "changed_for_publication": true
+    },
+    {
+      "file": "artifacts/generated/strata/No44-S31-0.html",
+      "original_sha256": "3c4958701f7da095dc7b91bb308a85725aacd6dbaa0aba363645e48fe0e9244b",
+      "published_sha256": "9ddb0d401694fc9c51bc86feb9d23482bd24ab2cf6e12608a47e322a184d8a44",
+      "changed_for_publication": true
+    },
+    {
+      "file": "artifacts/generated/strata/No45-S31-0.html",
+      "original_sha256": "9439fd5353d991ca269de9c9e0deb8a6297e3549784fcb0080c87e820f4ec2a1",
+      "published_sha256": "b72a00ee0f89bc8d19d9badbfbf4d2a204bd2aaef0f0c68e5ff4f5e882d1d856",
+      "changed_for_publication": true
+    },
+    {
+      "file": "docs/unsloth-build-info.json",
+      "original_sha256": "3757a7dcbb2d5a4870fc61d83f1b81d33e6319caa364d3211248ba2acef51e4d",
+      "published_sha256": "bd3709e3162067c21b7765ce79e63a94d26ba569d94194b63a7afc0bc0eb0d0d",
+      "changed_for_publication": true
+    }
+  ]
+}

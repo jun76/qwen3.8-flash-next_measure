@@ -1,0 +1,39 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "reasoning_content": "The user wants a block-breaking game (Breakout/Arkanoid). Let me build a rich, single-file HTML game with canvas, with a distinctive design that really feels like the subject.\n\nKey design instincts:\n- For a game, the game itself should be the opening — no generic intro, drop straight into a polished arcade cabinet feel.\n- Pair a characterful display face with a readable body face.\n- Ambient background, motion, micro-interactions, strong contrast in type sizes/weights.\n- Palette: an arcade/CRT vibe, but I want to steer clear of the tired near-black + single neon accent look — for Breakout a richer multi-hue palette actually reads better, since the bricks themselves are colorful. Let's do a deep midnight-blue/plum cabinet with warm amber/marigold accents plus cyan and magenta for the game elements. Several accents, not one neon.\n\nLet me think about typography: display face — something arcade-y and geometric. Google Fonts options: \"Bungee\" (very arcade, chunky), \"Monoton\", \"Rubik Mono One\", \"Chakra Petch\", \"Space Grotesk\". Body: \"IBM Plex Sans\" or \"DM Sans\" or \"Outfit\". Let's pair \"Bungee\" (display, arcade signage) with \"Space Grotesk\" (body/UI) — good contrast. Or \"Rubik Mono One\". Bungee is fun and arcade-signage-like. Body: \"IBM Plex Sans\" readable. Also a mono for scores: \"IBM Plex Mono\" or \"Space Mono\". Let's use Bungee + IBM Plex Sans + IBM Plex Mono for HUD numbers.\n\nGame features (rich build):\n- Canvas Breakout with:\n  - Paddle with mouse/touch/keyboard control\n  - Ball with speed increase, paddle angle control based on hit position\n  - Bricks with multiple colors, some multi-hit (steel bricks), points\n  - Power-ups falling: expand paddle, multiball, slow ball, laser? extra life, sticky\n  - Particles on brick break, screen shake, ball trails\n  - Combo multiplier\n  - Levels (multiple layouts), level intro banner\n  - Score, lives, level HUD\n  - Pause, restart\n  - Sound via WebAudio (blips) with mute toggle\n  - CRT scanline overlay subtle\n  - Start screen overlay with animated marquee\n  - Level complete / game over overlays\n  - High score in localStorage\n  - Side panel: controls legend, power-up legend, stats\n- Layout: an arcade cabinet frame. Left: game screen. Right: HUD panel with score, level, lives, powerups collected, legend. Header marquee with title in Bungee, blinking. Ambient background: layered radial gradients + subtle animated grid/starfield + moving light.\n\nLet me design the layout: \n- Top: a marquee bar (arcade cabinet header) with title \"BLOCKBUSTER\" / \"BLOCK BREAK\" in Bungee, plus coin slot / insert coin blinking, high score.\n- Main: grid with game canvas (center-left, big) and a right rail with score readouts (big numbers, strong type contrast), lives as icons, power-up legend, controls, and a \"log\" of events maybe.\n- Bottom: footer strip with tips.\n\nIt's a game, so the game screen itself should be the star, with a marquee strip above it — that reads as the cabinet.\n\nLet me write the code carefully.\n\nCanvas size: logical 900x640? Let's do responsive: canvas internal resolution fixed at e.g. 880x620 with CSS scaling, using devicePixelRatio. Simpler: fixed logical size W=880, H=620, scale via CSS width 100%, and handle pointer coordinates by scaling.\n\nGame implementation details:\n\nState machine: 'attract' (start screen), 'playing', 'paused', 'levelclear', 'gameover', 'win'.\n\nBall: x,y,vx,vy,r, speed. Paddle: x, w, h. Bricks: grid with rows/cols, each brick {x,y,w,h,color,hits,points,type}.\n\nLevels: define patterns as string arrays. Characters: '.' empty, '1'-'5' colors, 'S' steel (unbreakable, indestructible but bounces), '?' random powerup brick.\n\nPower-ups: types with colors and letters:\n- E: Expand paddle\n- M: Multiball (x3)\n- S: Slow ball\n- L: Laser (shoot with space for a duration)\n- +: Extra life\n- C: Catch (sticky)\n- B: Ball goes through bricks? maybe \"Pierce\"\n- Shield: bottom barrier one-time save\n\n"
+      }
+    }
+  ],
+  "created": 1790552637,
+  "model": "qwen3.8-flash-next-iq3_s-llamacpp-mtp",
+  "system_fingerprint": "b11160-a3c12db9d",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 1024,
+    "prompt_tokens": 58,
+    "total_tokens": 1082,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-eJ5jM8aAyguHdViCVoZM0TjzXuaxbzJ5",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 58,
+    "prompt_ms": 1105.586,
+    "prompt_per_token_ms": 19.061827586206896,
+    "prompt_per_second": 52.46086690678066,
+    "predicted_n": 1024,
+    "predicted_ms": 41305.486,
+    "predicted_per_token_ms": 40.376819159335284,
+    "predicted_per_second": 24.766685955468486,
+    "draft_n": 774,
+    "draft_n_accepted": 530
+  }
+}

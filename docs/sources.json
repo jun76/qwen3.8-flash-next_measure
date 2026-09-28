@@ -1,0 +1,71 @@
+{
+  "measurement_date": "2026-09-28",
+  "timezone": "Asia/Tokyo",
+  "hardware": {
+    "os": "Windows native",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "gpu_memory_gb": 32,
+    "cpu": "Intel Core i7-14700",
+    "ram_gb": 128,
+    "ram": "2 x 64GB DDR5-5600",
+    "model_storage": "M.2 SSD"
+  },
+  "main_model": {
+    "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+    "quant": "GSQ-RCO IQ3_S",
+    "original_download_revision": null,
+    "reproducible_revision_verified_on_publication": "2a55d75962e22f7a4a1d9963ab6eae3678537831",
+    "verification": "Both local full-file SHA-256 values match the Hub LFS SHA-256 values at this revision."
+  },
+  "llama_mtp": {
+    "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
+    "reproducible_revision": "38bb39ee97821de2c9009abb7e93950eec396e66",
+    "verification": "Both Q4_K_M and Q8_0 full-file SHA-256 values match the Hub LFS metadata at this revision."
+  },
+  "strata": {
+    "url": "https://github.com/Niko1221/Strata",
+    "commit": "6c4c8c1dfafc16fa0ea7fc80c12c79f93b9f7eee",
+    "patch": "patches/strata-local.patch",
+    "ggml_source": "https://github.com/ggml-org/llama.cpp",
+    "ggml_commit": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "build": {
+      "msvc": "19.44",
+      "cuda_toolkit": "13.1",
+      "cuda_arch": 120,
+      "build_type": "Release",
+      "generator": "Ninja"
+    },
+    "mtp": "Qwen BF16 MTP tensors -> q2_0 GGUF -> Strata runtime; original Hub revision not recorded"
+  },
+  "llama_generel": {
+    "url": "https://github.com/GenerelSchwerz/llama.cpp",
+    "commit": "50df2c7cf761a4647bd2555cb4e0f0fabdaeef11",
+    "source_changes": false,
+    "build": {
+      "msvc": "19.44",
+      "cuda_toolkit": "13.1",
+      "cuda_arch": 120,
+      "cpu": "AVX2",
+      "build_type": "Release",
+      "generator": "Ninja"
+    }
+  },
+  "llama_unsloth": {
+    "url": "https://github.com/unslothai/llama.cpp",
+    "tag": "b11160-mix-a6922cc",
+    "commit": "a3c12db9dfc9a5bdf93df199ec370e9faf117c69",
+    "package": "app-b11160-mix-a6922cc-windows-x64-cuda13-newer.zip",
+    "zip_sha256": "4a3151489c1f2d3326118e64ffc71f6099f52e148b7a520b8bc980db56a39246",
+    "build_info": "docs/unsloth-build-info.json",
+    "runtime_source_tag": "ggml-org/llama.cpp b11146",
+    "runtime_package": "cudart-llama-bin-win-cuda-13.4-x64.zip",
+    "runtime_zip_sha256": "738f8c251ac22b70c3ae6f83a10cf222725df0395246a2cf58f32bdb85fbe668"
+  },
+  "harness": {
+    "url": "https://github.com/deepseek-ai/deepseek-harness",
+    "package": "@deepseek-ai/dsh",
+    "version": "0.1.5-rc.1",
+    "tool_definitions": 27,
+    "required_for_replay": false
+  }
+}

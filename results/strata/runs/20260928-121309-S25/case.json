@@ -1,0 +1,7 @@
+{
+  "id": "S25",
+  "description": "S01からPLE表の読み方をmmapへ",
+  "overrides": {
+    "--ple-io": "mmap"
+  }
+}

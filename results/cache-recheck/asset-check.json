@@ -1,0 +1,90 @@
+{
+  "checked_utc": "2026-09-28T06:45:08.554899+00:00",
+  "assets": [
+    {
+      "path": "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+      "bytes": 54817524224,
+      "sha256": "4c1eb2ceb4915e1192f4f386021897bde56a97f40a0bb78bb86465e0f7d2aca3"
+    },
+    {
+      "path": "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+      "bytes": 28800138432,
+      "sha256": "316b46f3a2dbd68c900f43136ab9449f9dcc3725dfd8c794847c204bc161e113"
+    },
+    {
+      "path": "vendor/strata/mtp/rt/dense.bin",
+      "bytes": 116099072,
+      "sha256": "c724dc0b0822ada5d2977bf5bde821605feabaa64ea2e0045b67ca656329070a"
+    },
+    {
+      "path": "vendor/strata/mtp/rt/experts.bin",
+      "bytes": 707788800,
+      "sha256": "09398406be61f1f54c93861f449e48b8df0bfccbc9ec9b2b7636775a6ea9244f"
+    },
+    {
+      "path": "vendor/strata/mtp/rt/draft_vocab.bin",
+      "bytes": 162100,
+      "sha256": "369151522226a5edaa5f12cfd1e2ae7db8f4fbdbd222f3dcf327dced9597fb25"
+    },
+    {
+      "path": "vendor/strata/engine/strata.exe",
+      "bytes": 11578880,
+      "sha256": "5b61b189a4e69c5a21486f726d52e8b8cd1fd9370cf7e5c55b71ea3c0bbf77e0"
+    },
+    {
+      "path": "vendor/llama-generel/build-sm120/bin/llama-server.exe",
+      "bytes": 10752,
+      "sha256": "48e674bd1b6f0ce2f13f0924873420397dd0779a8748f2493094400e41c4079e"
+    },
+    {
+      "path": "vendor/strata/data/expert-profile.bin",
+      "bytes": 130328,
+      "sha256": "2504ff83d9dcacc80e503dfe02b06d139a3170b914241b69eac728009f9a1300"
+    },
+    {
+      "path": "artifacts/strata/expert-profile-expanded.bin",
+      "bytes": 196632,
+      "sha256": "49535f57316381f92a2bca33ae9003b21f13c2a1f1d8071eb96fdf655144991a"
+    },
+    {
+      "path": "vendor/llama-generel/build-sm120/bin/ggml-base.dll",
+      "bytes": 685568,
+      "sha256": "dfcdfb3e3a279b085e1fc3f2d3b9ee688cadbbada6f7403ca83effdaab0af3fe"
+    },
+    {
+      "path": "vendor/llama-generel/build-sm120/bin/ggml-cpu.dll",
+      "bytes": 981504,
+      "sha256": "7696847f1782fb1e733a66fb4011b0e848ef75abd342f97d074a491d27c82181"
+    },
+    {
+      "path": "vendor/llama-generel/build-sm120/bin/ggml-cuda.dll",
+      "bytes": 83667968,
+      "sha256": "5d9ea7f56e1d61c26b090fe4bff8fe28fb375529cafe4f6daa6a1b649e2400d0"
+    },
+    {
+      "path": "vendor/llama-generel/build-sm120/bin/ggml.dll",
+      "bytes": 61952,
+      "sha256": "8b706acaa7925c489e1df7a0ba74ba5420894966ebf7bf214f5657d9e7b052ef"
+    },
+    {
+      "path": "vendor/llama-generel/build-sm120/bin/llama-common.dll",
+      "bytes": 8940544,
+      "sha256": "ddac5b8656586a2d23017e739df825c205eb6451da0f21416ac4b033adcab966"
+    },
+    {
+      "path": "vendor/llama-generel/build-sm120/bin/llama-server-impl.dll",
+      "bytes": 6412800,
+      "sha256": "238796103a3d64ba61733809fe0980efea80c9f313854ca020c4a334e6eefd87"
+    },
+    {
+      "path": "vendor/llama-generel/build-sm120/bin/llama.dll",
+      "bytes": 2885120,
+      "sha256": "9d14395a58e206c8b776bc2e4226875764c0cd4fde0e999003ff62dec3dd03ad"
+    },
+    {
+      "path": "vendor/llama-generel/build-sm120/bin/mtmd.dll",
+      "bytes": 2403328,
+      "sha256": "dacc746adc00b89e7242611d4f5be7b6ed790b17b7f2e548f804810b0737ed8b"
+    }
+  ]
+}

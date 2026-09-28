@@ -1,0 +1,8 @@
+{
+  "id": "S20",
+  "description": "S01からexpert配置表を拡張、auto cache、VRAM余裕2048MiB",
+  "overrides": {
+    "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+    "--vram-reserve-mib": 2048
+  }
+}

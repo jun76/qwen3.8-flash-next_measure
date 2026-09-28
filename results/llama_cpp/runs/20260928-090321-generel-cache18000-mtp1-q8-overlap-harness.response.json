@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ブロック崩しゲームを、単一のHTMLファイル（ブラウザで開くだけで遊べる）として作ります。\n\n",
+        "reasoning_content": "The user is asking me to make a block-breaking game (Breakout / Arkanoid). Let me create it as a single HTML file with canvas + JS. I'll write it to the workspace directory.\n\nSimple approach: a self-contained HTML file. Let me write a high-quality Breakout game:\n- Paddle controlled by mouse/keyboard\n- Ball physics\n- Blocks\n- Score, lives, levels\n\nI'll make it polished and then present the file.\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "function": {
+              "name": "write",
+              "arguments": "{\"file_path\":\"fixtures/workspace\\\\breakout.html\",\"content\":\"<!DOCTYPE html>\\n<html lang=\\\"ja\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>ブロック崩し - Breakout</title>\\n<style>\\n  * { margin: 0; padding: 0; box-sizing: border-box; }\\n  body {\\n    background: #0f0f1a;\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    justify-content: center;\\n    min-height: 100vh;\\n    font-family: 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;\\n    color: #eee;\\n    user-select: none;\\n  }\\n  h1 {\\n    font-size: 22px;\\n    letter-spacing: 4px;\\n    margin-bottom: 10px;\\n    color: #7ecbff;\\n    text-shadow: 0 0 12px rgba(126,203,255,.5);\\n  }\\n  #wrap { position: relative; }\\n  canvas {\\n    background: linear-gradient(#101024, #181830);\\n    border: 2px solid #2c3e66;\\n    border-radius: 8px;\\n    box-shadow: 0 0 30px rgba(80,120,255,.25);\\n    display: block;\\n  }\\n  #hud {\\n    display: flex;\\n    justify-content: space-between;\\n    width: 640px;\\n    margin: 10px 0 6px;\\n    font-size: 15px;\\n    color: #9fb4d8;\\n  }\\n  #hud b { color: #fff; }\\n  #overlay {\\n    position: absolute;\\n    inset: 0;\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    justify-content: center;\\n    background: rgba(10,10,20,.72);\\n    border-radius: 8px;\\n    text-align: center;\\n  }\\n  #overlay.hidden { display: none; }\\n  #overlay h2 { font-size: 30px; margin-bottom: 12px; }\\n  #overlay p { color: #aabbd6; margin-bottom: 18px; line-height: 1.7; }\\n  #overlay button {\\n    font-size: 16px;\\n    padding: 10px 28px;\\n    border: none;\\n    border-radius: 6px;\\n    background: #3b82f6;\\n    color: #fff;\\n    cursor: pointer;\\n    letter-spacing: 2px;\\n  }\\n  #overlay button:hover { background: #2f6fd0; }\\n  .tip { margin-top: 10px; font-size: 12px; color: #66748f; }\\n</style>\\n</head>\\n<body>\\n<h1>BLOCK BREAKER</h1>\\n<div id=\\\"hud\\\">\\n  <span>SCORE <b id=\\\"score\\\">0</b></span>\\n  <span>LEVEL <b id=\\\"level\\\">1</b></span>\\n  <span>HIGH <b id=\\\"high\\\">0</b></span>\\n  <span>LIVES <b id=\\\"lives\\\">● ● ●</b></span>\\n</div>\\n<div id=\\\"wrap\\\">\\n  <canvas id=\\\"game\\\" width=\\\"640\\\" height=\\\"480\\\"></canvas>\\n  <div id=\\\"overlay"
+            },
+            "id": "u3Y4kniph5RpcteqHwUYgZ3eTHfjjTMX"
+          }
+        ]
+      }
+    }
+  ],
+  "created": 1790553850,
+  "model": "qwen3.8-flash-next-iq3_s-llamacpp-mtp",
+  "system_fingerprint": "b1-50df2c7",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 1024,
+    "prompt_tokens": 8930,
+    "total_tokens": 9954,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-LYSQQcQPx3KHcYHBKXLzmguhjAE3cXD7",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 8930,
+    "prompt_ms": 31519.573,
+    "prompt_per_token_ms": 3.5296274356103026,
+    "prompt_per_second": 283.3160208103073,
+    "predicted_n": 1024,
+    "predicted_ms": 18243.558,
+    "predicted_per_token_ms": 17.833390029325514,
+    "predicted_per_second": 56.07458808199584,
+    "draft_n": 521,
+    "draft_n_accepted": 489
+  }
+}

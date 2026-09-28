@@ -1,0 +1,14 @@
+{
+  "id": "S30",
+  "description": "S01からcacheの適応的入れ替えを毎ラウンドへ",
+  "overrides": {
+    "--adapt-every": 1
+  },
+  "measurements": [
+    {
+      "name": "harness-2048",
+      "input": "harness",
+      "tokens": 2048
+    }
+  ]
+}

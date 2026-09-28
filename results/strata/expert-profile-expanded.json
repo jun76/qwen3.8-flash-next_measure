@@ -1,0 +1,9 @@
+{
+  "source": "vendor/strata/data/expert-profile.bin",
+  "source_sha256": "2504ff83d9dcacc80e503dfe02b06d139a3170b914241b69eac728009f9a1300",
+  "original_pairs": 8000,
+  "expanded_pairs": 24576,
+  "target": "artifacts/strata/expert-profile-expanded.bin",
+  "target_sha256": "49535f57316381f92a2bca33ae9003b21f13c2a1f1d8071eb96fdf655144991a",
+  "method": "Preserve original ranked pairs. Append missing expert IDs in layer round-robin order. Added ranks are not measured routing frequencies. The existing adaptive cache selects frequently used experts during inference."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "S21",
+  "description": "S20からコンテキストを128Kへ",
+  "overrides": {
+    "--max-context": 131072,
+    "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+    "--vram-reserve-mib": 2048
+  }
+}

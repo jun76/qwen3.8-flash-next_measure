@@ -1,0 +1,76 @@
+{
+  "engine": "strata",
+  "config_id": "S31",
+  "historical_run": null,
+  "name": "direct-fixed-fresh",
+  "request_in_process": 1,
+  "max_tokens": 2048,
+  "thinking": true,
+  "input_kind": "direct",
+  "temperature": 0,
+  "usage": {
+    "prompt_tokens": 58,
+    "completion_tokens": 2048,
+    "total_tokens": 2106
+  },
+  "wall_seconds": 23.01484130002791,
+  "finish_reason": "length",
+  "request_sha256": "9dfd8ce5bd883781859b437c510206eb615d0141a4db8db44fc4c555051ef3ee",
+  "files": "results/cache-recheck/22-S31-direct-fixed-r3/01-direct-fixed-fresh",
+  "gpu_after": [
+    {
+      "used_mib": 31384,
+      "free_mib": 804,
+      "utilization_percent": 94,
+      "temperature_c": 53
+    }
+  ],
+  "prompt_tokens": 58,
+  "reused_tokens": 0,
+  "output_tokens": 2048,
+  "prefill_seconds": 0.775,
+  "generation_seconds": 22.234,
+  "tokens_per_second": 92.11118107403077,
+  "engine_reported_tps": 92.1,
+  "draft_accepted": 1126,
+  "draft_offered": 1798,
+  "effective_sampling": "greedy",
+  "engine_timing_line": "strata serve: prompt 58 tokens = 0 reused + 58 read in 775 ms (74.8 tok/s), 2048 generated in 22234 ms (92.1 tok/s), drafts accepted 1126 of 1798",
+  "case_id": "22-S31-direct-fixed-r3",
+  "phase": "fixed",
+  "repetition": 3,
+  "cache_start": "fresh_process",
+  "started_utc": "2026-09-28T07:57:05.304652+00:00",
+  "finished_utc": "2026-09-28T07:57:28.422240+00:00",
+  "startup": {
+    "seconds": 64.71325199998682,
+    "health": {
+      "status": "ok",
+      "max_context": 262144,
+      "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "images": false,
+      "api_key": false
+    },
+    "gpu": [
+      {
+        "used_mib": 31408,
+        "free_mib": 780,
+        "utilization_percent": 3,
+        "temperature_c": 43
+      }
+    ],
+    "gpu_before_start": [
+      {
+        "used_mib": 2874,
+        "free_mib": 29314,
+        "utilization_percent": 1,
+        "temperature_c": 49
+      }
+    ],
+    "pid": 51932,
+    "cache_slots": 9599.0,
+    "cache_gib": 18.21,
+    "pool_workers": 19.0
+  },
+  "acceptance": 0.6262513904338154
+}

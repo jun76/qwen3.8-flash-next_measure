@@ -1,0 +1,2124 @@
+{
+  "S01": {
+    "case": {
+      "id": "S01",
+      "description": "現在の設定：spec4、min-p0.5、context256K、cache auto"
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-114115-S01/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 33.15019780001603,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27672,
+        "free_mib": 4516,
+        "gpu_percent": 2,
+        "temperature_c": 51
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5252.0
+    }
+  },
+  "S02": {
+    "case": {
+      "id": "S02",
+      "description": "先読みを最大1トークンに",
+      "overrides": {
+        "--spec": 2
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--spec",
+        "2"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-114229-S02/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 34.61742850000155,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27698,
+        "free_mib": 4490,
+        "gpu_percent": 3,
+        "temperature_c": 44
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5179.0
+    }
+  },
+  "S03": {
+    "case": {
+      "id": "S03",
+      "description": "先読みを最大2トークンに",
+      "overrides": {
+        "--spec": 3
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--spec",
+        "3"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-114350-S03/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 34.125777100009145,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27717,
+        "free_mib": 4471,
+        "gpu_percent": 3,
+        "temperature_c": 43
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5181.0
+    }
+  },
+  "S04": {
+    "case": {
+      "id": "S04",
+      "description": "先読みを最大5トークンに",
+      "overrides": {
+        "--spec": 6
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--spec",
+        "6"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-114505-S04/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 39.12662009999622,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27732,
+        "free_mib": 4456,
+        "gpu_percent": 3,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5118.0
+    }
+  },
+  "S05": {
+    "case": {
+      "id": "S05",
+      "description": "先読みを最大7トークンに",
+      "overrides": {
+        "--spec": 8
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--spec",
+        "8"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-114627-S05/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 34.59609529998852,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27665,
+        "free_mib": 4523,
+        "gpu_percent": 2,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5107.0
+    }
+  },
+  "S06": {
+    "case": {
+      "id": "S06",
+      "description": "spec4、候補の確率による打ち切りなし",
+      "overrides": {
+        "--spec-min-p": 0
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--spec-min-p",
+        "0"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-114745-S06/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 34.629699799988884,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27638,
+        "free_mib": 4550,
+        "gpu_percent": 4,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5207.0
+    }
+  },
+  "S07": {
+    "case": {
+      "id": "S07",
+      "description": "spec4、候補の閾値0.3",
+      "overrides": {
+        "--spec-min-p": 0.3
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--spec-min-p",
+        "0.3"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-114900-S07/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 36.11681839998346,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27695,
+        "free_mib": 4493,
+        "gpu_percent": 2,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5204.0
+    }
+  },
+  "S08": {
+    "case": {
+      "id": "S08",
+      "description": "spec4、候補の閾値0.7",
+      "overrides": {
+        "--spec-min-p": 0.7
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--spec-min-p",
+        "0.7"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-115018-S08/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 34.13288770001964,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27694,
+        "free_mib": 4494,
+        "gpu_percent": 1,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5206.0
+    }
+  },
+  "S09": {
+    "case": {
+      "id": "S09",
+      "description": "spec4、候補の閾値0.9",
+      "overrides": {
+        "--spec-min-p": 0.9
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--spec-min-p",
+        "0.9"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-115133-S09/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 34.12393449997762,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27695,
+        "free_mib": 4493,
+        "gpu_percent": 3,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5209.0
+    }
+  },
+  "S10": {
+    "case": {
+      "id": "S10",
+      "description": "S01からCPUワーカーを7へ",
+      "overrides": {
+        "--pool-workers": 7
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--pool-workers",
+        "7"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-115254-S10/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 31.12956870000926,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27694,
+        "free_mib": 4494,
+        "gpu_percent": 4,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 7.0,
+      "free_mib": 5170.0
+    }
+  },
+  "S11": {
+    "case": {
+      "id": "S11",
+      "description": "S01からCPUワーカーを12へ",
+      "overrides": {
+        "--pool-workers": 12
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--pool-workers",
+        "12"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-115404-S11/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 31.62132809998002,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27701,
+        "free_mib": 4487,
+        "gpu_percent": 3,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 12.0,
+      "free_mib": 5202.0
+    }
+  },
+  "S12": {
+    "case": {
+      "id": "S12",
+      "description": "S01からキャッシュミス時のGPU分担率を0へ",
+      "overrides": {
+        "--pcie-frac": 0
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--pcie-frac",
+        "0"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-115518-S12/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 39.11900780000724,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27674,
+        "free_mib": 4514,
+        "gpu_percent": 1,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5205.0
+    }
+  },
+  "S13": {
+    "case": {
+      "id": "S13",
+      "description": "S01からキャッシュミス時のGPU分担率を0.3へ",
+      "overrides": {
+        "--pcie-frac": 0.3
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--pcie-frac",
+        "0.3"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-115637-S13/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 36.12018190001254,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27670,
+        "free_mib": 4518,
+        "gpu_percent": 1,
+        "temperature_c": 41
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5163.0
+    }
+  },
+  "S14": {
+    "case": {
+      "id": "S14",
+      "description": "S01からキャッシュミス時のGPU分担率を0.8へ",
+      "overrides": {
+        "--pcie-frac": 0.8
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--pcie-frac",
+        "0.8"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-115754-S14/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 37.12830739998026,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27620,
+        "free_mib": 4568,
+        "gpu_percent": 3,
+        "temperature_c": 41
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5206.0
+    }
+  },
+  "S15": {
+    "case": {
+      "id": "S15",
+      "description": "S01からキャッシュミス時のGPU分担率を1へ",
+      "overrides": {
+        "--pcie-frac": 1
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--pcie-frac",
+        "1"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-115914-S15/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 36.10025789999054,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27637,
+        "free_mib": 4551,
+        "gpu_percent": 1,
+        "temperature_c": 42
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5205.0
+    }
+  },
+  "S16": {
+    "case": {
+      "id": "S16",
+      "description": "S01からexpert-cache予算を4000へ。実件数は起動ログに記録",
+      "overrides": {
+        "--expert-cache": 4000
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--expert-cache",
+        "4000"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-120034-S16/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 36.587323399988236,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 22291,
+        "free_mib": 9897,
+        "gpu_percent": 1,
+        "temperature_c": 41
+      },
+      "cache_slots": 5215.0,
+      "cache_gib": 9.92,
+      "pool_workers": 19.0,
+      "free_mib": 11507.0
+    }
+  },
+  "S17": {
+    "case": {
+      "id": "S17",
+      "description": "S01からコンテキストを128Kへ",
+      "overrides": {
+        "--max-context": 131072
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--max-context",
+        "131072"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-120154-S17/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 34.62697169999592,
+      "health": {
+        "status": "ok",
+        "max_context": 131072,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 25731,
+        "free_mib": 6457,
+        "gpu_percent": 2,
+        "temperature_c": 41
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 7167.0
+    }
+  },
+  "S18": {
+    "case": {
+      "id": "S18",
+      "description": "S01からコンテキストを32Kへ。最大出力100Kの運用候補にはしない",
+      "overrides": {
+        "--max-context": 32768
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--max-context",
+        "32768"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-120311-S18/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 36.14074130001245,
+      "health": {
+        "status": "ok",
+        "max_context": 32768,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 24250,
+        "free_mib": 7938,
+        "gpu_percent": 3,
+        "temperature_c": 41
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 9561.0
+    }
+  },
+  "S19": {
+    "case": {
+      "id": "S19",
+      "description": "S17からKVをfp16へ",
+      "overrides": {
+        "--max-context": 131072,
+        "--kv": "fp16"
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--prompt-cache",
+        "0",
+        "--max-context",
+        "131072",
+        "--kv",
+        "fp16"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-120429-S19/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 36.622581999981776,
+      "health": {
+        "status": "ok",
+        "max_context": 131072,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27366,
+        "free_mib": 4822,
+        "gpu_percent": 1,
+        "temperature_c": 41
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5528.0
+    }
+  },
+  "S20": {
+    "case": {
+      "id": "S20",
+      "description": "S01からexpert配置表を拡張、auto cache、VRAM余裕2048MiB",
+      "overrides": {
+        "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib": 2048
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--expert-profile",
+        "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib",
+        "2048"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-120547-S20/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 39.1029440999846,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 31525,
+        "free_mib": 663,
+        "gpu_percent": 1,
+        "temperature_c": 41
+      },
+      "cache_slots": 10098.0,
+      "cache_gib": 19.16,
+      "pool_workers": 19.0,
+      "free_mib": 1356.0
+    }
+  },
+  "S21": {
+    "case": {
+      "id": "S21",
+      "description": "S20からコンテキストを128Kへ",
+      "overrides": {
+        "--max-context": 131072,
+        "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib": 2048
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--max-context",
+        "131072",
+        "--expert-profile",
+        "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib",
+        "2048"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-120707-S21/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 43.63227750000078,
+      "health": {
+        "status": "ok",
+        "max_context": 131072,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 31524,
+        "free_mib": 664,
+        "gpu_percent": 2,
+        "temperature_c": 41
+      },
+      "cache_slots": 11101.0,
+      "cache_gib": 21.07,
+      "pool_workers": 19.0,
+      "free_mib": 1348.0
+    }
+  },
+  "S22": {
+    "case": {
+      "id": "S22",
+      "description": "S01からprefillを4096へ",
+      "overrides": {
+        "--prefill": 4096
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--prefill",
+        "4096"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-120828-S22/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 42.08995580000919,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27441,
+        "free_mib": 4747,
+        "gpu_percent": 0,
+        "temperature_c": 40
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5206.0
+    }
+  },
+  "S23": {
+    "case": {
+      "id": "S23",
+      "description": "S01からcacheの適応的入れ替えを無効化",
+      "overrides": {
+        "--adapt-every": 0
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--adapt-every",
+        "0"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-120950-S23/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 40.13007740001194,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27441,
+        "free_mib": 4746,
+        "gpu_percent": 0,
+        "temperature_c": 41
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5209.0
+    }
+  },
+  "S24": {
+    "case": {
+      "id": "S24",
+      "description": "拡張配置表、32K、VRAM余裕3072MiB。短い文脈用の実験",
+      "overrides": {
+        "--max-context": 32768,
+        "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib": 3072
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--max-context",
+        "32768",
+        "--expert-profile",
+        "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib",
+        "3072"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-121150-S24/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 40.66861960000824,
+      "health": {
+        "status": "ok",
+        "max_context": 32768,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 30288,
+        "free_mib": 1900,
+        "gpu_percent": 3,
+        "temperature_c": 39
+      },
+      "cache_slots": 11224.0,
+      "cache_gib": 21.31,
+      "pool_workers": 19.0,
+      "free_mib": 2632.0
+    }
+  },
+  "S25": {
+    "case": {
+      "id": "S25",
+      "description": "S01からPLE表の読み方をmmapへ",
+      "overrides": {
+        "--ple-io": "mmap"
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--ple-io",
+        "mmap"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-121309-S25/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 42.16189839999424,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27468,
+        "free_mib": 4720,
+        "gpu_percent": 0,
+        "temperature_c": 40
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5336.0
+    }
+  },
+  "S26": {
+    "case": {
+      "id": "S26",
+      "description": "S01からPCIe転送をdirectへ",
+      "overrides": {
+        "--pcie-mode": "direct"
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--pcie-mode",
+        "direct"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-121500-S26/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 46.70228909997968,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27467,
+        "free_mib": 4721,
+        "gpu_percent": 0,
+        "temperature_c": 40
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5197.0
+    }
+  },
+  "S27": {
+    "case": {
+      "id": "S27",
+      "description": "S20からVRAM予約を3072MiBへ増やす常用候補",
+      "overrides": {
+        "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib": 3072
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--expert-profile",
+        "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib",
+        "3072"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-121640-S27/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 51.1549944000144,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 30642,
+        "free_mib": 1546,
+        "gpu_percent": 0,
+        "temperature_c": 40
+      },
+      "cache_slots": 9604.0,
+      "cache_gib": 18.22,
+      "pool_workers": 19.0,
+      "free_mib": 2427.0
+    }
+  },
+  "S28": {
+    "case": {
+      "id": "S28",
+      "description": "S20からVRAM予約を4096MiBへ増やす常用候補",
+      "overrides": {
+        "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib": 4096
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--expert-profile",
+        "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib",
+        "4096"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-121813-S28/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 48.64627160000964,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 29119,
+        "free_mib": 3069,
+        "gpu_percent": 3,
+        "temperature_c": 40
+      },
+      "cache_slots": 8914.0,
+      "cache_gib": 16.91,
+      "pool_workers": 19.0,
+      "free_mib": 3447.0
+    }
+  },
+  "S29": {
+    "case": {
+      "id": "S29",
+      "description": "S21からVRAM予約を3072MiBへ増やす128K候補",
+      "overrides": {
+        "--max-context": 131072,
+        "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib": 3072
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--max-context",
+        "131072",
+        "--expert-profile",
+        "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib",
+        "3072"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-121944-S29/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 51.15765940002166,
+      "health": {
+        "status": "ok",
+        "max_context": 131072,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 30347,
+        "free_mib": 1841,
+        "gpu_percent": 0,
+        "temperature_c": 39
+      },
+      "cache_slots": 10499.0,
+      "cache_gib": 19.93,
+      "pool_workers": 19.0,
+      "free_mib": 2618.0
+    }
+  },
+  "S30": {
+    "case": {
+      "id": "S30",
+      "description": "S01からcacheの適応的入れ替えを毎ラウンドへ",
+      "overrides": {
+        "--adapt-every": 1
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-profile",
+        "vendor/strata/data/expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--adapt-every",
+        "1"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-122126-S30/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 48.68482599998242,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 27498,
+        "free_mib": 4690,
+        "gpu_percent": 3,
+        "temperature_c": 39
+      },
+      "cache_slots": 8000.0,
+      "cache_gib": 15.17,
+      "pool_workers": 19.0,
+      "free_mib": 5127.0
+    }
+  },
+  "S31": {
+    "case": {
+      "id": "S31",
+      "description": "S27の拡張cache・256K・VRAM予約3072MiBと、S30の毎ラウンド入れ替えを組み合わせる",
+      "overrides": {
+        "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib": 3072,
+        "--adapt-every": 1
+      }
+    },
+    "config": {
+      "exe": "vendor/strata/engine/strata.exe",
+      "args": [
+        "--pack",
+        "artifacts/strata/packs/iq3_s",
+        "--native",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+        "--ple-gguf",
+        "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "2048",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "artifacts/strata/mtp/rt",
+        "--max-context",
+        "262144",
+        "--kv",
+        "int8",
+        "--prompt-cache",
+        "0",
+        "--expert-profile",
+        "artifacts/strata/expert-profile-expanded.bin",
+        "--vram-reserve-mib",
+        "3072",
+        "--adapt-every",
+        "1"
+      ],
+      "cwd": "vendor/strata",
+      "tokenizer": "artifacts/strata/packs/iq3_s/tokenizer",
+      "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+      "log": "results/strata/runs/20260928-122320-S31/engine.log",
+      "lib_dirs": [
+        "vendor/cuda/bin",
+        "vendor/cuda/bin/x64"
+      ],
+      "port": 8082
+    },
+    "startup": {
+      "seconds": 49.143325699988054,
+      "health": {
+        "status": "ok",
+        "max_context": 262144,
+        "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+        "images": false,
+        "api_key": false
+      },
+      "gpu": {
+        "used_mib": 30639,
+        "free_mib": 1549,
+        "gpu_percent": 3,
+        "temperature_c": 37
+      },
+      "cache_slots": 9595.0,
+      "cache_gib": 18.2,
+      "pool_workers": 19.0,
+      "free_mib": 2421.0
+    }
+  }
+}

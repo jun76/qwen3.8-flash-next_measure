@@ -1,0 +1,7 @@
+{
+  "id": "S17",
+  "description": "S01からコンテキストを128Kへ",
+  "overrides": {
+    "--max-context": 131072
+  }
+}

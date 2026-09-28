@@ -1,0 +1,7 @@
+{
+  "id": "S13",
+  "description": "S01からキャッシュミス時のGPU分担率を0.3へ",
+  "overrides": {
+    "--pcie-frac": 0.3
+  }
+}

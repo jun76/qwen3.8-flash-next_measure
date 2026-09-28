@@ -1,0 +1,7 @@
+{
+  "id": "S26",
+  "description": "S01からPCIe転送をdirectへ",
+  "overrides": {
+    "--pcie-mode": "direct"
+  }
+}

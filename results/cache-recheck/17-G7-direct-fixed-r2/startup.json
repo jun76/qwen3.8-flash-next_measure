@@ -1,0 +1,23 @@
+{
+  "seconds": 52.09373590000905,
+  "health": {
+    "status": "ok"
+  },
+  "gpu": [
+    {
+      "used_mib": 8648,
+      "free_mib": 23540,
+      "utilization_percent": 0,
+      "temperature_c": 41
+    }
+  ],
+  "gpu_before_start": [
+    {
+      "used_mib": 2855,
+      "free_mib": 29333,
+      "utilization_percent": 0,
+      "temperature_c": 46
+    }
+  ],
+  "pid": 58708
+}

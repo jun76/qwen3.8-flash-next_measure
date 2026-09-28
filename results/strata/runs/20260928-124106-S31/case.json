@@ -1,0 +1,22 @@
+{
+  "id": "S31",
+  "description": "S27の拡張cache・256K・VRAM予約3072MiBと、S30の毎ラウンド入れ替えを組み合わせる",
+  "overrides": {
+    "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+    "--vram-reserve-mib": 3072,
+    "--adapt-every": 1
+  },
+  "measurements": [
+    {
+      "name": "direct-complete",
+      "input": "direct",
+      "tokens": 32768
+    },
+    {
+      "name": "direct-no-thinking-complete",
+      "input": "direct",
+      "tokens": 16384,
+      "thinking": false
+    }
+  ]
+}

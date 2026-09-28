@@ -1,0 +1,7 @@
+{
+  "id": "S22",
+  "description": "S01からprefillを4096へ",
+  "overrides": {
+    "--prefill": 4096
+  }
+}

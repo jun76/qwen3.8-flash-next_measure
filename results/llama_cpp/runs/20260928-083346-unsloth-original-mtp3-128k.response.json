@@ -1,0 +1,39 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "reasoning_content": "The user wants a Breakout/Arkanoid game. Let me build a rich, polished single-file HTML game with canvas.\n\nKey design decisions:\n- For a game, the most characteristic opening is the game cabinet itself — the playfield should be front and center, not tucked under a marketing header. So instead of a generic top, I'll frame it as an arcade cabinet: side panels with score, level, lives, combos, a CRT-ish scanline vibe.\n- Pair a distinctive display face with a readable body face. Arcade display face candidates: \"Honten\"? no. \"Bungee\"? \"Rubik Mono One\"? \"Chakra Petch\"? \"Press Start 2P\" is very arcade pixel — but heavy for body. Pair \"Press Start 2P\" (display, used sparingly for score numbers/labels) with \"Chakra Petch\" or \"Space Grotesk\" body. Press Start 2P is a bit cliché but very characteristic for breakout. Alternatively \"Bungee\" for display. Let me pick display = \"Bungee\" (chunky arcade signage), body = \"Chakra Petch\" (techy readable), and use monospace numerals for scores via \"Chakra Petch\". Actually for the score readout, a segmented/pixel font feels great. Let me use:\n  - Display: \"Bungee\" — bold arcade marquee\n  - Body: \"Chakra Petch\" — readable techy\n  - Numbers: \"Press Start 2P\" for tiny labels/HUD digits — adds arcade authenticity. Three fonts is fine.\n\nPalette: an arcade feels best dark, but I don't want a flat near-black with one lonely neon — richer color is more alive here. Let's do a warm-dark cabinet: deep plum/aubergine background with amber marquee, coral blocks, teal accents. Let's use multiple hues: sunset gradient background (deep magenta-plum to deep navy?) hmm. Let's do: background deep ink blue-green (#0d1b1e?) with cabinet panel in warm charcoal, accents: hot coral #FF5A5F, amber #FFC14D, mint #4DE0A0, sky #59C2FF. Multi-accent = alive.\n\nActually let's do a distinct palette:\n- bg deep: #101418 with layered radial + subtle grid + drifting dot pattern\n- cabinet frame: #1b2027 with amber marquee glow\n- bricks: rows in a gradient of hues: coral, amber, mint, sky, violet? I'll steer clear of a violet/indigo gradient wash, though individual violet bricks are fine. I'll use coral/amber/mint/sky/rose.\n\nGame features (rich but focused):\n1. Canvas breakout with paddle, ball, bricks.\n2. Power-ups falling: multiball, expand paddle, slow ball, laser? , extra life, sticky.\n3. Combo multiplier, particle effects, screen shake, brick crack for tough bricks (multi-hit), gold bricks.\n4. Levels: procedurally generated patterns (arch, checker, pyramid, tunnel, heart?), increasing rows.\n5. HUD: score, level, lives, combo, high score (localStorage).\n6. Controls: mouse/touch drag, arrow keys/A-D. Space to launch, P pause, R restart.\n7. Overlays: title screen with \"INSERT COIN\" style start, level clear banner, game over, pause.\n8. Sound: WebAudio synth blips (toggle mute).\n9. Side panel: live stats, power-up legend, controls, and maybe a mini \"level map\".\n10. Micro-interactions: hover on buttons, scanline sweep, marquee flicker animation, ball trail glow.\n\nLayout: a wide \"cabinet\" grid: left column = score/stats/level info; center = canvas; right = power-ups legend + controls + log of events (\"+500 COMBO x4\"). Header marquee across the top with title in Bungee, and a ticker.\n\nMotion: ambient background with slowly moving gradient + parallax grid + floating pixel motes drawn on a background canvas? Simpler: CSS animated conic/radial glows + noise + grid, plus canvas particles.\n\nImplementation details carefully:\n\nCanvas sized with devicePixelRatio, logical size 720x560? Let's do 800x600 aspect 4:3. Use CSS to scale responsively; input maps from client coords.\n\nGame loop with requestAnimationFrame and fixed timestep accumulation.\n\nPhysics: ball with dx, dy, speed; paddle collision with angle based on offset; wall collisions; brick collision using axis-of-penetration resolution to avoid tunneling. Sub-step movement for high speed: move ball in"
+      }
+    }
+  ],
+  "created": 1790552081,
+  "model": "qwen3.8-flash-next-iq3_s-llamacpp-mtp",
+  "system_fingerprint": "b11160-a3c12db9d",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 1024,
+    "prompt_tokens": 58,
+    "total_tokens": 1082,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-fyqHj0Luvk5YZvF0iiXXV2pc4lVS5sMD",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 58,
+    "prompt_ms": 1725.525,
+    "prompt_per_token_ms": 29.75043103448276,
+    "prompt_per_second": 33.61295837498732,
+    "predicted_n": 1024,
+    "predicted_ms": 53418.482,
+    "predicted_per_token_ms": 52.21747996089932,
+    "predicted_per_second": 19.150675228846826,
+    "draft_n": 942,
+    "draft_n_accepted": 531
+  }
+}

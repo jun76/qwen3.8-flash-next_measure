@@ -1,0 +1,7 @@
+{
+  "id": "S07",
+  "description": "spec4、候補の閾値0.3",
+  "overrides": {
+    "--spec-min-p": 0.3
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "S23",
+  "description": "S01からcacheの適応的入れ替えを無効化",
+  "overrides": {
+    "--adapt-every": 0
+  }
+}

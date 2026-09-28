@@ -1,0 +1,181 @@
+{
+  "engine": "llama_cpp",
+  "description": "Recorded request order; G7 is restarted before historical run20.",
+  "cases": [
+    {
+      "id": "U1",
+      "requests": [
+        {
+          "name": "unsloth-original-mtp3-128k",
+          "request_file": "results/llama_cpp/runs/20260928-083346-unsloth-original-mtp3-128k.request.json",
+          "historical_run": 1
+        },
+        {
+          "name": "unsloth-original-mtp3-harness",
+          "request_file": "results/llama_cpp/runs/20260928-083611-unsloth-original-mtp3-harness.request.json",
+          "historical_run": 2
+        }
+      ]
+    },
+    {
+      "id": "U2",
+      "requests": [
+        {
+          "name": "unsloth-mtp1-t8-fit2048",
+          "request_file": "results/llama_cpp/runs/20260928-083813-unsloth-mtp1-t8-fit2048.request.json",
+          "historical_run": 3
+        }
+      ]
+    },
+    {
+      "id": "U3",
+      "requests": [
+        {
+          "name": "unsloth-mtp3-t8-fit2048",
+          "request_file": "results/llama_cpp/runs/20260928-083921-unsloth-mtp3-t8-fit2048.request.json",
+          "historical_run": 4
+        }
+      ]
+    },
+    {
+      "id": "U4",
+      "requests": [
+        {
+          "name": "unsloth-off-t8-fit2048",
+          "request_file": "results/llama_cpp/runs/20260928-084054-unsloth-off-t8-fit2048.request.json",
+          "historical_run": 5
+        }
+      ]
+    },
+    {
+      "id": "U5",
+      "requests": [
+        {
+          "name": "unsloth-mtp2-q4-t20-32k",
+          "request_file": "results/llama_cpp/runs/20260928-084226-unsloth-mtp2-q4-t20-32k.request.json",
+          "historical_run": 6
+        },
+        {
+          "name": "unsloth-mtp2-q4-t20-32k-greedy",
+          "request_file": "results/llama_cpp/runs/20260928-084315-unsloth-mtp2-q4-t20-32k-greedy.request.json",
+          "historical_run": 7
+        }
+      ]
+    },
+    {
+      "id": "G1",
+      "requests": [
+        {
+          "name": "generel-cache18000-off-128k",
+          "request_file": "results/llama_cpp/runs/20260928-085354-generel-cache18000-off-128k.request.json",
+          "historical_run": 8
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "requests": [
+        {
+          "name": "generel-cache17000-mtp2-q4-128k",
+          "request_file": "results/llama_cpp/runs/20260928-085557-generel-cache17000-mtp2-q4-128k.request.json",
+          "historical_run": 9
+        },
+        {
+          "name": "generel-cache17000-mtp2-q4-128k-greedy",
+          "request_file": "results/llama_cpp/runs/20260928-085623-generel-cache17000-mtp2-q4-128k-greedy.request.json",
+          "historical_run": 10
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "requests": [
+        {
+          "name": "generel-cache20000-off-overlap-128k",
+          "request_file": "results/llama_cpp/runs/20260928-085758-generel-cache20000-off-overlap-128k.request.json",
+          "historical_run": 11
+        },
+        {
+          "name": "generel-cache20000-off-overlap-128k-greedy",
+          "request_file": "results/llama_cpp/runs/20260928-085815-generel-cache20000-off-overlap-128k-greedy.request.json",
+          "historical_run": 12
+        },
+        {
+          "name": "generel-cache20000-overlap-harness-full",
+          "request_file": "results/llama_cpp/runs/20260928-085902-generel-cache20000-overlap-harness-full.request.json",
+          "historical_run": 13
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "requests": [
+        {
+          "name": "generel-cache18000-mtp1-q8-overlap-harness",
+          "request_file": "results/llama_cpp/runs/20260928-090321-generel-cache18000-mtp1-q8-overlap-harness.request.json",
+          "historical_run": 14
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "requests": [
+        {
+          "name": "generel-cache17000-mtp3-q8-overlap-harness",
+          "request_file": "results/llama_cpp/runs/20260928-090552-generel-cache17000-mtp3-q8-overlap-harness.request.json",
+          "historical_run": 15
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "requests": [
+        {
+          "name": "generel-cache20000-t1-overlap-harness",
+          "request_file": "results/llama_cpp/runs/20260928-090811-generel-cache20000-t1-overlap-harness.request.json",
+          "historical_run": 16
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "requests": [
+        {
+          "name": "generel-cache21000-q4kv-overlap-harness",
+          "request_file": "results/llama_cpp/runs/20260928-091019-generel-cache21000-q4kv-overlap-harness.request.json",
+          "historical_run": 17
+        },
+        {
+          "name": "generel-cache21000-q4kv-overlap-short",
+          "request_file": "results/llama_cpp/runs/20260928-091128-generel-cache21000-q4kv-overlap-short.request.json",
+          "historical_run": 18
+        },
+        {
+          "name": "generel-cache21000-q4kv-overlap-harness-full",
+          "request_file": "results/llama_cpp/runs/20260928-091227-generel-cache21000-q4kv-overlap-harness-full.request.json",
+          "historical_run": 19
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "requests": [
+        {
+          "name": "final-fast-cold-repeat",
+          "request_file": "results/llama_cpp/runs/20260928-091605-final-fast-cold-repeat.request.json",
+          "historical_run": 20
+        },
+        {
+          "name": "final-fast-direct-complete",
+          "request_file": "results/llama_cpp/runs/20260928-092437-final-fast-direct-complete.request.json",
+          "historical_run": 21
+        },
+        {
+          "name": "final-fast-direct-no-thinking",
+          "request_file": "results/llama_cpp/runs/20260928-093209-final-fast-direct-no-thinking.request.json",
+          "historical_run": 22
+        }
+      ]
+    }
+  ]
+}

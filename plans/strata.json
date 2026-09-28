@@ -1,0 +1,436 @@
+{
+  "engine": "strata",
+  "description": "41 Strata process groups, 45 requests; preserves the recorded process and request order.",
+  "cases": [
+    {
+      "id": "S01",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-114115-S01/harness-2048.request.json",
+          "historical_run": 1
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-114229-S02/harness-2048.request.json",
+          "historical_run": 2
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-114350-S03/harness-2048.request.json",
+          "historical_run": 3
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-114505-S04/harness-2048.request.json",
+          "historical_run": 4
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-114627-S05/harness-2048.request.json",
+          "historical_run": 5
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-114745-S06/harness-2048.request.json",
+          "historical_run": 6
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-114900-S07/harness-2048.request.json",
+          "historical_run": 7
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-115018-S08/harness-2048.request.json",
+          "historical_run": 8
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-115133-S09/harness-2048.request.json",
+          "historical_run": 9
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-115254-S10/harness-2048.request.json",
+          "historical_run": 10
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-115404-S11/harness-2048.request.json",
+          "historical_run": 11
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-115518-S12/harness-2048.request.json",
+          "historical_run": 12
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-115637-S13/harness-2048.request.json",
+          "historical_run": 13
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-115754-S14/harness-2048.request.json",
+          "historical_run": 14
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-115914-S15/harness-2048.request.json",
+          "historical_run": 15
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-120034-S16/harness-2048.request.json",
+          "historical_run": 16
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-120154-S17/harness-2048.request.json",
+          "historical_run": 17
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-120311-S18/harness-2048.request.json",
+          "historical_run": 18
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-120429-S19/harness-2048.request.json",
+          "historical_run": 19
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-120547-S20/harness-2048.request.json",
+          "historical_run": 20
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-120707-S21/harness-2048.request.json",
+          "historical_run": 21
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-120828-S22/harness-2048.request.json",
+          "historical_run": 22
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-120950-S23/harness-2048.request.json",
+          "historical_run": 23
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-121150-S24/harness-2048.request.json",
+          "historical_run": 24
+        }
+      ]
+    },
+    {
+      "id": "S25",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-121309-S25/harness-2048.request.json",
+          "historical_run": 25
+        }
+      ]
+    },
+    {
+      "id": "S26",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-121500-S26/harness-2048.request.json",
+          "historical_run": 26
+        }
+      ]
+    },
+    {
+      "id": "S27",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-121640-S27/harness-2048.request.json",
+          "historical_run": 27
+        }
+      ]
+    },
+    {
+      "id": "S28",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-121813-S28/harness-2048.request.json",
+          "historical_run": 28
+        }
+      ]
+    },
+    {
+      "id": "S29",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-121944-S29/harness-2048.request.json",
+          "historical_run": 29
+        }
+      ]
+    },
+    {
+      "id": "S30",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-122126-S30/harness-2048.request.json",
+          "historical_run": 30
+        }
+      ]
+    },
+    {
+      "id": "S31",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-122320-S31/harness-2048.request.json",
+          "historical_run": 31
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-122501-S01/harness-2048.request.json",
+          "historical_run": 32
+        },
+        {
+          "name": "harness-complete",
+          "request_file": "results/strata/runs/20260928-122501-S01/harness-complete.request.json",
+          "historical_run": 33
+        }
+      ]
+    },
+    {
+      "id": "S30",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-122827-S30/harness-2048.request.json",
+          "historical_run": 34
+        },
+        {
+          "name": "harness-complete",
+          "request_file": "results/strata/runs/20260928-122827-S30/harness-complete.request.json",
+          "historical_run": 35
+        }
+      ]
+    },
+    {
+      "id": "S31",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-123051-S31/harness-2048.request.json",
+          "historical_run": 36
+        },
+        {
+          "name": "harness-complete",
+          "request_file": "results/strata/runs/20260928-123051-S31/harness-complete.request.json",
+          "historical_run": 37
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-123304-S01/harness-2048.request.json",
+          "historical_run": 38
+        }
+      ]
+    },
+    {
+      "id": "S30",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-123426-S30/harness-2048.request.json",
+          "historical_run": 39
+        }
+      ]
+    },
+    {
+      "id": "S31",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-123543-S31/harness-2048.request.json",
+          "historical_run": 40
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-123656-S24/harness-2048.request.json",
+          "historical_run": 41
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-123812-S24/harness-2048.request.json",
+          "historical_run": 42
+        }
+      ]
+    },
+    {
+      "id": "S29",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-123927-S29/harness-2048.request.json",
+          "historical_run": 43
+        }
+      ]
+    },
+    {
+      "id": "S31",
+      "requests": [
+        {
+          "name": "direct-complete",
+          "request_file": "results/strata/runs/20260928-124106-S31/direct-complete.request.json",
+          "historical_run": 44
+        },
+        {
+          "name": "direct-no-thinking-complete",
+          "request_file": "results/strata/runs/20260928-124106-S31/direct-no-thinking-complete.request.json",
+          "historical_run": 45
+        }
+      ]
+    }
+  ]
+}

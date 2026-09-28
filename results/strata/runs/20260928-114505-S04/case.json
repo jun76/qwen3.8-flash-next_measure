@@ -1,0 +1,7 @@
+{
+  "id": "S04",
+  "description": "先読みを最大5トークンに",
+  "overrides": {
+    "--spec": 6
+  }
+}

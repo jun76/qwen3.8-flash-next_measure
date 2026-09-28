@@ -1,0 +1,7 @@
+{
+  "id": "S16",
+  "description": "S01からexpert-cache予算を4000へ。実件数は起動ログに記録",
+  "overrides": {
+    "--expert-cache": 4000
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "S06",
+  "description": "spec4、候補の確率による打ち切りなし",
+  "overrides": {
+    "--spec-min-p": 0
+  }
+}

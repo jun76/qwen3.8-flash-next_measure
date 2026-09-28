@@ -1,0 +1,14 @@
+{
+  "captured_utc": "2026-09-28T07:15:43.211986+00:00",
+  "capture_stage": "During the running recheck matrix",
+  "windows_version": "10.0.26200",
+  "windows_release": "11",
+  "benchmark_python_version": "3.12.11",
+  "gpu": [
+    {
+      "name": "NVIDIA GeForce RTX 5090",
+      "driver_version": "591.86",
+      "total_memory_mib": "32607"
+    }
+  ]
+}

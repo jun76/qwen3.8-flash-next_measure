@@ -1,0 +1,33 @@
+{
+  "exe": "{strata_exe}",
+  "args": [
+    "--pack",
+    "{strata_pack}",
+    "--native",
+    "{model}",
+    "--ple-gguf",
+    "{ple_model}",
+    "--expert-profile",
+    "{expert_profile}",
+    "--expert-cache",
+    "auto",
+    "--prefill",
+    "2048",
+    "--spec",
+    "4",
+    "--spec-min-p",
+    "0.5",
+    "--mtp",
+    "{strata_mtp}",
+    "--max-context",
+    "262144",
+    "--kv",
+    "int8",
+    "--prompt-cache",
+    "0"
+  ],
+  "cwd": "{strata_root}",
+  "tokenizer": "{strata_tokenizer}",
+  "model_name": "qwen3.8-flash-next-iq3_s-strata-bench",
+  "port": 8082
+}

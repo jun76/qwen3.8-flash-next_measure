@@ -1,0 +1,20 @@
+{
+  "seconds": 31.12956870000926,
+  "health": {
+    "status": "ok",
+    "max_context": 262144,
+    "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+    "images": false,
+    "api_key": false
+  },
+  "gpu": {
+    "used_mib": 27694,
+    "free_mib": 4494,
+    "gpu_percent": 4,
+    "temperature_c": 42
+  },
+  "cache_slots": 8000.0,
+  "cache_gib": 15.17,
+  "pool_workers": 7.0,
+  "free_mib": 5170.0
+}

@@ -1,0 +1,22 @@
+{
+  "raw_directory": "runs/cache-recheck-20260928-154349",
+  "input_basis": "Previously published path-normalized fixtures; parsed request bodies required no further normalization for this publication.",
+  "fixture_sha256": {
+    "fixtures/direct-request.json": "05c9e55f711779407882a20c2601e10b57505ac348eb81d52008b662cf8b9505",
+    "fixtures/harness-request.json": "f3e5e63dfd190fc01df00220e060da83dfa5072dde6c070afeb64a630dcfdd03"
+  },
+  "script_sha256": {
+    "scripts/run_benchmarks.py": "1ebce2bf907abf7d9d0e6b14b27487b8ac3b33d36e1587ed65e79841e49acc22",
+    "scripts/run_cache_recheck.py": "959fde56094af725911b38bb5791b7c2c039ca066a9ccddd40c1b337ba1e2502"
+  },
+  "analysis_script_sha256": {
+    "scripts/summarize_cache_recheck.py": "700eb68bc30a94255e4b4fa2c96adc8dc0c683a5c42556a3ab8335fa66d56790"
+  },
+  "configuration_sha256": {
+    "configs/llama_cpp.json": "5eb5cf96fb92ac9262e93472e08ad85eeb61fe26bfbed9548852dd9127883102",
+    "configs/strata-base.json": "794aad6f22264cdbde118e000f08b2153f4d6b74c9930fb96065e67568b43a6d",
+    "configs/strata.json": "79e2725a7a1135d2c11f57fc47d34de3776cffb27daf095bc28ac7914972b782"
+  },
+  "plan_sha256": "782243adeab5a9a9cee197f9197f266732b28da293d0b23adc6ebafda48295eb",
+  "original_exploration_unchanged": true
+}

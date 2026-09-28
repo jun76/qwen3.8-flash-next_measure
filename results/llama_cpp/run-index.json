@@ -1,0 +1,156 @@
+[
+  {
+    "run": 1,
+    "config_id": "U1",
+    "profile_name": "original-unsloth",
+    "name": "unsloth-original-mtp3-128k",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 2,
+    "config_id": "U1",
+    "profile_name": "original-unsloth",
+    "name": "unsloth-original-mtp3-harness",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 3,
+    "config_id": "U2",
+    "profile_name": "unsloth-mtp1-t8-fit2048",
+    "name": "unsloth-mtp1-t8-fit2048",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 4,
+    "config_id": "U3",
+    "profile_name": "unsloth-mtp3-t8-fit2048",
+    "name": "unsloth-mtp3-t8-fit2048",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 5,
+    "config_id": "U4",
+    "profile_name": "unsloth-off-t8-fit2048",
+    "name": "unsloth-off-t8-fit2048",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 6,
+    "config_id": "U5",
+    "profile_name": "unsloth-mtp2-q4-t20-32k",
+    "name": "unsloth-mtp2-q4-t20-32k",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 7,
+    "config_id": "U5",
+    "profile_name": "unsloth-mtp2-q4-t20-32k",
+    "name": "unsloth-mtp2-q4-t20-32k-greedy",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 8,
+    "config_id": "G1",
+    "profile_name": "generel-cache18000-off-128k",
+    "name": "generel-cache18000-off-128k",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 9,
+    "config_id": "G2",
+    "profile_name": "generel-cache17000-mtp2-q4-128k",
+    "name": "generel-cache17000-mtp2-q4-128k",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 10,
+    "config_id": "G2",
+    "profile_name": "generel-cache17000-mtp2-q4-128k",
+    "name": "generel-cache17000-mtp2-q4-128k-greedy",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 11,
+    "config_id": "G3",
+    "profile_name": "generel-cache20000-off-overlap-128k",
+    "name": "generel-cache20000-off-overlap-128k",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 12,
+    "config_id": "G3",
+    "profile_name": "generel-cache20000-off-overlap-128k",
+    "name": "generel-cache20000-off-overlap-128k-greedy",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 13,
+    "config_id": "G3",
+    "profile_name": "generel-cache20000-off-overlap-128k",
+    "name": "generel-cache20000-overlap-harness-full",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 14,
+    "config_id": "G4",
+    "profile_name": "generel-cache18000-mtp1-q8-overlap-128k",
+    "name": "generel-cache18000-mtp1-q8-overlap-harness",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 15,
+    "config_id": "G5",
+    "profile_name": "generel-cache17000-mtp3-q8-overlap-128k",
+    "name": "generel-cache17000-mtp3-q8-overlap-harness",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 16,
+    "config_id": "G6",
+    "profile_name": "generel-cache20000-t1-overlap-128k",
+    "name": "generel-cache20000-t1-overlap-harness",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 17,
+    "config_id": "G7",
+    "profile_name": "generel-cache21000-q4kv-overlap-128k",
+    "name": "generel-cache21000-q4kv-overlap-harness",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 18,
+    "config_id": "G7",
+    "profile_name": "generel-cache21000-q4kv-overlap-128k",
+    "name": "generel-cache21000-q4kv-overlap-short",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 19,
+    "config_id": "G7",
+    "profile_name": "generel-cache21000-q4kv-overlap-128k",
+    "name": "generel-cache21000-q4kv-overlap-harness-full",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 20,
+    "config_id": "G7",
+    "profile_name": "generel-cache21000-q4kv-overlap-128k",
+    "name": "final-fast-cold-repeat",
+    "repeated_from_run": 18
+  },
+  {
+    "run": 21,
+    "config_id": "G7",
+    "profile_name": "generel-cache21000-q4kv-overlap-128k",
+    "name": "final-fast-direct-complete",
+    "repeated_from_run": ""
+  },
+  {
+    "run": 22,
+    "config_id": "G7",
+    "profile_name": "generel-cache21000-q4kv-overlap-128k",
+    "name": "final-fast-direct-no-thinking",
+    "repeated_from_run": ""
+  }
+]

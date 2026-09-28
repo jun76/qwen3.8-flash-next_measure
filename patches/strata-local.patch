@@ -1,0 +1,65 @@
+diff --git a/src/kernels/native_expert_parity.cpp b/src/kernels/native_expert_parity.cpp
+index 9d37dfe..a6e2855 100644
+--- a/src/kernels/native_expert_parity.cpp
++++ b/src/kernels/native_expert_parity.cpp
+@@ -8,6 +8,7 @@
+ #include "strata/artifact/gguf_reader.hpp"
+ #include "strata/kernels/cpu/native_expert.hpp"
+ #include "strata/kernels/cpu/expert.hpp"
++#include "strata/kernels/cpu/expert_layout.hpp"
+ #include "strata/kernels/cpu/iq_avx512.hpp"
+ #include "ggml-cpu.h"
+ #include "strata/kernels/iq_kernels.hpp"
+@@ -34,6 +35,9 @@ static double rel(const std::vector<float>& a, const std::vector<float>& b) {
+ 
+ int main(int argc, char** argv) {
+     if (argc < 2) { std::fprintf(stderr, "usage: native_expert_parity <shard1.gguf> [layer ...]\n"); return 2; }
++    const bool avx512 = cpu::cpu_avx512_ok();
++    std::setvbuf(stdout, nullptr, _IONBF, 0);
++    std::printf("native_expert_parity: AVX-512 comparisons %s\n", avx512 ? "enabled" : "skipped (unsupported CPU)");
+     strata::GgufFile gguf(argv[1]);
+     std::vector<int> layers;
+     for (int i = 2; i < argc; ++i) layers.push_back(std::atoi(argv[i]));
+@@ -102,7 +106,7 @@ int main(int argc, char** argv) {
+                 ffp[k] = ff[k].data();
+             }
+             cpu::native_gu_rows(f, blob.data(), a, NT, ffp, 0, (int) FF);
+-            if (cpu::iq512_supported(f.gu_type)) {
++            if (avx512 && cpu::iq512_supported(f.gu_type)) {
+                 // the AVX-512 rows against ggml's own vec_dot, same Q8_K activations: float-order differences only
+                 std::vector<float> g512((size_t) NT * FF), gref((size_t) NT * FF);
+                 float* gp[NT];
+@@ -144,7 +148,7 @@ int main(int argc, char** argv) {
+                 op[k] = got_c.data() + k * H;
+             }
+             cpu::native_down_rows(f, blob.data(), hp, NT, op, 0, (int) H);
+-            if (f.d_type == 42) {
++            if (avx512 && f.d_type == 42) {
+                 // (b2) the AVX-512 GGUF-layout Q2_0 kernel the pool uses for Q2_0 down projections
+                 std::vector<cpu::ActQ> a2(NT);
+                 const cpu::ActQ* ap[NT];
+diff --git a/src/program/generate.cpp b/src/program/generate.cpp
+index f730f90..80892ae 100644
+--- a/src/program/generate.cpp
++++ b/src/program/generate.cpp
+@@ -1223,11 +1223,15 @@ int main(int argc, char** argv) {
+         // what R4 recorded as "a better profile makes the token worse": more hits means more wrong rows, so
+         // the payoff is non-monotone BY CONSTRUCTION rather than by any memory-system effect.
+         // The cache stays opt-in and this warning is not a refusal, because the divergence IS the diagnostic.
+-        std::fprintf(stderr,
+-                     "strata generate: *** WARNING: --expert-cache is enabled and the GPU hit path is NOT\n"
+-                     "                 CORRECT. The generated tokens diverge from a cache-off run (measured:\n"
+-                     "                 first difference at token 40 at 2.97%% hits, token 0 at 54.4%%). Any\n"
+-                     "                 timing from this run is real; any OUTPUT from it is not. ***\n");
++        // Those measurements concern the legacy moe_hit_grouped_s2 path. Native IQ packs run
++        // verifier windows through native_expert_grouped instead (see core/verify.cpp).
++        if (!native_pack) {
++            std::fprintf(stderr,
++                         "strata generate: *** WARNING: --expert-cache is enabled and the GPU hit path is NOT\n"
++                         "                 CORRECT. The generated tokens diverge from a cache-off run (measured:\n"
++                         "                 first difference at token 40 at 2.97%% hits, token 0 at 54.4%%). Any\n"
++                         "                 timing from this run is real; any OUTPUT from it is not. ***\n");
++        }
+         if (o.expert_cache_per_layer) {
+             int64_t lo = 0, hi = 0;
+             xcache.layer_slot_range(0, lo, hi);

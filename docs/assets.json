@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-28",
+  "algorithm": "SHA-256",
+  "note": "Hashes were read from the assets used for the measurements. No weights or binaries are included. Rebuilt binaries can have different hashes. Paths are repository-relative defaults; path_key resolves optional local overrides.",
+  "assets": [
+    {
+      "bytes": 54817524224,
+      "sha256": "4c1eb2ceb4915e1192f4f386021897bde56a97f40a0bb78bb86465e0f7d2aca3",
+      "group": "model",
+      "path": "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+      "path_key": "model"
+    },
+    {
+      "bytes": 28800138432,
+      "sha256": "316b46f3a2dbd68c900f43136ab9449f9dcc3725dfd8c794847c204bc161e113",
+      "group": "model",
+      "path": "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+      "path_key": "ple_model"
+    },
+    {
+      "bytes": 1907151936,
+      "sha256": "f521868a9e143718bef513772f6e04d9642551e362cf2439636d2abdbd149dfc",
+      "group": "llama_mtp",
+      "path": "models/MTP/mtp-Qwen3.8-Flash-Next-shared-Q4_K_M.gguf",
+      "path_key": "mtp_q4"
+    },
+    {
+      "bytes": 2786568256,
+      "sha256": "5ff54097406a905cf3a724c709124ceb0e3e10235ee862298969e91c96fa96e6",
+      "group": "llama_mtp",
+      "path": "models/MTP/mtp-Qwen3.8-Flash-Next-shared-Q8_0.gguf",
+      "path_key": "mtp_q8"
+    },
+    {
+      "bytes": 889017216,
+      "sha256": "a22206a4d74eafbf31063a84610292535fb3b49af9a339963817fd04aed81e4d",
+      "group": "strata",
+      "path": "vendor/strata/mtp/mtp-q2_0.gguf",
+      "path_key": "strata_root",
+      "relative_to_key": "mtp/mtp-q2_0.gguf"
+    },
+    {
+      "bytes": 116099072,
+      "sha256": "c724dc0b0822ada5d2977bf5bde821605feabaa64ea2e0045b67ca656329070a",
+      "group": "strata",
+      "path": "vendor/strata/mtp/rt/dense.bin",
+      "path_key": "strata_mtp",
+      "relative_to_key": "dense.bin"
+    },
+    {
+      "bytes": 707788800,
+      "sha256": "09398406be61f1f54c93861f449e48b8df0bfccbc9ec9b2b7636775a6ea9244f",
+      "group": "strata",
+      "path": "vendor/strata/mtp/rt/experts.bin",
+      "path_key": "strata_mtp",
+      "relative_to_key": "experts.bin"
+    },
+    {
+      "bytes": 162100,
+      "sha256": "369151522226a5edaa5f12cfd1e2ae7db8f4fbdbd222f3dcf327dced9597fb25",
+      "group": "strata",
+      "path": "vendor/strata/mtp/rt/draft_vocab.bin",
+      "path_key": "strata_mtp",
+      "relative_to_key": "draft_vocab.bin"
+    },
+    {
+      "bytes": 11578880,
+      "sha256": "5b61b189a4e69c5a21486f726d52e8b8cd1fd9370cf7e5c55b71ea3c0bbf77e0",
+      "group": "binaries",
+      "path": "vendor/strata/engine/strata.exe",
+      "path_key": "strata_exe"
+    },
+    {
+      "bytes": 10752,
+      "sha256": "48e674bd1b6f0ce2f13f0924873420397dd0779a8748f2493094400e41c4079e",
+      "group": "binaries",
+      "path": "vendor/llama-generel/build-sm120/bin/llama-server.exe",
+      "path_key": "llama_generel"
+    },
+    {
+      "bytes": 26432,
+      "sha256": "d9f606a2aec9541728720d27f7a23738c9aeb564544752dee105717dd14e4eee",
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/llama-server.exe",
+      "path_key": "llama_unsloth"
+    },
+    {
+      "group": "strata",
+      "path": "vendor/strata/data/expert-profile.bin",
+      "path_key": "expert_profile",
+      "bytes": 130328,
+      "sha256": "2504ff83d9dcacc80e503dfe02b06d139a3170b914241b69eac728009f9a1300"
+    },
+    {
+      "group": "strata",
+      "path": "artifacts/strata/expert-profile-expanded.bin",
+      "path_key": "expanded_profile",
+      "bytes": 196632,
+      "sha256": "49535f57316381f92a2bca33ae9003b21f13c2a1f1d8071eb96fdf655144991a"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-generel/build-sm120/bin/ggml-base.dll",
+      "path_key": "llama_generel",
+      "relative_to_key": "ggml-base.dll",
+      "relative_to_key_parent": true,
+      "bytes": 685568,
+      "sha256": "dfcdfb3e3a279b085e1fc3f2d3b9ee688cadbbada6f7403ca83effdaab0af3fe"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-generel/build-sm120/bin/ggml-cpu.dll",
+      "path_key": "llama_generel",
+      "relative_to_key": "ggml-cpu.dll",
+      "relative_to_key_parent": true,
+      "bytes": 981504,
+      "sha256": "7696847f1782fb1e733a66fb4011b0e848ef75abd342f97d074a491d27c82181"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-generel/build-sm120/bin/ggml-cuda.dll",
+      "path_key": "llama_generel",
+      "relative_to_key": "ggml-cuda.dll",
+      "relative_to_key_parent": true,
+      "bytes": 83667968,
+      "sha256": "5d9ea7f56e1d61c26b090fe4bff8fe28fb375529cafe4f6daa6a1b649e2400d0"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-generel/build-sm120/bin/ggml.dll",
+      "path_key": "llama_generel",
+      "relative_to_key": "ggml.dll",
+      "relative_to_key_parent": true,
+      "bytes": 61952,
+      "sha256": "8b706acaa7925c489e1df7a0ba74ba5420894966ebf7bf214f5657d9e7b052ef"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-generel/build-sm120/bin/llama-common.dll",
+      "path_key": "llama_generel",
+      "relative_to_key": "llama-common.dll",
+      "relative_to_key_parent": true,
+      "bytes": 8940544,
+      "sha256": "ddac5b8656586a2d23017e739df825c205eb6451da0f21416ac4b033adcab966"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-generel/build-sm120/bin/llama-server-impl.dll",
+      "path_key": "llama_generel",
+      "relative_to_key": "llama-server-impl.dll",
+      "relative_to_key_parent": true,
+      "bytes": 6412800,
+      "sha256": "238796103a3d64ba61733809fe0980efea80c9f313854ca020c4a334e6eefd87"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-generel/build-sm120/bin/llama.dll",
+      "path_key": "llama_generel",
+      "relative_to_key": "llama.dll",
+      "relative_to_key_parent": true,
+      "bytes": 2885120,
+      "sha256": "9d14395a58e206c8b776bc2e4226875764c0cd4fde0e999003ff62dec3dd03ad"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-generel/build-sm120/bin/mtmd.dll",
+      "path_key": "llama_generel",
+      "relative_to_key": "mtmd.dll",
+      "relative_to_key_parent": true,
+      "bytes": 2403328,
+      "sha256": "dacc746adc00b89e7242611d4f5be7b6ed790b17b7f2e548f804810b0737ed8b"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-base.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-base.dll",
+      "relative_to_key_parent": true,
+      "bytes": 718656,
+      "sha256": "ce7b9d2bb3e372e082552b6e690da09e58bfea373d7a0111997a086a13c19203"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cpu-alderlake.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cpu-alderlake.dll",
+      "relative_to_key_parent": true,
+      "bytes": 1024320,
+      "sha256": "5a21e3acf58e226de91333f4eb2f03e04001daeb2c00110209fc20ae1144565a"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cpu-cannonlake.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cpu-cannonlake.dll",
+      "relative_to_key_parent": true,
+      "bytes": 1128256,
+      "sha256": "56fee0359b5ca5b52745b777a010db5f071f3cb386dba8edf9c5cb959caae380"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cpu-cascadelake.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cpu-cascadelake.dll",
+      "relative_to_key_parent": true,
+      "bytes": 1127232,
+      "sha256": "98cb8b300350899d5f515629db37cb1f516b18597a03372977f055b6f8143c4f"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cpu-haswell.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cpu-haswell.dll",
+      "relative_to_key_parent": true,
+      "bytes": 1025856,
+      "sha256": "481fc81e01784714c727bfeaa74ce175d15c632aa924ddf98b541ee15da00d0c"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cpu-icelake.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cpu-icelake.dll",
+      "relative_to_key_parent": true,
+      "bytes": 1126720,
+      "sha256": "ce8d68b0370280e4dc2850c60c2ec920cdb1f882059d5c6040f119e5d22b8527"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cpu-sandybridge.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cpu-sandybridge.dll",
+      "relative_to_key_parent": true,
+      "bytes": 969536,
+      "sha256": "eac3ff4652821317fa3c95751b971c4f9a756d3712b688b595c8b54fbcc925fa"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cpu-skylakex.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cpu-skylakex.dll",
+      "relative_to_key_parent": true,
+      "bytes": 1128256,
+      "sha256": "b347f4a856d1337fa680f092dba2a6bf4381ee7ea8e7640a37d5f5e796c3e85f"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cpu-sse42.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cpu-sse42.dll",
+      "relative_to_key_parent": true,
+      "bytes": 889664,
+      "sha256": "3bbdc54025dfced6937d085f94e8e1870677b5e0e776952e06063ab3fd585078"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cpu-x64.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cpu-x64.dll",
+      "relative_to_key_parent": true,
+      "bytes": 891200,
+      "sha256": "91a030cd7e45ca09e3ab4c1d730e586dd332da03234c3d641ee134ba99d2d44d"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-cuda.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-cuda.dll",
+      "relative_to_key_parent": true,
+      "bytes": 230285632,
+      "sha256": "24c0ced22028c9dea1fe0120f9d997cd8c24e46e03c1edc41f0fd6b7c012e1c7"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml-rpc.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml-rpc.dll",
+      "relative_to_key_parent": true,
+      "bytes": 162112,
+      "sha256": "1d3a7375b77ff2fb4aec1e56c756593789951ddf9550d2070feacb3fa5082ab2"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/ggml.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "ggml.dll",
+      "relative_to_key_parent": true,
+      "bytes": 76608,
+      "sha256": "f439edaa838366d66ad05da9ceff18ca50122b7d712cee8b438e0558b0328f44"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/llama-common.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "llama-common.dll",
+      "relative_to_key_parent": true,
+      "bytes": 9449792,
+      "sha256": "36aab1d5b1fd1c3635a41ea308d5e8f822e07788997b7951047387d786161132"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/llama-server-impl.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "llama-server-impl.dll",
+      "relative_to_key_parent": true,
+      "bytes": 7602496,
+      "sha256": "1abc71ef161cc19a67dab2115c03e24003bdffe4c7d52ceab21f26f5fe9a21eb"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/llama.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "llama.dll",
+      "relative_to_key_parent": true,
+      "bytes": 2767680,
+      "sha256": "482fd9d4d16cb33a461d9750495affcced27b529d51a3fa3ad07f6751f9ddbbf"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/llama-unsloth/mtmd.dll",
+      "path_key": "llama_unsloth",
+      "relative_to_key": "mtmd.dll",
+      "relative_to_key_parent": true,
+      "bytes": 2488640,
+      "sha256": "f30dd6580e5ee1a89bdf4c57a6db0379bd48b5b1c84eea62e11ea3cfd2b3336a"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/cuda-runtime/cublas64_13.dll",
+      "path_key": "cuda_runtime",
+      "relative_to_key": "cublas64_13.dll",
+      "relative_to_key_parent": false,
+      "bytes": 54942320,
+      "sha256": "1119dbca0a808e0c8850bb4221e330daf0b5ddb348d62d37b6ac533854723df9"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/cuda-runtime/cublasLt64_13.dll",
+      "path_key": "cuda_runtime",
+      "relative_to_key": "cublasLt64_13.dll",
+      "relative_to_key_parent": false,
+      "bytes": 492752496,
+      "sha256": "0f5bc315fef706b5626248ebd74e8a48a9e82fa2f0cad38330f5f70984913107"
+    },
+    {
+      "group": "binaries",
+      "path": "vendor/cuda-runtime/cudart64_13.dll",
+      "path_key": "cuda_runtime",
+      "relative_to_key": "cudart64_13.dll",
+      "relative_to_key_parent": false,
+      "bytes": 551024,
+      "sha256": "05bfafcb97bd53b0089568a96e1e5bd6921637bd0853ff7f5342bd31a6a16890"
+    }
+  ]
+}

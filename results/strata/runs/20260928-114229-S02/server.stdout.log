@@ -1,0 +1,33 @@
+loading the model (the first start takes a minute or two) ...
+ready: http://127.0.0.1:8082/v1  (OpenAI: /v1/chat/completions, Anthropic: /v1/messages, context 262144 tokens)
+       open http://127.0.0.1:8082/ in a browser to chat; close this window to stop the model
+[strata] reading the prompt: 8685 tokens, 3 s so far
+[strata] reading the prompt: 8685 tokens, 7 s so far
+[strata] reading the prompt: 8685 tokens, 11 s so far
+[strata] reading the prompt: 8685 tokens, 15 s so far
+[strata] reading the prompt: 8685 tokens, 17 s so far
+[strata] thinking: 66 of max 2048 tokens, 76.5 tok/s, 18 s
+[strata] thinking: 148 of max 2048 tokens, 79.0 tok/s, 19 s
+[strata] thinking: 232 of max 2048 tokens, 80.3 tok/s, 20 s
+[strata] thinking: 309 of max 2048 tokens, 79.0 tok/s, 21 s
+[strata] thinking: 393 of max 2048 tokens, 79.6 tok/s, 22 s
+[strata] thinking: 482 of max 2048 tokens, 81.2 tok/s, 23 s
+[strata] thinking: 582 of max 2048 tokens, 83.9 tok/s, 24 s
+[strata] thinking: 666 of max 2048 tokens, 83.8 tok/s, 25 s
+[strata] thinking: 732 of max 2048 tokens, 81.7 tok/s, 26 s
+[strata] thinking: 813 of max 2048 tokens, 81.5 tok/s, 27 s
+[strata] thinking: 881 of max 2048 tokens, 80.2 tok/s, 28 s
+[strata] thinking: 957 of max 2048 tokens, 79.8 tok/s, 29 s
+[strata] thinking: 1042 of max 2048 tokens, 80.1 tok/s, 30 s
+[strata] thinking: 1130 of max 2048 tokens, 80.7 tok/s, 31 s
+[strata] thinking: 1232 of max 2048 tokens, 82.1 tok/s, 32 s
+[strata] thinking: 1317 of max 2048 tokens, 82.2 tok/s, 33 s
+[strata] thinking: 1404 of max 2048 tokens, 82.4 tok/s, 34 s
+[strata] thinking: 1498 of max 2048 tokens, 83.0 tok/s, 35 s
+[strata] thinking: 1583 of max 2048 tokens, 83.1 tok/s, 36 s
+[strata] thinking: 1661 of max 2048 tokens, 82.7 tok/s, 37 s
+[strata] thinking: 1723 of max 2048 tokens, 81.7 tok/s, 38 s
+[strata] thinking: 1805 of max 2048 tokens, 81.7 tok/s, 39 s
+[strata] thinking: 1877 of max 2048 tokens, 81.3 tok/s, 40 s
+[strata] thinking: 1955 of max 2048 tokens, 81.0 tok/s, 41 s
+[strata] done: 2048 tokens in 42 s (81.7 tok/s) (length, cancel=False)

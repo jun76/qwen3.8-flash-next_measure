@@ -1,0 +1,8 @@
+{
+  "id": "S28",
+  "description": "S20からVRAM予約を4096MiBへ増やす常用候補",
+  "overrides": {
+    "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+    "--vram-reserve-mib": 4096
+  }
+}

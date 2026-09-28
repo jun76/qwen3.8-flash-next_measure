@@ -1,0 +1,21 @@
+{
+  "source_commit": "6c4c8c1dfafc16fa0ea7fc80c12c79f93b9f7eee",
+  "local_source_changes": "Pre-existing warning-scope and AVX-512 capability-check fixes; no engine edits for this comparison.",
+  "artifacts": [
+    {
+      "path": "vendor/strata/engine/strata.exe",
+      "size": 11578880,
+      "sha256": "5b61b189a4e69c5a21486f726d52e8b8cd1fd9370cf7e5c55b71ea3c0bbf77e0"
+    },
+    {
+      "path": "vendor/strata/strata-iq3_s.json",
+      "size": 1183,
+      "sha256": "f99cf67d6360d598b24fa4f93cdbcadff39195bd54029d03d76a91ca240cd428"
+    },
+    {
+      "path": "vendor/strata/data/expert-profile.bin",
+      "size": 130328,
+      "sha256": "2504ff83d9dcacc80e503dfe02b06d139a3170b914241b69eac728009f9a1300"
+    }
+  ]
+}

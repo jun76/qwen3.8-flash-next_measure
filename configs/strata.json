@@ -1,0 +1,197 @@
+{
+  "S01": {
+    "description": "現在の設定：spec4、min-p0.5、context256K、cache auto"
+  },
+  "S02": {
+    "description": "先読みを最大1トークンに",
+    "overrides": {
+      "--spec": 2
+    }
+  },
+  "S03": {
+    "description": "先読みを最大2トークンに",
+    "overrides": {
+      "--spec": 3
+    }
+  },
+  "S04": {
+    "description": "先読みを最大5トークンに",
+    "overrides": {
+      "--spec": 6
+    }
+  },
+  "S05": {
+    "description": "先読みを最大7トークンに",
+    "overrides": {
+      "--spec": 8
+    }
+  },
+  "S06": {
+    "description": "spec4、候補の確率による打ち切りなし",
+    "overrides": {
+      "--spec-min-p": 0
+    }
+  },
+  "S07": {
+    "description": "spec4、候補の閾値0.3",
+    "overrides": {
+      "--spec-min-p": 0.3
+    }
+  },
+  "S08": {
+    "description": "spec4、候補の閾値0.7",
+    "overrides": {
+      "--spec-min-p": 0.7
+    }
+  },
+  "S09": {
+    "description": "spec4、候補の閾値0.9",
+    "overrides": {
+      "--spec-min-p": 0.9
+    }
+  },
+  "S10": {
+    "description": "S01からCPUワーカーを7へ",
+    "overrides": {
+      "--pool-workers": 7
+    }
+  },
+  "S11": {
+    "description": "S01からCPUワーカーを12へ",
+    "overrides": {
+      "--pool-workers": 12
+    }
+  },
+  "S12": {
+    "description": "S01からキャッシュミス時のGPU分担率を0へ",
+    "overrides": {
+      "--pcie-frac": 0
+    }
+  },
+  "S13": {
+    "description": "S01からキャッシュミス時のGPU分担率を0.3へ",
+    "overrides": {
+      "--pcie-frac": 0.3
+    }
+  },
+  "S14": {
+    "description": "S01からキャッシュミス時のGPU分担率を0.8へ",
+    "overrides": {
+      "--pcie-frac": 0.8
+    }
+  },
+  "S15": {
+    "description": "S01からキャッシュミス時のGPU分担率を1へ",
+    "overrides": {
+      "--pcie-frac": 1
+    }
+  },
+  "S16": {
+    "description": "S01からexpert-cache予算を4000へ。実件数は起動ログに記録",
+    "overrides": {
+      "--expert-cache": 4000
+    }
+  },
+  "S17": {
+    "description": "S01からコンテキストを128Kへ",
+    "overrides": {
+      "--max-context": 131072
+    }
+  },
+  "S18": {
+    "description": "S01からコンテキストを32Kへ。最大出力100Kの運用候補にはしない",
+    "overrides": {
+      "--max-context": 32768
+    }
+  },
+  "S19": {
+    "description": "S17からKVをfp16へ",
+    "overrides": {
+      "--max-context": 131072,
+      "--kv": "fp16"
+    }
+  },
+  "S20": {
+    "description": "S01からexpert配置表を拡張、auto cache、VRAM余裕2048MiB",
+    "overrides": {
+      "--expert-profile": "{expanded_profile}",
+      "--vram-reserve-mib": 2048
+    }
+  },
+  "S21": {
+    "description": "S20からコンテキストを128Kへ",
+    "overrides": {
+      "--max-context": 131072,
+      "--expert-profile": "{expanded_profile}",
+      "--vram-reserve-mib": 2048
+    }
+  },
+  "S22": {
+    "description": "S01からprefillを4096へ",
+    "overrides": {
+      "--prefill": 4096
+    }
+  },
+  "S23": {
+    "description": "S01からcacheの適応的入れ替えを無効化",
+    "overrides": {
+      "--adapt-every": 0
+    }
+  },
+  "S24": {
+    "description": "拡張配置表、32K、VRAM余裕3072MiB。短い文脈用の実験",
+    "overrides": {
+      "--max-context": 32768,
+      "--expert-profile": "{expanded_profile}",
+      "--vram-reserve-mib": 3072
+    }
+  },
+  "S25": {
+    "description": "S01からPLE表の読み方をmmapへ",
+    "overrides": {
+      "--ple-io": "mmap"
+    }
+  },
+  "S26": {
+    "description": "S01からPCIe転送をdirectへ",
+    "overrides": {
+      "--pcie-mode": "direct"
+    }
+  },
+  "S27": {
+    "description": "S20からVRAM予約を3072MiBへ増やす常用候補",
+    "overrides": {
+      "--expert-profile": "{expanded_profile}",
+      "--vram-reserve-mib": 3072
+    }
+  },
+  "S28": {
+    "description": "S20からVRAM予約を4096MiBへ増やす常用候補",
+    "overrides": {
+      "--expert-profile": "{expanded_profile}",
+      "--vram-reserve-mib": 4096
+    }
+  },
+  "S29": {
+    "description": "S21からVRAM予約を3072MiBへ増やす128K候補",
+    "overrides": {
+      "--max-context": 131072,
+      "--expert-profile": "{expanded_profile}",
+      "--vram-reserve-mib": 3072
+    }
+  },
+  "S30": {
+    "description": "S01からcacheの適応的入れ替えを毎ラウンドへ",
+    "overrides": {
+      "--adapt-every": 1
+    }
+  },
+  "S31": {
+    "description": "S27の拡張cache・256K・VRAM予約3072MiBと、S30の毎ラウンド入れ替えを組み合わせる",
+    "overrides": {
+      "--expert-profile": "{expanded_profile}",
+      "--vram-reserve-mib": 3072,
+      "--adapt-every": 1
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "S24",
+  "description": "拡張配置表、32K、VRAM余裕3072MiB。短い文脈用の実験",
+  "overrides": {
+    "--max-context": 32768,
+    "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+    "--vram-reserve-mib": 3072
+  },
+  "measurements": [
+    {
+      "name": "harness-2048",
+      "input": "harness",
+      "tokens": 2048
+    }
+  ]
+}

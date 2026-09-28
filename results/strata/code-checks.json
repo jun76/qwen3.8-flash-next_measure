@@ -1,0 +1,42 @@
+[
+  {
+    "run": 33,
+    "config_id": "S01",
+    "html": "No33-S01-1.html",
+    "javascript_syntax_ok": true,
+    "diagnostic": "",
+    "gameplay_tested": false
+  },
+  {
+    "run": 35,
+    "config_id": "S30",
+    "html": "No35-S30-1.html",
+    "javascript_syntax_ok": true,
+    "diagnostic": "",
+    "gameplay_tested": false
+  },
+  {
+    "run": 37,
+    "config_id": "S31",
+    "html": "No37-S31-1.html",
+    "javascript_syntax_ok": true,
+    "diagnostic": "",
+    "gameplay_tested": false
+  },
+  {
+    "run": 44,
+    "config_id": "S31",
+    "html": "No44-S31-0.html",
+    "javascript_syntax_ok": true,
+    "diagnostic": "",
+    "gameplay_tested": false
+  },
+  {
+    "run": 45,
+    "config_id": "S31",
+    "html": "No45-S31-0.html",
+    "javascript_syntax_ok": true,
+    "diagnostic": "",
+    "gameplay_tested": false
+  }
+]

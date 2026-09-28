@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "ブロック崩しゲーム作って"
+    }
+  ],
+  "seed": 1234,
+  "top_k": 20,
+  "top_p": 0.95,
+  "cache_prompt": false,
+  "model": "qwen3.8-flash-next-iq3_s-strata-bench",
+  "max_tokens": 32768,
+  "stream": false,
+  "temperature": 0
+}

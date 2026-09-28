@@ -1,0 +1,42 @@
+loading the model (the first start takes a minute or two) ...
+ready: http://127.0.0.1:8082/v1  (OpenAI: /v1/chat/completions, Anthropic: /v1/messages, context 262144 tokens)
+       open http://127.0.0.1:8082/ in a browser to chat; close this window to stop the model
+[strata] reading the prompt: 8685 tokens, 4 s so far
+[strata] reading the prompt: 8685 tokens, 7 s so far
+[strata] reading the prompt: 8685 tokens, 10 s so far
+[strata] reading the prompt: 8685 tokens, 14 s so far
+[strata] reading the prompt: 8685 tokens, 16 s so far
+[strata] thinking: 28 of max 2048 tokens, 31.5 tok/s, 17 s
+[strata] thinking: 73 of max 2048 tokens, 38.3 tok/s, 18 s
+[strata] thinking: 132 of max 2048 tokens, 45.3 tok/s, 19 s
+[strata] thinking: 210 of max 2048 tokens, 53.5 tok/s, 20 s
+[strata] thinking: 295 of max 2048 tokens, 59.6 tok/s, 21 s
+[strata] thinking: 373 of max 2048 tokens, 62.4 tok/s, 22 s
+[strata] writing a tool call: write: 412 of max 2048 tokens, 59.0 tok/s, 23 s
+[strata] writing a tool call: write: 455 of max 2048 tokens, 56.9 tok/s, 24 s
+[strata] writing a tool call: write: 501 of max 2048 tokens, 55.4 tok/s, 25 s
+[strata] writing a tool call: write: 535 of max 2048 tokens, 52.9 tok/s, 26 s
+[strata] writing a tool call: write: 583 of max 2048 tokens, 52.2 tok/s, 27 s
+[strata] writing a tool call: write: 632 of max 2048 tokens, 51.6 tok/s, 29 s
+[strata] writing a tool call: write: 676 of max 2048 tokens, 50.9 tok/s, 30 s
+[strata] writing a tool call: write: 729 of max 2048 tokens, 51.0 tok/s, 31 s
+[strata] writing a tool call: write: 788 of max 2048 tokens, 51.4 tok/s, 32 s
+[strata] writing a tool call: write: 849 of max 2048 tokens, 52.0 tok/s, 33 s
+[strata] writing a tool call: write: 909 of max 2048 tokens, 52.4 tok/s, 34 s
+[strata] writing a tool call: write: 977 of max 2048 tokens, 53.2 tok/s, 35 s
+[strata] writing a tool call: write: 1045 of max 2048 tokens, 53.8 tok/s, 36 s
+[strata] writing a tool call: write: 1121 of max 2048 tokens, 54.9 tok/s, 37 s
+[strata] writing a tool call: write: 1178 of max 2048 tokens, 54.9 tok/s, 38 s
+[strata] writing a tool call: write: 1233 of max 2048 tokens, 54.9 tok/s, 39 s
+[strata] writing a tool call: write: 1306 of max 2048 tokens, 55.7 tok/s, 40 s
+[strata] writing a tool call: write: 1359 of max 2048 tokens, 55.5 tok/s, 41 s
+[strata] writing a tool call: write: 1418 of max 2048 tokens, 55.5 tok/s, 42 s
+[strata] writing a tool call: write: 1502 of max 2048 tokens, 56.6 tok/s, 43 s
+[strata] writing a tool call: write: 1581 of max 2048 tokens, 57.3 tok/s, 44 s
+[strata] writing a tool call: write: 1650 of max 2048 tokens, 57.7 tok/s, 45 s
+[strata] writing a tool call: write: 1717 of max 2048 tokens, 57.8 tok/s, 46 s
+[strata] writing a tool call: write: 1778 of max 2048 tokens, 57.9 tok/s, 47 s
+[strata] writing a tool call: write: 1845 of max 2048 tokens, 58.1 tok/s, 48 s
+[strata] writing a tool call: write: 1942 of max 2048 tokens, 59.3 tok/s, 49 s
+[strata] writing a tool call: write: 2036 of max 2048 tokens, 60.3 tok/s, 50 s
+[strata] done: 2048 tokens in 50 s (60.5 tok/s) (length, cancel=False)

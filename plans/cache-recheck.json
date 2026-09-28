@@ -1,0 +1,739 @@
+{
+  "purpose": "Recheck the direct/Harness end-of-response table with fresh engine processes and paired warm-cache diagnostics.",
+  "protocol": {
+    "replicates_per_cell": 3,
+    "shuffle_seed": 20260928,
+    "sampling_seed": 1234,
+    "full_response_max_tokens": 65536,
+    "fixed_length_max_tokens": 2048,
+    "primary": "Four engine/input cells; one full response per fresh server process, repeated three times.",
+    "diagnostic": "Four engine/input cells with a 2048-token cap, repeated three times in fresh processes. Strata repeats the same request once in each process to measure warm-cache effects.",
+    "prompt_cache": "Disabled: request cache_prompt=false, Strata --prompt-cache 0, llama.cpp --cache-ram 0. Check Strata reused_tokens=0.",
+    "expert_cache": "Fresh process for every first request. Paired second Strata requests intentionally retain expert and PLE row caches.",
+    "os_cache": "OS file caches are not purged. Engine startup time and prefill are excluded from generation tok/s.",
+    "input_provenance": "Previously published path-normalized fixtures. New rates measure these public inputs; old rates measured inputs before path normalization.",
+    "settings": "Existing G7/S31 configurations. G7 temperature=1; Strata effective greedy. Thinking enabled in all cases.",
+    "capacity": "Keep the original Strata auto cache policy; record actual slot count and GPU memory for every process.",
+    "stopping": "Do not ignore EOS. A length-limited response is retained and labeled censored, not described as a completed response.",
+    "tools": "Record tool calls only; never execute generated tools or code.",
+    "aggregation": "Report the median and observed range across all three runs in each cell, plus output lengths and finish states. Keep primary, fixed-length, and warm-cache measurements separate."
+  },
+  "processes": 24,
+  "requests": 30,
+  "cases": [
+    {
+      "case_id": "01-S31-harness-full-r1",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "full",
+      "input_kind": "harness",
+      "repetition": 1,
+      "requests": [
+        {
+          "name": "harness-full-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "02-S31-direct-full-r1",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "full",
+      "input_kind": "direct",
+      "repetition": 1,
+      "requests": [
+        {
+          "name": "direct-full-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "03-G7-harness-full-r1",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "full",
+      "input_kind": "harness",
+      "repetition": 1,
+      "requests": [
+        {
+          "name": "harness-full-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "04-G7-direct-full-r1",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "full",
+      "input_kind": "direct",
+      "repetition": 1,
+      "requests": [
+        {
+          "name": "direct-full-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "05-G7-direct-full-r2",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "full",
+      "input_kind": "direct",
+      "repetition": 2,
+      "requests": [
+        {
+          "name": "direct-full-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "06-G7-harness-full-r2",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "full",
+      "input_kind": "harness",
+      "repetition": 2,
+      "requests": [
+        {
+          "name": "harness-full-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "07-S31-direct-full-r2",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "full",
+      "input_kind": "direct",
+      "repetition": 2,
+      "requests": [
+        {
+          "name": "direct-full-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "08-S31-harness-full-r2",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "full",
+      "input_kind": "harness",
+      "repetition": 2,
+      "requests": [
+        {
+          "name": "harness-full-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "09-S31-harness-full-r3",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "full",
+      "input_kind": "harness",
+      "repetition": 3,
+      "requests": [
+        {
+          "name": "harness-full-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "10-S31-direct-full-r3",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "full",
+      "input_kind": "direct",
+      "repetition": 3,
+      "requests": [
+        {
+          "name": "direct-full-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "11-G7-harness-full-r3",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "full",
+      "input_kind": "harness",
+      "repetition": 3,
+      "requests": [
+        {
+          "name": "harness-full-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "12-G7-direct-full-r3",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "full",
+      "input_kind": "direct",
+      "repetition": 3,
+      "requests": [
+        {
+          "name": "direct-full-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 65536,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "13-S31-harness-fixed-r1",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "fixed",
+      "input_kind": "harness",
+      "repetition": 1,
+      "requests": [
+        {
+          "name": "harness-fixed-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        },
+        {
+          "name": "harness-fixed-warm",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "14-S31-direct-fixed-r1",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "fixed",
+      "input_kind": "direct",
+      "repetition": 1,
+      "requests": [
+        {
+          "name": "direct-fixed-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        },
+        {
+          "name": "direct-fixed-warm",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "15-G7-harness-fixed-r1",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "fixed",
+      "input_kind": "harness",
+      "repetition": 1,
+      "requests": [
+        {
+          "name": "harness-fixed-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "16-G7-direct-fixed-r1",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "fixed",
+      "input_kind": "direct",
+      "repetition": 1,
+      "requests": [
+        {
+          "name": "direct-fixed-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "17-G7-direct-fixed-r2",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "fixed",
+      "input_kind": "direct",
+      "repetition": 2,
+      "requests": [
+        {
+          "name": "direct-fixed-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "18-S31-harness-fixed-r2",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "fixed",
+      "input_kind": "harness",
+      "repetition": 2,
+      "requests": [
+        {
+          "name": "harness-fixed-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        },
+        {
+          "name": "harness-fixed-warm",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "19-S31-direct-fixed-r2",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "fixed",
+      "input_kind": "direct",
+      "repetition": 2,
+      "requests": [
+        {
+          "name": "direct-fixed-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        },
+        {
+          "name": "direct-fixed-warm",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "20-G7-harness-fixed-r2",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "fixed",
+      "input_kind": "harness",
+      "repetition": 2,
+      "requests": [
+        {
+          "name": "harness-fixed-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "21-S31-harness-fixed-r3",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "fixed",
+      "input_kind": "harness",
+      "repetition": 3,
+      "requests": [
+        {
+          "name": "harness-fixed-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        },
+        {
+          "name": "harness-fixed-warm",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "22-S31-direct-fixed-r3",
+      "engine": "strata",
+      "id": "S31",
+      "port": 8082,
+      "phase": "fixed",
+      "input_kind": "direct",
+      "repetition": 3,
+      "requests": [
+        {
+          "name": "direct-fixed-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        },
+        {
+          "name": "direct-fixed-warm",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 0,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "23-G7-direct-fixed-r3",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "fixed",
+      "input_kind": "direct",
+      "repetition": 3,
+      "requests": [
+        {
+          "name": "direct-fixed-fresh",
+          "request_file": "fixtures/direct-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "24-G7-harness-fixed-r3",
+      "engine": "llama_cpp",
+      "id": "G7",
+      "port": 8081,
+      "phase": "fixed",
+      "input_kind": "harness",
+      "repetition": 3,
+      "requests": [
+        {
+          "name": "harness-fixed-fresh",
+          "request_file": "fixtures/harness-request.json",
+          "overrides": {
+            "max_tokens": 2048,
+            "temperature": 1,
+            "seed": 1234,
+            "top_k": 20,
+            "top_p": 0.95,
+            "min_p": 0.05,
+            "chat_template_kwargs": {
+              "enable_thinking": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

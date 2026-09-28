@@ -1,0 +1,26 @@
+{
+  "config_id": "S31",
+  "rationale": "expertのGPU常駐枠を増やし、適応的な入れ替えを4ラウンドごとから毎ラウンドへ変更した。再起動して行った3回の固定長測定と、応答終了までの測定の両方で元の設定を上回った。測定後の空きVRAMは約1.4〜1.7GiBあり、短いコンテキストへ縮める必要もなかった。",
+  "fixed_length_runs": [
+    31,
+    36,
+    40
+  ],
+  "baseline_fixed_length_runs": [
+    1,
+    32,
+    38
+  ],
+  "complete_harness_run": 37,
+  "production_context": 262144,
+  "harness_max_output": 100000,
+  "production_prompt_cache": 6,
+  "benchmark_prompt_cache": 0,
+  "selection_basis": "3 fresh-process Harness requests, 2048 generated tokens each; one complete API response after the same 2048-token warm-up; VRAM headroom and prior 100K-output requirement.",
+  "not_verified": [
+    "100000-token continuous output",
+    "maximum-context accuracy",
+    "multi-user concurrency",
+    "gameplay correctness"
+  ]
+}

@@ -1,0 +1,743 @@
+{
+  "requests": 30,
+  "processes": 24,
+  "aggregation": "Median and observed minimum/maximum across the three requests in each cell; ranges are not confidence intervals.",
+  "cells": [
+    {
+      "phase": "fixed",
+      "engine": "llama_cpp",
+      "config_id": "G7",
+      "input_kind": "direct",
+      "cache_start": "fresh_process",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "length": 3
+      },
+      "cases": [
+        "16-G7-direct-fixed-r1",
+        "17-G7-direct-fixed-r2",
+        "23-G7-direct-fixed-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 73.21065749751166,
+        "min": 59.67775702126886,
+        "max": 73.21386513948815
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 2048,
+        "min": 2048,
+        "max": 2048
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 58,
+        "min": 58,
+        "max": 58
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 27.96041,
+        "min": 27.959185,
+        "max": 34.300887
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 1.432567,
+        "min": 1.392296,
+        "max": 1.734329
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 29.417083800013643,
+        "min": 29.357009799976368,
+        "max": 36.0638516000472
+      }
+    },
+    {
+      "phase": "fixed",
+      "engine": "llama_cpp",
+      "config_id": "G7",
+      "input_kind": "harness",
+      "cache_start": "fresh_process",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "length": 3
+      },
+      "cases": [
+        "15-G7-harness-fixed-r1",
+        "20-G7-harness-fixed-r2",
+        "24-G7-harness-fixed-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 62.786742482706195,
+        "min": 62.4242206708094,
+        "max": 63.242100244506254
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 2048,
+        "min": 2048,
+        "max": 2048
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 8858,
+        "min": 8858,
+        "max": 8858
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 32.602424,
+        "min": 32.367679,
+        "max": 32.791759
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 26.213029,
+        "min": 26.105826,
+        "max": 26.413254000000002
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 58.83380490000127,
+        "min": 58.75803069997346,
+        "max": 59.0409362000064
+      }
+    },
+    {
+      "phase": "fixed",
+      "engine": "strata",
+      "config_id": "S31",
+      "input_kind": "direct",
+      "cache_start": "fresh_process",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "length": 3
+      },
+      "cases": [
+        "14-S31-direct-fixed-r1",
+        "19-S31-direct-fixed-r2",
+        "22-S31-direct-fixed-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 95.85322474960218,
+        "min": 92.11118107403077,
+        "max": 102.09371884346959
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 2048,
+        "min": 2048,
+        "max": 2048
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 58,
+        "min": 58,
+        "max": 58
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 21.366,
+        "min": 20.06,
+        "max": 22.234
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 0.723,
+        "min": 0.72,
+        "max": 0.775
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 22.10455920000095,
+        "min": 20.801746899960563,
+        "max": 23.01484130002791
+      },
+      "acceptance": {
+        "n": 3,
+        "median": 0.6350132625994694,
+        "min": 0.6262513904338154,
+        "max": 0.6359765832889835
+      },
+      "cache_slots": {
+        "n": 3,
+        "median": 9618.0,
+        "min": 9599.0,
+        "max": 9630.0
+      }
+    },
+    {
+      "phase": "fixed",
+      "engine": "strata",
+      "config_id": "S31",
+      "input_kind": "direct",
+      "cache_start": "same_input_repeat",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "length": 3
+      },
+      "cases": [
+        "14-S31-direct-fixed-r1",
+        "19-S31-direct-fixed-r2",
+        "22-S31-direct-fixed-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 94.09602572938203,
+        "min": 83.77991409286153,
+        "max": 95.49121089196625
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 2048,
+        "min": 2048,
+        "max": 2048
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 58,
+        "min": 58,
+        "max": 58
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 21.765,
+        "min": 21.447,
+        "max": 24.445
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 0.808,
+        "min": 0.793,
+        "max": 0.84
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 22.58994380000513,
+        "min": 22.268251799978316,
+        "max": 25.288251999998465
+      },
+      "acceptance": {
+        "n": 3,
+        "median": 0.5794956140350878,
+        "min": 0.5468669083376488,
+        "max": 0.605979711692472
+      },
+      "cache_slots": {
+        "n": 3,
+        "median": 9618.0,
+        "min": 9599.0,
+        "max": 9630.0
+      }
+    },
+    {
+      "phase": "fixed",
+      "engine": "strata",
+      "config_id": "S31",
+      "input_kind": "harness",
+      "cache_start": "fresh_process",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "length": 3
+      },
+      "cases": [
+        "13-S31-harness-fixed-r1",
+        "18-S31-harness-fixed-r2",
+        "21-S31-harness-fixed-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 115.34129308402794,
+        "min": 98.43787551069454,
+        "max": 119.79410388394946
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 2048,
+        "min": 2048,
+        "max": 2048
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 8613,
+        "min": 8613,
+        "max": 8613
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 17.756,
+        "min": 17.096,
+        "max": 20.805
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 14.808,
+        "min": 13.991,
+        "max": 18.136
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 31.953817199973855,
+        "min": 31.79741749999812,
+        "max": 38.98920630000066
+      },
+      "acceptance": {
+        "n": 3,
+        "median": 0.8218224027858386,
+        "min": 0.7191201353637902,
+        "max": 0.8415138971023063
+      },
+      "cache_slots": {
+        "n": 3,
+        "median": 9569.0,
+        "min": 9548.0,
+        "max": 9631.0
+      }
+    },
+    {
+      "phase": "fixed",
+      "engine": "strata",
+      "config_id": "S31",
+      "input_kind": "harness",
+      "cache_start": "same_input_repeat",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "length": 3
+      },
+      "cases": [
+        "13-S31-harness-fixed-r1",
+        "18-S31-harness-fixed-r2",
+        "21-S31-harness-fixed-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 98.36223044042073,
+        "min": 96.62200415172674,
+        "max": 103.29348867705654
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 2048,
+        "min": 2048,
+        "max": 2048
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 8613,
+        "min": 8613,
+        "max": 8613
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 20.821,
+        "min": 19.827,
+        "max": 21.196
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 13.294,
+        "min": 12.022,
+        "max": 14.348
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 34.52839970000787,
+        "min": 31.895125299983192,
+        "max": 35.209309300000314
+      },
+      "acceptance": {
+        "n": 3,
+        "median": 0.7128883774453395,
+        "min": 0.6916150815981992,
+        "max": 0.717948717948718
+      },
+      "cache_slots": {
+        "n": 3,
+        "median": 9569.0,
+        "min": 9548.0,
+        "max": 9631.0
+      }
+    },
+    {
+      "phase": "full",
+      "engine": "llama_cpp",
+      "config_id": "G7",
+      "input_kind": "direct",
+      "cache_start": "fresh_process",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "stop": 3
+      },
+      "cases": [
+        "04-G7-direct-full-r1",
+        "05-G7-direct-full-r2",
+        "12-G7-direct-full-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 62.323619068358454,
+        "min": 61.840076777189694,
+        "max": 62.34401373400465
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 25930,
+        "min": 25930,
+        "max": 25930
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 58,
+        "min": 58,
+        "max": 58
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 416.038099,
+        "min": 415.902,
+        "max": 419.2912
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 1.4674749999999999,
+        "min": 1.464479,
+        "max": 1.488754
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 417.51289369998267,
+        "min": 417.3965865999926,
+        "max": 420.78734409995377
+      }
+    },
+    {
+      "phase": "full",
+      "engine": "llama_cpp",
+      "config_id": "G7",
+      "input_kind": "harness",
+      "cache_start": "fresh_process",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "tool_calls": 3
+      },
+      "cases": [
+        "03-G7-harness-full-r1",
+        "06-G7-harness-full-r2",
+        "11-G7-harness-full-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 63.50243803797191,
+        "min": 62.005966336853874,
+        "max": 63.56433015042889
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 5506,
+        "min": 5506,
+        "max": 5506
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 8858,
+        "min": 8858,
+        "max": 8858
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 86.68958500000001,
+        "min": 86.605176,
+        "max": 88.781779
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 26.28518,
+        "min": 26.125891,
+        "max": 27.152521
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 112.95214720000513,
+        "min": 112.86530200002016,
+        "max": 115.98712150001666
+      }
+    },
+    {
+      "phase": "full",
+      "engine": "strata",
+      "config_id": "S31",
+      "input_kind": "direct",
+      "cache_start": "fresh_process",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "stop": 3
+      },
+      "cases": [
+        "02-S31-direct-full-r1",
+        "07-S31-direct-full-r2",
+        "10-S31-direct-full-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 99.25413308022496,
+        "min": 97.03213745034088,
+        "max": 105.78037258222658
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 28025,
+        "min": 23735,
+        "max": 28650
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 58,
+        "min": 58,
+        "max": 58
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 282.356,
+        "min": 224.38,
+        "max": 295.263
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 0.752,
+        "min": 0.727,
+        "max": 0.779
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 285.16167409997433,
+        "min": 225.1385067999945,
+        "max": 296.0070589000243
+      },
+      "acceptance": {
+        "n": 3,
+        "median": 0.7373878653419504,
+        "min": 0.7279779985222888,
+        "max": 0.7468755072228535
+      },
+      "cache_slots": {
+        "n": 3,
+        "median": 9566.0,
+        "min": 9563.0,
+        "max": 9575.0
+      }
+    },
+    {
+      "phase": "full",
+      "engine": "strata",
+      "config_id": "S31",
+      "input_kind": "harness",
+      "cache_start": "fresh_process",
+      "requests": 3,
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "finish_reasons": {
+        "tool_calls": 3
+      },
+      "cases": [
+        "01-S31-harness-full-r1",
+        "08-S31-harness-full-r2",
+        "09-S31-harness-full-r3"
+      ],
+      "tokens_per_second": {
+        "n": 3,
+        "median": 110.40480682802796,
+        "min": 91.07969407706784,
+        "max": 128.04610176499472
+      },
+      "output_tokens": {
+        "n": 3,
+        "median": 13634,
+        "min": 4955,
+        "max": 17375
+      },
+      "prompt_tokens": {
+        "n": 3,
+        "median": 8613,
+        "min": 8613,
+        "max": 8613
+      },
+      "generation_seconds": {
+        "n": 3,
+        "median": 123.491,
+        "min": 38.697,
+        "max": 190.767
+      },
+      "prefill_seconds": {
+        "n": 3,
+        "median": 13.237,
+        "min": 13.035,
+        "max": 15.707
+      },
+      "wall_seconds": {
+        "n": 3,
+        "median": 139.23894260003,
+        "min": 51.9693667999818,
+        "max": 203.84693200001493
+      },
+      "acceptance": {
+        "n": 3,
+        "median": 0.8208139117963428,
+        "min": 0.8083409138618711,
+        "max": 0.8561204343534057
+      },
+      "cache_slots": {
+        "n": 3,
+        "median": 9599.0,
+        "min": 9564.0,
+        "max": 9601.0
+      }
+    }
+  ],
+  "paired_strata_fixed": [
+    {
+      "case_id": "13-S31-harness-fixed-r1",
+      "input_kind": "harness",
+      "repetition": 1,
+      "fresh_tps": 115.34129308402794,
+      "warm_tps": 98.36223044042073,
+      "change_percent": -14.720714663080548,
+      "fresh_output_tokens": 2048,
+      "warm_output_tokens": 2048,
+      "fresh_acceptance": 0.8218224027858386,
+      "warm_acceptance": 0.7128883774453395,
+      "same_semantic_output": false
+    },
+    {
+      "case_id": "14-S31-direct-fixed-r1",
+      "input_kind": "direct",
+      "repetition": 1,
+      "fresh_tps": 95.85322474960218,
+      "warm_tps": 94.09602572938203,
+      "change_percent": -1.833218470020681,
+      "fresh_output_tokens": 2048,
+      "warm_output_tokens": 2048,
+      "fresh_acceptance": 0.6359765832889835,
+      "warm_acceptance": 0.5468669083376488,
+      "same_semantic_output": false
+    },
+    {
+      "case_id": "18-S31-harness-fixed-r2",
+      "input_kind": "harness",
+      "repetition": 2,
+      "fresh_tps": 119.79410388394946,
+      "warm_tps": 96.62200415172674,
+      "change_percent": -19.343272315531234,
+      "fresh_output_tokens": 2048,
+      "warm_output_tokens": 2048,
+      "fresh_acceptance": 0.8415138971023063,
+      "warm_acceptance": 0.717948717948718,
+      "same_semantic_output": false
+    },
+    {
+      "case_id": "19-S31-direct-fixed-r2",
+      "input_kind": "direct",
+      "repetition": 2,
+      "fresh_tps": 102.09371884346959,
+      "warm_tps": 83.77991409286153,
+      "change_percent": -17.93822867662098,
+      "fresh_output_tokens": 2048,
+      "warm_output_tokens": 2048,
+      "fresh_acceptance": 0.6350132625994694,
+      "warm_acceptance": 0.605979711692472,
+      "same_semantic_output": false
+    },
+    {
+      "case_id": "21-S31-harness-fixed-r3",
+      "input_kind": "harness",
+      "repetition": 3,
+      "fresh_tps": 98.43787551069454,
+      "warm_tps": 103.29348867705654,
+      "change_percent": 4.9326675745196,
+      "fresh_output_tokens": 2048,
+      "warm_output_tokens": 2048,
+      "fresh_acceptance": 0.7191201353637902,
+      "warm_acceptance": 0.6916150815981992,
+      "same_semantic_output": false
+    },
+    {
+      "case_id": "22-S31-direct-fixed-r3",
+      "input_kind": "direct",
+      "repetition": 3,
+      "fresh_tps": 92.11118107403077,
+      "warm_tps": 95.49121089196625,
+      "change_percent": 3.669510887303584,
+      "fresh_output_tokens": 2048,
+      "warm_output_tokens": 2048,
+      "fresh_acceptance": 0.6262513904338154,
+      "warm_acceptance": 0.5794956140350878,
+      "same_semantic_output": false
+    }
+  ],
+  "paired_change_percent": {
+    "direct": {
+      "n": 3,
+      "median": -1.833218470020681,
+      "min": -17.93822867662098,
+      "max": 3.669510887303584
+    },
+    "harness": {
+      "n": 3,
+      "median": -14.720714663080548,
+      "min": -19.343272315531234,
+      "max": 4.9326675745196
+    }
+  }
+}

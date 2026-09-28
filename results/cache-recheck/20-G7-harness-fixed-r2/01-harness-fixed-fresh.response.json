@@ -1,0 +1,47 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ブロック崩しゲームをHTMLファイルで作ります。ブラウザで開くだけで遊べる、スコア・ライフ・レベル上昇付きの完全版にします。\n\n",
+        "reasoning_content": "The user is asking for a block-breaker game (block breaker / Breakout game) in Japanese. Let's make an HTML file containing a Breakout game. Single file, canvas-based, with paddle controls (mouse and keyboard), score, lives, levels, and brick blocks.\n\nI should make it polished. Write a single HTML file to fixtures/workspace/block-breaker.html (or breakout.html). Then present it.\n\nShould I ask a clarifying question? The request is simple, so it's fine to just make a good-looking web-based game. Language: since the user is writing in Japanese, respond in Japanese.\n\nLet's write a polished single-file HTML game:\n- Canvas 800x600\n- Paddle controlled by mouse / arrow keys\n- Ball physics, brick blocks with multiple colors, score, combo, lives, levels\n- Power-ups (optional): wide paddle, multi-ball\n- Start screen, game over, victory\n- Japanese UI\n\nKeep the code quality good. Then present the file.\n\nLet's write the file.\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "function": {
+              "name": "write",
+              "arguments": "{\"file_path\":\"block-breaker.html\",\"content\":\"<!DOCTYPE html>\\n<html lang=\\\"ja\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>ブロック崩し</title>\\n<style>\\n  * { margin: 0; padding: 0; box-sizing: border-box; }\\n  body {\\n    background: #0f0f1a;\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    justify-content: center;\\n    min-height: 100vh;\\n    font-family: \\\"Segoe UI\\\", \\\"Hiragino Sans\\\", \\\"Meiryo\\\", sans-serif;\\n    color: #eee;\\n    user-select: none;\\n  }\\n  h1 {\\n    font-size: 22px;\\n    letter-spacing: 4px;\\n    margin: 14px 0 8px;\\n    color: #7dd3fc;\\n    text-shadow: 0 0 12px rgba(125, 211, 252, .5);\\n  }\\n  #wrap { position: relative; }\\n  canvas {\\n    background: linear-gradient(#101024, #181830);\\n    border: 2px solid #2c2c4a;\\n    border-radius: 8px;\\n    box-shadow: 0 0 40px rgba(80, 120, 255, .15);\\n    display: block;\\n  }\\n  #hud {\\n    display: flex;\\n    justify-content: space-between;\\n    width: 640px;\\n    margin: 10px 2px 6px;\\n    font-size: 14px;\\n    color: #9aa0c0;\\n  }\\n  #hud b { color: #fff; font-variant-numeric: tabular-nums; }\\n  #overlay {\\n    position: absolute;\\n    inset: 0;\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    justify-content: center;\\n    gap: 14px;\\n    background: rgba(8, 8, 18, .72);\\n    border-radius: 8px;\\n    backdrop-filter: blur(3px);\\n  }\\n  #overlay.hidden { display: none; }\\n  #overlay .title { font-size: 34px; font-weight: 700; letter-spacing: 6px; }\\n  #overlay .sub { font-size: 14px; color: #9aa0c0; line-height: 1.8; text-align: center; }\\n  #overlay button {\\n    font-size: 16px;\\n    padding: 10px 34px;\\n    border: none;\\n    border-radius: 6px;\\n    background: #38bdf8;\\n    color: #06202e;\\n    font-weight: 700;\\n    cursor: pointer;\\n    letter-spacing: 2px;\\n    transition: transform .1s, box-shadow .2s;\\n    box-shadow: 0 0 18px rgba(56, 189, 248, .4);\\n  }\\n  #overlay button:hover { transform: scale(1.06); box-shadow: 0 0 26px rgba(56, 189, 248, .7); }\\n  #tips { margin-top: 8px; font-size: 12px; color: #565c7c; }\\n</style>\\n</head>\\n<body>\\n<h1>BREAKOUT</h1>\\n<div id=\\\"hud\\\">\\n  <span>SCORE <b id=\\\"score\\\">0</b></span>\\n  <span>HIGH <b id=\\\"high\\\">0</b></span>\\n  <span>LEVEL <b id=\\\"level\\\">1</b></span>\\n  <span>LIVES <b id=\\\"lives\\\">3</b></span>\\n  <span>COMBO <b id=\\\"combo\\\">0</b></span>\\n</div>\\n<div id=\\\"wrap\\\">\\n  <canvas id=\\\"game\\\" width=\\\"640\\\" height=\\\"480\\\"></canvas>\\n  <div id=\\\"overlay\\\">\\n    <div class=\\\"title\\\" id=\\\"ov-title\\\">BREAKOUT</div>\\n    <div class=\\\"sub\\\" id=\\\"ov-sub\\\">マウス ← → または A/D キーでパドルを操作<br>ボールを当ててブロックを全て壊そう</div>\\n    <button id=\\\"ov-btn\\\">スタート</button>\\n  </div>\\n</div>\\n<div id=\\\"tips\\\">マウス移動 / ←→ / A・D ： パドル移動　・　スペース ： ボール発射・一時停止</div>\\n\\n<script>\\n(() => {\\n  const cvs = document.getElementById('game');\\n  const ctx = cvs.getContext('2d');\\n  const W = cvs.width, H = cvs.height;\\n\\n  const ui = {\\n    score: document.getElementById('score'),\\n    high: document.getElementById('high'),\\n    level: document.getElementById('level'),\\n    lives: document.getElementById('lives'),\\n    combo: document.getElementById('combo'),\\n    overlay: document.getElementById('overlay'),\\n    title: document.getElementById('ov-title'),\\n    sub: document.getElementById('ov-sub'),\\n    btn: document.getElementById('ov-btn'),\\n  };\\n\\n  // ---- 定数 ----\\n  const PADDLE_W0 = 96, PADDLE_H = 12, PADDLE_Y = H - 34;\\n  const BALL_R = 7;\\n  const BRICK_COLS = 10, BRICK_TOP = 50, BRICK_GAP = 4;\\n  const BRICK_MARGIN = 20;\\n  const BRICK_W = (W - BRICK_MARGIN * 2 - BRICK_GAP * (BRICK_COLS - 1)) / BRICK_COLS;\\n  const BRICK_H = 20;\\n\\n  const ROW_COLORS = ['#f87171', '#fb923c', '#facc15', '#4ade80', '#38bdf8', '#a78bfa'];\\n\\n  // ---- 状態 ----\\n  let state = 'menu'; // menu | ready | play | pause | levelup | over | win\\n  let score = 0, lives = 3, level = 1, combo = 0, comboTimer = 0;\\n  let high = Number(localStorage.getItem('bb_high') || 0);\\n  ui.high.textContent = high;\\n\\n  const paddle = { x: W / 2 - PADDLE_W0 / 2, w: PADDLE_W0, vx: 0 };\\n  const ball = { x: 0, y: 0, vx: 0, vy: 0, stuck: true };\\n  let bricks = [];\\n  let particles = [];\\n  let powerups = [];\\n  let paddleWideTimer = 0;\\n\\n  const keys = {};\\n\\n  function levelConfig(lv) {\\n    const rows = Math.min(4 + lv, ROW_COLORS.length);\\n    const speed = 4 + lv * 0.5;\\n    return { rows, speed };\\n  }\\n\\n  function buildBricks() {\\n    const { rows } = levelConfig(level);\\n    bricks = [];\\n    for (let r = 0; r < rows; r++) {\\n      for (let c = 0; c < BRICK_COLS; c++) {\\n        const hp = (level >= 3 && r < 2) ? 2 : 1; // 上位レベルでは上2列が頑丈\\n        bricks.push({\\n         "
+            },
+            "id": "4vNmsZNnR2tMbBzKmeAbMqtoO3gXh5rQ"
+          }
+        ]
+      }
+    }
+  ],
+  "created": 1790582044,
+  "model": "qwen3.8-flash-next-iq3_s-llamacpp-mtp",
+  "system_fingerprint": "b1-50df2c7",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 2048,
+    "prompt_tokens": 8858,
+    "total_tokens": 10906,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-IHYXKGgcizET0qfzWcXgx2aTAKVmoTIc",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 8858,
+    "prompt_ms": 26213.029,
+    "prompt_per_token_ms": 2.959249153307744,
+    "prompt_per_second": 337.923557021968,
+    "predicted_n": 2048,
+    "predicted_ms": 32791.759,
+    "predicted_per_token_ms": 16.019423058133853,
+    "predicted_per_second": 62.4242206708094
+  }
+}

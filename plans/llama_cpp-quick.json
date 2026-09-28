@@ -1,0 +1,16 @@
+{
+  "engine": "llama_cpp",
+  "description": "One G7 direct 4096-token request.",
+  "cases": [
+    {
+      "id": "G7",
+      "requests": [
+        {
+          "name": "final-fast-cold-repeat",
+          "request_file": "results/llama_cpp/runs/20260928-091605-final-fast-cold-repeat.request.json",
+          "historical_run": 20
+        }
+      ]
+    }
+  ]
+}

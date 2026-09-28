@@ -1,0 +1,14 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "ブロック崩しゲーム作って"
+    }
+  ],
+  "temperature": 1.0,
+  "top_k": 20,
+  "top_p": 0.95,
+  "min_p": 0.05,
+  "seed": 1234,
+  "cache_prompt": false
+}

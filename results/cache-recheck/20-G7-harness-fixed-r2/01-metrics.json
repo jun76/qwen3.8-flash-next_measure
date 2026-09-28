@@ -1,0 +1,76 @@
+{
+  "engine": "llama_cpp",
+  "config_id": "G7",
+  "historical_run": null,
+  "name": "harness-fixed-fresh",
+  "request_in_process": 1,
+  "max_tokens": 2048,
+  "thinking": true,
+  "input_kind": "harness",
+  "temperature": 1,
+  "usage": {
+    "completion_tokens": 2048,
+    "prompt_tokens": 8858,
+    "total_tokens": 10906,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "wall_seconds": 59.0409362000064,
+  "finish_reason": "length",
+  "request_sha256": "29bffc1d3176100e5405f6a6291c5f9c21ab6c477e0a92f6c8969f9417f3d0ae",
+  "files": "results/cache-recheck/20-G7-harness-fixed-r2/01-harness-fixed-fresh",
+  "gpu_after": [
+    {
+      "used_mib": 30000,
+      "free_mib": 2188,
+      "utilization_percent": 93,
+      "temperature_c": 56
+    }
+  ],
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 8858,
+    "prompt_ms": 26213.029,
+    "prompt_per_token_ms": 2.959249153307744,
+    "prompt_per_second": 337.923557021968,
+    "predicted_n": 2048,
+    "predicted_ms": 32791.759,
+    "predicted_per_token_ms": 16.019423058133853,
+    "predicted_per_second": 62.4242206708094
+  },
+  "prompt_tokens": 8858,
+  "output_tokens": 2048,
+  "prefill_seconds": 26.213029,
+  "generation_seconds": 32.791759,
+  "tokens_per_second": 62.4242206708094,
+  "case_id": "20-G7-harness-fixed-r2",
+  "phase": "fixed",
+  "repetition": 2,
+  "cache_start": "fresh_process",
+  "started_utc": "2026-09-28T07:53:05.584874+00:00",
+  "finished_utc": "2026-09-28T07:54:04.695183+00:00",
+  "startup": {
+    "seconds": 32.878608600003645,
+    "health": {
+      "status": "ok"
+    },
+    "gpu": [
+      {
+        "used_mib": 8713,
+        "free_mib": 23475,
+        "utilization_percent": 2,
+        "temperature_c": 44
+      }
+    ],
+    "gpu_before_start": [
+      {
+        "used_mib": 3142,
+        "free_mib": 29046,
+        "utilization_percent": 1,
+        "temperature_c": 47
+      }
+    ],
+    "pid": 58716
+  }
+}

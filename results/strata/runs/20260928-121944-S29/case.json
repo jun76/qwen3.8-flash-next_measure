@@ -1,0 +1,9 @@
+{
+  "id": "S29",
+  "description": "S21からVRAM予約を3072MiBへ増やす128K候補",
+  "overrides": {
+    "--max-context": 131072,
+    "--expert-profile": "artifacts/strata/expert-profile-expanded.bin",
+    "--vram-reserve-mib": 3072
+  }
+}

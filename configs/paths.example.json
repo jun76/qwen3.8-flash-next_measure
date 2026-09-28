@@ -1,0 +1,17 @@
+{
+  "strata_root": "vendor/strata",
+  "strata_exe": "vendor/strata/engine/strata.exe",
+  "strata_python": "vendor/strata/.venv/Scripts/python.exe",
+  "strata_pack": "vendor/strata/packs/iq3_s",
+  "strata_tokenizer": "vendor/strata/packs/iq3_s/tokenizer",
+  "strata_mtp": "vendor/strata/mtp/rt",
+  "expert_profile": "vendor/strata/data/expert-profile.bin",
+  "expanded_profile": "artifacts/strata/expert-profile-expanded.bin",
+  "model": "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+  "ple_model": "models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+  "mtp_q8": "models/MTP/mtp-Qwen3.8-Flash-Next-shared-Q8_0.gguf",
+  "mtp_q4": "models/MTP/mtp-Qwen3.8-Flash-Next-shared-Q4_K_M.gguf",
+  "llama_unsloth": "vendor/llama-unsloth/llama-server.exe",
+  "llama_generel": "vendor/llama-generel/build-sm120/bin/llama-server.exe",
+  "cuda_runtime": "vendor/cuda-runtime"
+}

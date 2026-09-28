@@ -1,0 +1,8 @@
+{
+  "id": "S19",
+  "description": "S17からKVをfp16へ",
+  "overrides": {
+    "--max-context": 131072,
+    "--kv": "fp16"
+  }
+}

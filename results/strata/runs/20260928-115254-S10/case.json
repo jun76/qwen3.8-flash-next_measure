@@ -1,0 +1,7 @@
+{
+  "id": "S10",
+  "description": "S01からCPUワーカーを7へ",
+  "overrides": {
+    "--pool-workers": 7
+  }
+}

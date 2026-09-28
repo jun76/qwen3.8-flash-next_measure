@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "ブロック崩しゲーム作って"
+    }
+  ],
+  "temperature": 1.0,
+  "top_k": 20,
+  "top_p": 0.95,
+  "min_p": 0.05,
+  "seed": 1234,
+  "cache_prompt": false,
+  "model": "qwen3.8-flash-next-iq3_s-llamacpp-fast",
+  "max_tokens": 16384,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  }
+}

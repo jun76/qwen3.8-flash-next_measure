@@ -1,0 +1,23 @@
+# Downloaded engines, model weights and prepared runtime files
+/vendor/
+/models/
+/artifacts/strata/
+*.gguf
+*.safetensors
+*.dll
+*.exe
+*.bin
+
+# Machine-specific configuration and new measurement records
+/configs/paths.local.json
+/runs/
+/.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/

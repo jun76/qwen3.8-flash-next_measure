@@ -1,0 +1,76 @@
+{
+  "engine": "llama_cpp",
+  "config_id": "G7",
+  "historical_run": null,
+  "name": "direct-full-fresh",
+  "request_in_process": 1,
+  "max_tokens": 65536,
+  "thinking": true,
+  "input_kind": "direct",
+  "temperature": 1,
+  "usage": {
+    "completion_tokens": 25930,
+    "prompt_tokens": 58,
+    "total_tokens": 25988,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "wall_seconds": 417.3965865999926,
+  "finish_reason": "stop",
+  "request_sha256": "19c30a27668d02855ee25fe4be9aa7bc6ef73d2b68de4560d2648058adcf2878",
+  "files": "results/cache-recheck/12-G7-direct-full-r3/01-direct-full-fresh",
+  "gpu_after": [
+    {
+      "used_mib": 30021,
+      "free_mib": 2167,
+      "utilization_percent": 91,
+      "temperature_c": 64
+    }
+  ],
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 58,
+    "prompt_ms": 1464.479,
+    "prompt_per_token_ms": 25.249637931034485,
+    "prompt_per_second": 39.604528299825404,
+    "predicted_n": 25930,
+    "predicted_ms": 415902.0,
+    "predicted_per_token_ms": 16.04003239615874,
+    "predicted_per_second": 62.34401373400465
+  },
+  "prompt_tokens": 58,
+  "output_tokens": 25930,
+  "prefill_seconds": 1.464479,
+  "generation_seconds": 415.902,
+  "tokens_per_second": 62.34401373400465,
+  "case_id": "12-G7-direct-full-r3",
+  "phase": "full",
+  "repetition": 3,
+  "cache_start": "fresh_process",
+  "started_utc": "2026-09-28T07:34:01.651035+00:00",
+  "finished_utc": "2026-09-28T07:40:59.103812+00:00",
+  "startup": {
+    "seconds": 42.66184549999889,
+    "health": {
+      "status": "ok"
+    },
+    "gpu": [
+      {
+        "used_mib": 8483,
+        "free_mib": 23705,
+        "utilization_percent": 0,
+        "temperature_c": 43
+      }
+    ],
+    "gpu_before_start": [
+      {
+        "used_mib": 2793,
+        "free_mib": 29395,
+        "utilization_percent": 0,
+        "temperature_c": 51
+      }
+    ],
+    "pid": 52280
+  }
+}

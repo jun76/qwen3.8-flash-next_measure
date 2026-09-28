@@ -1,0 +1,1586 @@
+0.00.000.551 I srv  llama_server: initializing ...
+0.00.026.865 I cmn  common_param: common_params_print_info: build 1 (50df2c7) with MSVC 19.44.35228.0 for Windows AMD64
+0.00.026.871 I cmn  common_param: common_params_print_info: verbosity = 4 (adjust with the `-lv N` CLI arg)
+0.00.026.872 I cmn  common_param: device_info:
+0.00.086.832 I cmn  common_param:   - CUDA0   : NVIDIA GeForce RTX 5090 (32606 MiB, 30927 MiB free)
+0.00.086.839 I cmn  common_param:   - CPU     : Intel(R) Core(TM) i7-14700 (130773 MiB, 97990 MiB free)
+0.00.086.899 I cmn  common_param: system_info: n_threads = 8 (n_threads_batch = 20) / 28 | CUDA : ARCHS = 1200 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16 | BLACKWELL_NATIVE_FP4 = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.087.137 I srv          init: using 27 threads for HTTP server
+0.00.092.061 I srv    load_model: loading model 'models/IQ3_S\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf'
+0.00.092.064 I srv    load_model: local path 'models/IQ3_S\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf'
+0.00.152.031 I llama_model_loader: additional 1 GGUFs metadata loaded.
+0.00.152.039 I llama_model_loader: loaded meta data with 67 key-value pairs and 1224 tensors from models/IQ3_S\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf (version GGUF V3 (latest))
+0.00.152.076 I llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+0.00.152.081 I llama_model_loader: - kv   0:                       general.architecture str              = qwen4exp
+0.00.152.082 I llama_model_loader: - kv   1:                               general.type str              = model
+0.00.152.085 I llama_model_loader: - kv   2:                     general.sampling.top_k i32              = 20
+0.00.152.093 I llama_model_loader: - kv   3:                     general.sampling.top_p f32              = 0.950000
+0.00.152.094 I llama_model_loader: - kv   4:                      general.sampling.temp f32              = 1.000000
+0.00.152.094 I llama_model_loader: - kv   5:                               general.name str              = Qwen3.8-Flash-Next GSQ-RCO
+0.00.152.096 I llama_model_loader: - kv   6:                        general.description str              = A Preview of the Qwen4 Architecture
+0.00.152.096 I llama_model_loader: - kv   7:                         general.size_label str              = 512x56B
+0.00.152.097 I llama_model_loader: - kv   8:                       qwen4exp.block_count u32              = 48
+0.00.152.098 I llama_model_loader: - kv   9:                    qwen4exp.context_length u32              = 262144
+0.00.152.098 I llama_model_loader: - kv  10:                  qwen4exp.embedding_length u32              = 2560
+0.00.152.099 I llama_model_loader: - kv  11:              qwen4exp.attention.head_count u32              = 24
+0.00.152.099 I llama_model_loader: - kv  12:           qwen4exp.attention.head_count_kv u32              = 2
+0.00.152.125 I llama_model_loader: - kv  13:           qwen4exp.rope.dimension_sections arr[i32,4]       = [11, 11, 10, 0]
+0.00.152.126 I llama_model_loader: - kv  14:                    qwen4exp.rope.freq_base f32              = 10000000.000000
+0.00.152.128 I llama_model_loader: - kv  15:  qwen4exp.attention.layer_norm_rms_epsilon f32              = 0.000001
+0.00.152.128 I llama_model_loader: - kv  16:                      qwen4exp.expert_count u32              = 512
+0.00.152.129 I llama_model_loader: - kv  17:                 qwen4exp.expert_used_count u32              = 10
+0.00.152.129 I llama_model_loader: - kv  18:              qwen4exp.attention.key_length u32              = 256
+0.00.152.130 I llama_model_loader: - kv  19:            qwen4exp.attention.value_length u32              = 256
+0.00.152.130 I llama_model_loader: - kv  20:        qwen4exp.expert_feed_forward_length u32              = 640
+0.00.152.130 I llama_model_loader: - kv  21: qwen4exp.expert_shared_feed_forward_length u32              = 640
+0.00.152.131 I llama_model_loader: - kv  22:                   qwen4exp.ssm.conv_kernel u32              = 4
+0.00.152.131 I llama_model_loader: - kv  23:                    qwen4exp.ssm.state_size u32              = 128
+0.00.152.132 I llama_model_loader: - kv  24:                   qwen4exp.ssm.group_count u32              = 16
+0.00.152.132 I llama_model_loader: - kv  25:                qwen4exp.ssm.time_step_rank u32              = 48
+0.00.152.133 I llama_model_loader: - kv  26:                    qwen4exp.ssm.inner_size u32              = 6144
+0.00.152.133 I llama_model_loader: - kv  27:           qwen4exp.full_attention_interval u32              = 4
+0.00.152.134 I llama_model_loader: - kv  28:              qwen4exp.rope.dimension_count u32              = 64
+0.00.152.134 I llama_model_loader: - kv  29:            qwen4exp.hyper_connection.count u32              = 4
+0.00.152.135 I llama_model_loader: - kv  30:         qwen4exp.hyper_connection.low_rank u32              = 320
+0.00.152.135 I llama_model_loader: - kv  31:      qwen4exp.attention.indexer.head_count u32              = 4
+0.00.152.135 I llama_model_loader: - kv  32:      qwen4exp.attention.indexer.key_length u32              = 128
+0.00.152.135 I llama_model_loader: - kv  33:           qwen4exp.attention.indexer.top_k u32              = 2048
+0.00.152.142 I llama_model_loader: - kv  34:         qwen4exp.attention.compress_ratios arr[i32,48]      = [0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, ...
+0.00.152.143 I llama_model_loader: - kv  35:                        qwen4exp.ple.layers arr[i32,1]       = [1]
+0.00.152.143 I llama_model_loader: - kv  36:                    qwen4exp.ple.ngram_size u32              = 3
+0.00.152.144 I llama_model_loader: - kv  37:               qwen4exp.ple.heads_per_ngram u32              = 8
+0.00.152.144 I llama_model_loader: - kv  38:                   qwen4exp.ple.conv_kernel u32              = 4
+0.00.152.144 I llama_model_loader: - kv  39:                  qwen4exp.ple.eos_token_id u32              = 248044
+0.00.152.145 I llama_model_loader: - kv  40:  qwen4exp.embedding_length_per_layer_input u32              = 160
+0.00.152.147 I llama_model_loader: - kv  41:             qwen4exp.ple.layer_multipliers arr[u64,3]       = [23703573157769, 20109073645365, 8052...
+0.00.152.150 I llama_model_loader: - kv  42:                  qwen4exp.ple.head_offsets arr[u64,16]      = [0, 20000003, 40000026, 60000059, 800...
+0.00.152.153 I llama_model_loader: - kv  43:              qwen4exp.ple.head_vocab_sizes arr[u64,16]      = [20000003, 20000023, 20000033, 200000...
+0.00.152.154 I llama_model_loader: - kv  44:                       tokenizer.ggml.model str              = gpt2
+0.00.152.154 I llama_model_loader: - kv  45:                         tokenizer.ggml.pre str              = qwen35
+0.00.194.937 I llama_model_loader: - kv  46:                      tokenizer.ggml.tokens arr[str,248320]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+0.00.211.244 I llama_model_loader: - kv  47:                  tokenizer.ggml.token_type arr[i32,248320]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+0.00.253.959 I llama_model_loader: - kv  48:                      tokenizer.ggml.merges arr[str,247587]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+0.00.253.967 I llama_model_loader: - kv  49:                tokenizer.ggml.eos_token_id u32              = 248046
+0.00.253.967 I llama_model_loader: - kv  50:            tokenizer.ggml.padding_token_id u32              = 248044
+0.00.253.968 I llama_model_loader: - kv  51:                tokenizer.ggml.bos_token_id u32              = 248044
+0.00.253.981 I llama_model_loader: - kv  52:               tokenizer.ggml.add_bos_token bool             = false
+0.00.253.986 I llama_model_loader: - kv  53:                    tokenizer.chat_template str              = {%- set image_count = namespace(value...
+0.00.253.987 I llama_model_loader: - kv  54:                qwen4exp.ple.image_token_id u32              = 248056
+0.00.253.988 I llama_model_loader: - kv  55:                       general.quantized_by str              = ISTA DASLab
+0.00.253.989 I llama_model_loader: - kv  56:                           general.repo_url str              = https://huggingface.co/ISTA-DASLab/Qw...
+0.00.253.989 I llama_model_loader: - kv  57:                      quantize.imatrix.file str              = imatrix-qwen3.8-flash-next.gguf
+0.00.253.990 I llama_model_loader: - kv  58:                   quantize.imatrix.dataset str              = calib_qwen3.8-flash-next.tokids
+0.00.253.990 I llama_model_loader: - kv  59:             quantize.imatrix.entries_count u32              = 926
+0.00.253.991 I llama_model_loader: - kv  60:              quantize.imatrix.chunks_count u32              = 1000
+0.00.253.991 I llama_model_loader: - kv  61:                          general.file_type u32              = 26
+0.00.253.992 I llama_model_loader: - kv  62:               general.quantization_version u32              = 2
+0.00.253.992 I llama_model_loader: - kv  63:                                   split.no u16              = 0
+0.00.253.993 I llama_model_loader: - kv  64:                                split.count u16              = 2
+0.00.253.993 I llama_model_loader: - kv  65:                        split.tensors.count i32              = 1224
+0.00.254.001 I llama_model_loader: - kv  66:                               general.tags arr[str,7]       = ["gguf", "gsq", "rco", "quantization"...
+0.00.254.002 I llama_model_loader: - type  f32:  292 tensors
+0.00.254.002 I llama_model_loader: - type  f16:    1 tensors
+0.00.254.002 I llama_model_loader: - type q8_0:    1 tensors
+0.00.254.003 I llama_model_loader: - type q4_K:   47 tensors
+0.00.254.003 I llama_model_loader: - type q5_K:   35 tensors
+0.00.254.003 I llama_model_loader: - type q6_K:  129 tensors
+0.00.254.004 I llama_model_loader: - type iq3_xxs:   34 tensors
+0.00.254.004 I llama_model_loader: - type iq4_nl:   87 tensors
+0.00.254.004 I llama_model_loader: - type iq3_s:   20 tensors
+0.00.254.005 I llama_model_loader: - type iq2_s:   40 tensors
+0.00.254.005 I llama_model_loader: - type iq4_xs:   45 tensors
+0.00.254.005 I llama_model_loader: - type bf16:  484 tensors
+0.00.254.010 I llama_model_loader: - type q2_0:    9 tensors
+0.00.254.011 I print_info: file format = GGUF V3 (latest)
+0.00.254.011 I print_info: file type   = IQ3_S - 3.4375 bpw
+0.00.254.014 I print_info: file size   = 77.86 GiB (3.78 BPW) 
+0.00.254.083 I llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 5090) (0000:01:00.0) - 30927 MiB free
+0.00.373.569 I load: 0 unused tokens
+0.00.411.637 I load: printing all EOG tokens:
+0.00.411.642 I load:   - 248044 ('<|endoftext|>')
+0.00.411.643 I load:   - 248046 ('<|im_end|>')
+0.00.411.643 I load:   - 248063 ('<|fim_pad|>')
+0.00.411.643 I load:   - 248064 ('<|repo_name|>')
+0.00.411.644 I load:   - 248065 ('<|file_sep|>')
+0.00.412.144 I load: special tokens cache size = 33
+0.00.449.803 I load: token to piece cache size = 1.7581 MB
+0.00.449.841 I print_info: arch                  = qwen4exp
+0.00.449.842 I print_info: vocab_only            = 0
+0.00.449.842 I print_info: no_alloc              = 0
+0.00.449.843 I print_info: n_ctx_train           = 262144
+0.00.449.843 I print_info: n_embd_inp            = 2560
+0.00.449.843 I print_info: n_embd                = 2560
+0.00.449.844 I print_info: n_embd_out            = 10240
+0.00.449.844 I print_info: n_layer               = 48
+0.00.449.844 I print_info: n_layer_all           = 48
+0.00.449.858 I print_info: n_head                = 24
+0.00.449.860 I print_info: n_head_kv             = 2
+0.00.449.860 I print_info: n_rot                 = 64
+0.00.449.860 I print_info: n_swa                 = 0
+0.00.449.861 I print_info: is_swa_any            = 0
+0.00.449.861 I print_info: non_causal_type       = 0
+0.00.449.861 I print_info: n_embd_head_k         = 256
+0.00.449.861 I print_info: n_embd_head_v         = 256
+0.00.449.863 I print_info: n_gqa                 = 12
+0.00.449.864 I print_info: n_embd_k_gqa          = 512
+0.00.449.871 I print_info: n_embd_v_gqa          = 512
+0.00.449.872 I print_info: f_norm_eps            = 0.0e+00
+0.00.449.873 I print_info: f_norm_rms_eps        = 1.0e-06
+0.00.449.873 I print_info: f_clamp_kqv           = 0.0e+00
+0.00.449.873 I print_info: f_max_alibi_bias      = 0.0e+00
+0.00.449.874 I print_info: f_logit_scale         = 0.0e+00
+0.00.449.874 I print_info: f_attn_scale          = 0.0e+00
+0.00.449.874 I print_info: f_attn_value_scale    = 0.0000
+0.00.449.876 I print_info: n_ff                  = 0
+0.00.449.876 I print_info: n_expert              = 512
+0.00.449.876 I print_info: n_expert_used         = 10
+0.00.449.877 I print_info: n_expert_groups       = 0
+0.00.449.877 I print_info: n_group_used          = 0
+0.00.449.877 I print_info: causal attn           = 1
+0.00.449.877 I print_info: pooling type          = -1
+0.00.449.878 I print_info: rope type             = 40
+0.00.449.878 I print_info: rope scaling          = linear
+0.00.449.879 I print_info: freq_base_train       = 10000000.0
+0.00.449.880 I print_info: freq_scale_train      = 1
+0.00.449.880 I print_info: n_ctx_orig_yarn       = 262144
+0.00.449.880 I print_info: rope_yarn_log_mul     = 0.0000
+0.00.449.881 I print_info: rope_finetuned        = unknown
+0.00.449.881 I print_info: mrope sections        = [11, 11, 10, 0]
+0.00.449.882 I print_info: model type            = A3B
+0.00.449.883 I print_info: model params          = 176.94 B
+0.00.449.883 I print_info: general.name          = Qwen3.8-Flash-Next GSQ-RCO
+0.00.449.886 I print_info: vocab type            = BPE
+0.00.449.886 I print_info: n_vocab               = 248320
+0.00.449.887 I print_info: n_merges              = 247587
+0.00.449.887 I print_info: BOS token             = 248044 '<|endoftext|>'
+0.00.449.887 I print_info: EOS token             = 248046 '<|im_end|>'
+0.00.449.888 I print_info: EOT token             = 248046 '<|im_end|>'
+0.00.449.888 I print_info: PAD token             = 248044 '<|endoftext|>'
+0.00.449.888 I print_info: LF token              = 198 'Ċ'
+0.00.449.889 I print_info: FIM PRE token         = 248060 '<|fim_prefix|>'
+0.00.449.889 I print_info: FIM SUF token         = 248062 '<|fim_suffix|>'
+0.00.449.889 I print_info: FIM MID token         = 248061 '<|fim_middle|>'
+0.00.449.890 I print_info: FIM PAD token         = 248063 '<|fim_pad|>'
+0.00.449.890 I print_info: FIM REP token         = 248064 '<|repo_name|>'
+0.00.449.890 I print_info: FIM SEP token         = 248065 '<|file_sep|>'
+0.00.449.891 I print_info: EOG token             = 248044 '<|endoftext|>'
+0.00.449.891 I print_info: EOG token             = 248046 '<|im_end|>'
+0.00.449.891 I print_info: EOG token             = 248063 '<|fim_pad|>'
+0.00.449.892 I print_info: EOG token             = 248064 '<|repo_name|>'
+0.00.449.892 I print_info: EOG token             = 248065 '<|file_sep|>'
+0.00.449.892 I print_info: max token length      = 256
+0.00.449.893 I load_tensors: loading model tensors, this can take a while... (load_mode = none)
+0.00.450.240 I add: tensor per_layer_token_embd.weight (size = 27465 MiB) lazy read enabled
+0.11.906.701 I load_tensors: offloading output layer to GPU
+0.11.906.706 I load_tensors: offloading 47 repeating layers to GPU
+0.11.906.706 I load_tensors: offloaded 49/49 layers to GPU
+0.11.906.711 I load_tensors:        CUDA0 model buffer size =  3983.00 MiB
+0.11.906.712 I load_tensors:    CUDA_Host model buffer size =   322.07 MiB
+0.11.906.713 I load_tensors: CUDA_MoE_Cached model buffer size = 47962.50 MiB
+0.11.906.714 I load_tensors:   CPU_Mapped model buffer size = 27465.95 MiB
+0.11.906.926 I moe-cache-budget: device=CUDA0 budget_bytes=18874368000 slots=192 fixed_device_bytes=520236 per_slot_device_bytes=98229408
+0.33.763.724 I cmn  common_param: added <|endoftext|> logit bias = -inf
+0.33.763.729 I cmn  common_param: added <|im_end|> logit bias = -inf
+0.33.763.730 I cmn  common_param: added <|fim_pad|> logit bias = -inf
+0.33.763.730 I cmn  common_param: added <|repo_name|> logit bias = -inf
+0.33.763.730 I cmn  common_param: added <|file_sep|> logit bias = -inf
+0.33.766.000 I llama_context: constructing llama_context
+0.33.766.009 I llama_context: n_seq_max             = 1
+0.33.766.009 I llama_context: n_ctx                 = 131072
+0.33.766.009 I llama_context: n_ctx_seq             = 131072
+0.33.766.010 I llama_context: n_batch               = 512
+0.33.766.010 I llama_context: n_ubatch              = 512
+0.33.766.010 I llama_context: causal_attn           = 1
+0.33.766.010 I llama_context: flash_attn            = enabled
+0.33.766.011 I llama_context: kv_unified            = false
+0.33.766.013 I llama_context: freq_base             = 10000000.0
+0.33.766.014 I llama_context: freq_scale            = 1
+0.33.766.014 I llama_context: n_rs_seq              = 0
+0.33.766.015 I llama_context: n_outputs_max         = 1
+0.33.766.015 I llama_context: n_outputs_max_per_seq = 1
+0.33.766.015 I llama_context: n_ctx_seq (131072) < n_ctx_train (262144) -- the full capacity of the model will not be utilized
+0.33.766.819 I llama_context:  CUDA_Host  output buffer size =     0.95 MiB
+0.33.770.559 I llama_kv_cache:      CUDA0 KV buffer size =  1632.00 MiB
+0.33.914.219 I llama_kv_cache: size = 1632.00 MiB (131072 cells,  12 layers,  1/1 seqs), K (q8_0):  816.00 MiB, V (q8_0):  816.00 MiB
+0.33.914.231 I llama_kv_cache: attn_rot_k = 1, n_embd_head_k_all = 256
+0.33.914.232 I llama_kv_cache: attn_rot_v = 1, n_embd_head_k_all = 256
+0.33.926.775 I llama_memory_recurrent:      CUDA0 RS buffer size =   112.57 MiB
+0.33.926.785 I llama_memory_recurrent: size =  112.57 MiB (     1 cells,  48 layers,  1 seqs  0 rs_seq), R (f32):    4.22 MiB, S (f32):  108.00 MiB, P (f32):    0.35 MiB
+0.33.926.802 I operator (): creating indexer KV cache, size = 131072 cells
+0.33.928.612 I llama_kv_cache:      CUDA0 KV buffer size =   204.01 MiB
+0.33.947.417 I llama_kv_cache: size =  204.00 MiB (131072 cells,  12 layers,  1/1 seqs), K (q8_0):  204.00 MiB, V (q8_0):    0.00 MiB
+0.33.947.425 I llama_kv_cache: attn_rot_k = 1, n_embd_head_k_all = 128
+0.33.947.426 I llama_kv_cache: attn_rot_v = 0, n_embd_head_k_all = 0
+0.33.947.469 I sched_reserve: reserving ...
+0.33.955.729 I resolve_fused_ops: resolving fused DeepSeek V4 HC support:
+0.33.959.035 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.044 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.049 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.054 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.059 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.063 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.067 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.071 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.075 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.079 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.084 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.088 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.093 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.098 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.102 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.107 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.111 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.115 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.119 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.123 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.128 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.131 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.134 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.136 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.139 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.142 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.145 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.147 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.150 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.153 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.156 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.158 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.161 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.163 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.166 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.169 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.171 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.174 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.177 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.181 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.184 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.186 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.189 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.191 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.194 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.196 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.199 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.959.203 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.961.014 I resolve_fused_ops: fused DeepSeek V4 HC pre enabled
+0.33.962.322 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.326 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.328 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.331 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.333 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.336 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.339 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.341 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.344 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.346 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.349 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.351 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.354 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.356 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.359 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.361 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.364 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.366 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.369 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.371 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.374 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.376 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.379 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.381 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.384 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.386 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.388 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.391 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.393 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.396 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.398 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.401 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.403 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.405 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.408 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.410 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.413 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.415 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.417 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.420 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.422 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.425 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.427 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.430 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.432 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.435 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.437 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.962.439 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.963.054 I resolve_fused_ops: fused DeepSeek V4 HC comb enabled
+0.33.964.285 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.288 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.291 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.293 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.296 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.299 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.301 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.304 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.306 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.309 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.312 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.314 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.317 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.319 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.322 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.324 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.327 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.329 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.332 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.334 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.336 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.339 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.341 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.344 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.346 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.349 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.351 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.353 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.356 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.358 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.361 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.363 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.365 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.368 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.370 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.373 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.375 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.378 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.380 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.382 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.385 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.387 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.390 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.392 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.394 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.397 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.399 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.964.402 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.965.024 I resolve_fused_ops: fused DeepSeek V4 HC post enabled
+0.33.966.245 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.248 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.251 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.254 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.256 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.259 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.261 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.264 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.267 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.269 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.272 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.274 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.277 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.279 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.282 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.284 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.287 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.290 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.292 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.295 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.297 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.300 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.302 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.305 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.307 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.309 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.318 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.321 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.323 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.326 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.328 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.330 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.333 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.335 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.338 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.340 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.343 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.345 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.347 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.350 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.352 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.354 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.357 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.359 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.362 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.364 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.366 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.33.966.369 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.005.984 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.005.993 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.005.997 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.000 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.003 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.007 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.011 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.014 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.017 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.021 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.025 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.028 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.031 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.034 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.038 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.041 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.044 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.047 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.051 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.054 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.057 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.060 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.063 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.065 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.068 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.071 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.074 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.076 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.079 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.082 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.085 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.088 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.090 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.093 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.096 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.099 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.102 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.104 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.107 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.109 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.112 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.115 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.118 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.120 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.123 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.126 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.128 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.006.131 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.236 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.240 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.243 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.246 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.249 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.252 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.255 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.258 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.261 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.264 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.267 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.270 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.273 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.276 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.279 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.282 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.284 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.287 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.290 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.293 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.296 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.299 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.302 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.305 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.307 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.310 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.313 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.316 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.319 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.322 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.324 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.327 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.330 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.333 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.336 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.339 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.341 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.344 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.347 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.350 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.353 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.356 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.359 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.361 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.364 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.367 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.370 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.009.373 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.010.792 I sched_reserve:      CUDA0 compute buffer size =   979.86 MiB
+0.34.010.793 I sched_reserve:  CUDA_Host compute buffer size =   208.82 MiB
+0.34.010.796 I sched_reserve: graph: nodes = 6916, splits = 2, input objects = 6, input tensors = 15
+0.34.010.797 I sched_reserve: reserve took 60.28 ms, sched copies = 1
+0.34.011.074 I cmn          init: llama threadpool init, n_threads = 8
+0.34.029.980 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.029.989 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.029.993 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.029.996 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.000 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.003 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.010 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.013 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.016 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.020 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.024 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.027 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.030 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.033 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.037 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.040 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.044 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.047 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.050 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.053 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.056 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.059 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.062 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.065 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.068 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.071 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.075 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.078 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.081 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.084 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.087 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.090 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.093 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.096 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.099 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.102 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.105 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.108 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.111 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.114 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.117 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.120 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.123 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.125 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.128 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.131 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.133 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.030.136 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.041.331 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=0 domain=1 outcome=0 reason=1
+0.34.041.335 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=1 domain=1 outcome=0 reason=1
+0.34.041.336 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=2 domain=1 outcome=0 reason=1
+0.34.041.336 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=3 domain=1 outcome=0 reason=1
+0.34.041.337 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=4 domain=1 outcome=0 reason=1
+0.34.041.338 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=5 domain=1 outcome=0 reason=1
+0.34.041.339 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=6 domain=1 outcome=0 reason=1
+0.34.041.339 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=7 domain=1 outcome=0 reason=1
+0.34.041.340 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=8 domain=1 outcome=0 reason=1
+0.34.041.340 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=9 domain=1 outcome=0 reason=1
+0.34.041.341 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=10 domain=1 outcome=0 reason=1
+0.34.041.341 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=11 domain=1 outcome=0 reason=1
+0.34.041.342 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=12 domain=1 outcome=0 reason=1
+0.34.041.342 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=13 domain=1 outcome=0 reason=1
+0.34.041.343 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=14 domain=1 outcome=0 reason=1
+0.34.041.343 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=15 domain=1 outcome=0 reason=1
+0.34.041.343 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=16 domain=1 outcome=0 reason=1
+0.34.041.344 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=17 domain=1 outcome=0 reason=1
+0.34.041.344 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=18 domain=1 outcome=0 reason=1
+0.34.041.345 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=19 domain=1 outcome=0 reason=1
+0.34.041.345 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=20 domain=1 outcome=0 reason=1
+0.34.041.346 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=21 domain=1 outcome=0 reason=1
+0.34.041.346 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=22 domain=1 outcome=0 reason=1
+0.34.041.346 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=23 domain=1 outcome=0 reason=1
+0.34.041.347 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=24 domain=1 outcome=0 reason=1
+0.34.041.347 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=25 domain=1 outcome=0 reason=1
+0.34.041.348 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=26 domain=1 outcome=0 reason=1
+0.34.041.348 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=27 domain=1 outcome=0 reason=1
+0.34.041.348 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=28 domain=1 outcome=0 reason=1
+0.34.041.349 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=29 domain=1 outcome=0 reason=1
+0.34.041.349 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=30 domain=1 outcome=0 reason=1
+0.34.041.349 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=31 domain=1 outcome=0 reason=1
+0.34.041.350 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=32 domain=1 outcome=0 reason=1
+0.34.041.350 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=33 domain=1 outcome=0 reason=1
+0.34.041.351 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=34 domain=1 outcome=0 reason=1
+0.34.041.351 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=35 domain=1 outcome=0 reason=1
+0.34.041.352 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=36 domain=1 outcome=0 reason=1
+0.34.041.352 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=37 domain=1 outcome=0 reason=1
+0.34.041.353 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=38 domain=1 outcome=0 reason=1
+0.34.041.353 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=39 domain=1 outcome=0 reason=1
+0.34.041.353 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=40 domain=1 outcome=0 reason=1
+0.34.041.354 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=41 domain=1 outcome=0 reason=1
+0.34.041.354 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=42 domain=1 outcome=0 reason=1
+0.34.041.355 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=43 domain=1 outcome=0 reason=1
+0.34.041.355 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=44 domain=1 outcome=0 reason=1
+0.34.041.355 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=45 domain=1 outcome=0 reason=1
+0.34.041.356 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=46 domain=1 outcome=0 reason=1
+0.34.041.356 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=47 domain=1 outcome=0 reason=2
+0.34.187.617 I moe-cache: first mul_mat_id  src0=blk.0.ffn_gate_exps.weight  buft=CUDA_MoE_Cached  is_cached=1
+0.34.189.005 I moe-cache: CUDA_MoE_Cache_Pool[blk.0.ffn_gate_exps.weight      ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.191.866 I moe-cache: CUDA_MoE_Cache_Pool[blk.0.ffn_up_exps.weight        ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.191.968 I moe-cache: CUDA_MoE_Cache_Pool[blk.0.ffn_down_exps.weight      ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.219.419 I moe-cache: CUDA_MoE_Cache_Pool[blk.1.ffn_gate_exps.weight      ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.221.492 I moe-cache: CUDA_MoE_Cache_Pool[blk.1.ffn_up_exps.weight        ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.222.152 I moe-cache: CUDA_MoE_Cache_Pool[blk.1.ffn_down_exps.weight      ] =   84.38 MiB  (192 slots x 0.44 MiB)
+0.34.224.275 I moe-cache: CUDA_MoE_Cache_Pool[blk.2.ffn_gate_exps.weight      ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.227.512 I moe-cache: CUDA_MoE_Cache_Pool[blk.2.ffn_up_exps.weight        ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.227.585 I moe-cache: CUDA_MoE_Cache_Pool[blk.2.ffn_down_exps.weight      ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.248.050 I moe-cache: CUDA_MoE_Cache_Pool[blk.3.ffn_gate_exps.weight      ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.251.333 I moe-cache: CUDA_MoE_Cache_Pool[blk.3.ffn_up_exps.weight        ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.251.432 I moe-cache: CUDA_MoE_Cache_Pool[blk.3.ffn_down_exps.weight      ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.252.680 I moe-cache: CUDA_MoE_Cache_Pool[blk.4.ffn_gate_exps.weight      ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.256.307 I moe-cache: CUDA_MoE_Cache_Pool[blk.4.ffn_up_exps.weight        ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.256.428 I moe-cache: CUDA_MoE_Cache_Pool[blk.4.ffn_down_exps.weight      ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.257.798 I moe-cache: CUDA_MoE_Cache_Pool[blk.5.ffn_gate_exps.weight      ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.261.173 I moe-cache: CUDA_MoE_Cache_Pool[blk.5.ffn_up_exps.weight        ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.261.246 I moe-cache: CUDA_MoE_Cache_Pool[blk.5.ffn_down_exps.weight      ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.262.541 I moe-cache: CUDA_MoE_Cache_Pool[blk.6.ffn_gate_exps.weight      ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.266.309 I moe-cache: CUDA_MoE_Cache_Pool[blk.6.ffn_up_exps.weight        ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.266.382 I moe-cache: CUDA_MoE_Cache_Pool[blk.6.ffn_down_exps.weight      ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.267.692 I moe-cache: CUDA_MoE_Cache_Pool[blk.7.ffn_gate_exps.weight      ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.271.608 I moe-cache: CUDA_MoE_Cache_Pool[blk.7.ffn_up_exps.weight        ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.272.237 I moe-cache: CUDA_MoE_Cache_Pool[blk.7.ffn_down_exps.weight      ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.274.044 I moe-cache: CUDA_MoE_Cache_Pool[blk.8.ffn_gate_exps.weight      ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.276.580 I moe-cache: CUDA_MoE_Cache_Pool[blk.8.ffn_up_exps.weight        ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.276.661 I moe-cache: CUDA_MoE_Cache_Pool[blk.8.ffn_down_exps.weight      ] =   84.38 MiB  (192 slots x 0.44 MiB)
+0.34.278.502 I moe-cache: CUDA_MoE_Cache_Pool[blk.9.ffn_gate_exps.weight      ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.281.305 I moe-cache: CUDA_MoE_Cache_Pool[blk.9.ffn_up_exps.weight        ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.281.399 I moe-cache: CUDA_MoE_Cache_Pool[blk.9.ffn_down_exps.weight      ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.282.438 I moe-cache: CUDA_MoE_Cache_Pool[blk.10.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.285.465 I moe-cache: CUDA_MoE_Cache_Pool[blk.10.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.285.560 I moe-cache: CUDA_MoE_Cache_Pool[blk.10.ffn_down_exps.weight     ] =   84.38 MiB  (192 slots x 0.44 MiB)
+0.34.287.471 I moe-cache: CUDA_MoE_Cache_Pool[blk.11.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.290.421 I moe-cache: CUDA_MoE_Cache_Pool[blk.11.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.290.499 I moe-cache: CUDA_MoE_Cache_Pool[blk.11.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.291.903 I moe-cache: CUDA_MoE_Cache_Pool[blk.12.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.295.015 I moe-cache: CUDA_MoE_Cache_Pool[blk.12.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.295.084 I moe-cache: CUDA_MoE_Cache_Pool[blk.12.ffn_down_exps.weight     ] =   84.38 MiB  (192 slots x 0.44 MiB)
+0.34.296.229 I moe-cache: CUDA_MoE_Cache_Pool[blk.13.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.299.256 I moe-cache: CUDA_MoE_Cache_Pool[blk.13.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.299.318 I moe-cache: CUDA_MoE_Cache_Pool[blk.13.ffn_down_exps.weight     ] =   84.38 MiB  (192 slots x 0.44 MiB)
+0.34.301.165 I moe-cache: CUDA_MoE_Cache_Pool[blk.14.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.304.193 I moe-cache: CUDA_MoE_Cache_Pool[blk.14.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.304.274 I moe-cache: CUDA_MoE_Cache_Pool[blk.14.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.306.279 I moe-cache: CUDA_MoE_Cache_Pool[blk.15.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.309.353 I moe-cache: CUDA_MoE_Cache_Pool[blk.15.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.309.473 I moe-cache: CUDA_MoE_Cache_Pool[blk.15.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.310.747 I moe-cache: CUDA_MoE_Cache_Pool[blk.16.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.314.473 I moe-cache: CUDA_MoE_Cache_Pool[blk.16.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.314.545 I moe-cache: CUDA_MoE_Cache_Pool[blk.16.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.315.803 I moe-cache: CUDA_MoE_Cache_Pool[blk.17.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.320.041 I moe-cache: CUDA_MoE_Cache_Pool[blk.17.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.320.112 I moe-cache: CUDA_MoE_Cache_Pool[blk.17.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.322.493 I moe-cache: CUDA_MoE_Cache_Pool[blk.18.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.325.884 I moe-cache: CUDA_MoE_Cache_Pool[blk.18.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.325.966 I moe-cache: CUDA_MoE_Cache_Pool[blk.18.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.328.388 I moe-cache: CUDA_MoE_Cache_Pool[blk.19.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.331.162 I moe-cache: CUDA_MoE_Cache_Pool[blk.19.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.331.241 I moe-cache: CUDA_MoE_Cache_Pool[blk.19.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.332.360 I moe-cache: CUDA_MoE_Cache_Pool[blk.20.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.335.458 I moe-cache: CUDA_MoE_Cache_Pool[blk.20.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.335.534 I moe-cache: CUDA_MoE_Cache_Pool[blk.20.ffn_down_exps.weight     ] =   84.38 MiB  (192 slots x 0.44 MiB)
+0.34.336.611 I moe-cache: CUDA_MoE_Cache_Pool[blk.21.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.339.883 I moe-cache: CUDA_MoE_Cache_Pool[blk.21.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.339.965 I moe-cache: CUDA_MoE_Cache_Pool[blk.21.ffn_down_exps.weight     ] =   84.38 MiB  (192 slots x 0.44 MiB)
+0.34.341.625 I moe-cache: CUDA_MoE_Cache_Pool[blk.22.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.345.087 I moe-cache: CUDA_MoE_Cache_Pool[blk.22.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.345.158 I moe-cache: CUDA_MoE_Cache_Pool[blk.22.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.346.444 I moe-cache: CUDA_MoE_Cache_Pool[blk.23.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.350.217 I moe-cache: CUDA_MoE_Cache_Pool[blk.23.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.350.307 I moe-cache: CUDA_MoE_Cache_Pool[blk.23.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.351.428 I moe-cache: CUDA_MoE_Cache_Pool[blk.24.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.354.895 I moe-cache: CUDA_MoE_Cache_Pool[blk.24.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.355.020 I moe-cache: CUDA_MoE_Cache_Pool[blk.24.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.356.269 I moe-cache: CUDA_MoE_Cache_Pool[blk.25.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.360.340 I moe-cache: CUDA_MoE_Cache_Pool[blk.25.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.360.444 I moe-cache: CUDA_MoE_Cache_Pool[blk.25.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.361.828 I moe-cache: CUDA_MoE_Cache_Pool[blk.26.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.365.288 I moe-cache: CUDA_MoE_Cache_Pool[blk.26.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.365.394 I moe-cache: CUDA_MoE_Cache_Pool[blk.26.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.367.201 I moe-cache: CUDA_MoE_Cache_Pool[blk.27.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.371.153 I moe-cache: CUDA_MoE_Cache_Pool[blk.27.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.371.295 I moe-cache: CUDA_MoE_Cache_Pool[blk.27.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.373.235 I moe-cache: CUDA_MoE_Cache_Pool[blk.28.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.377.066 I moe-cache: CUDA_MoE_Cache_Pool[blk.28.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.377.147 I moe-cache: CUDA_MoE_Cache_Pool[blk.28.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.378.682 I moe-cache: CUDA_MoE_Cache_Pool[blk.29.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.382.721 I moe-cache: CUDA_MoE_Cache_Pool[blk.29.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.382.792 I moe-cache: CUDA_MoE_Cache_Pool[blk.29.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.384.006 I moe-cache: CUDA_MoE_Cache_Pool[blk.30.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.387.226 I moe-cache: CUDA_MoE_Cache_Pool[blk.30.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.387.306 I moe-cache: CUDA_MoE_Cache_Pool[blk.30.ffn_down_exps.weight     ] =   84.38 MiB  (192 slots x 0.44 MiB)
+0.34.389.569 I moe-cache: CUDA_MoE_Cache_Pool[blk.31.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.392.756 I moe-cache: CUDA_MoE_Cache_Pool[blk.31.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.392.869 I moe-cache: CUDA_MoE_Cache_Pool[blk.31.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.394.154 I moe-cache: CUDA_MoE_Cache_Pool[blk.32.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.398.106 I moe-cache: CUDA_MoE_Cache_Pool[blk.32.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.398.179 I moe-cache: CUDA_MoE_Cache_Pool[blk.32.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.399.459 I moe-cache: CUDA_MoE_Cache_Pool[blk.33.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.403.439 I moe-cache: CUDA_MoE_Cache_Pool[blk.33.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.403.514 I moe-cache: CUDA_MoE_Cache_Pool[blk.33.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.405.598 I moe-cache: CUDA_MoE_Cache_Pool[blk.34.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.408.382 I moe-cache: CUDA_MoE_Cache_Pool[blk.34.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.408.453 I moe-cache: CUDA_MoE_Cache_Pool[blk.34.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.410.386 I moe-cache: CUDA_MoE_Cache_Pool[blk.35.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.414.412 I moe-cache: CUDA_MoE_Cache_Pool[blk.35.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.414.498 I moe-cache: CUDA_MoE_Cache_Pool[blk.35.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.415.687 I moe-cache: CUDA_MoE_Cache_Pool[blk.36.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.418.652 I moe-cache: CUDA_MoE_Cache_Pool[blk.36.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.418.748 I moe-cache: CUDA_MoE_Cache_Pool[blk.36.ffn_down_exps.weight     ] =   84.38 MiB  (192 slots x 0.44 MiB)
+0.34.420.753 I moe-cache: CUDA_MoE_Cache_Pool[blk.37.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.423.706 I moe-cache: CUDA_MoE_Cache_Pool[blk.37.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.423.854 I moe-cache: CUDA_MoE_Cache_Pool[blk.37.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.425.326 I moe-cache: CUDA_MoE_Cache_Pool[blk.38.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.429.105 I moe-cache: CUDA_MoE_Cache_Pool[blk.38.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.429.188 I moe-cache: CUDA_MoE_Cache_Pool[blk.38.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.430.676 I moe-cache: CUDA_MoE_Cache_Pool[blk.39.ffn_gate_exps.weight     ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.434.264 I moe-cache: CUDA_MoE_Cache_Pool[blk.39.ffn_up_exps.weight       ] =   96.09 MiB  (192 slots x 0.50 MiB)
+0.34.434.986 I moe-cache: CUDA_MoE_Cache_Pool[blk.39.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.436.708 I moe-cache: CUDA_MoE_Cache_Pool[blk.40.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.440.181 I moe-cache: CUDA_MoE_Cache_Pool[blk.40.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.440.320 I moe-cache: CUDA_MoE_Cache_Pool[blk.40.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.441.572 I moe-cache: CUDA_MoE_Cache_Pool[blk.41.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.445.827 I moe-cache: CUDA_MoE_Cache_Pool[blk.41.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.445.919 I moe-cache: CUDA_MoE_Cache_Pool[blk.41.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.447.120 I moe-cache: CUDA_MoE_Cache_Pool[blk.42.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.450.941 I moe-cache: CUDA_MoE_Cache_Pool[blk.42.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.451.032 I moe-cache: CUDA_MoE_Cache_Pool[blk.42.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.452.327 I moe-cache: CUDA_MoE_Cache_Pool[blk.43.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.456.556 I moe-cache: CUDA_MoE_Cache_Pool[blk.43.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.456.662 I moe-cache: CUDA_MoE_Cache_Pool[blk.43.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.458.100 I moe-cache: CUDA_MoE_Cache_Pool[blk.44.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.462.489 I moe-cache: CUDA_MoE_Cache_Pool[blk.44.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.462.574 I moe-cache: CUDA_MoE_Cache_Pool[blk.44.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.464.253 I moe-cache: CUDA_MoE_Cache_Pool[blk.45.ffn_gate_exps.weight     ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.468.122 I moe-cache: CUDA_MoE_Cache_Pool[blk.45.ffn_up_exps.weight       ] =  128.91 MiB  (192 slots x 0.67 MiB)
+0.34.468.204 I moe-cache: CUDA_MoE_Cache_Pool[blk.45.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.469.413 I moe-cache: CUDA_MoE_Cache_Pool[blk.46.ffn_gate_exps.weight     ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.473.257 I moe-cache: CUDA_MoE_Cache_Pool[blk.46.ffn_up_exps.weight       ] =  114.84 MiB  (192 slots x 0.60 MiB)
+0.34.473.359 I moe-cache: CUDA_MoE_Cache_Pool[blk.46.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.484.533 I moe-cache: CUDA_MoE_Cache_Pool[blk.47.ffn_gate_exps.weight     ] =  159.38 MiB  (192 slots x 0.83 MiB)
+0.34.484.550 I moe-cache: CUDA_MoE_Cache_Pool[blk.47.ffn_up_exps.weight       ] =  159.38 MiB  (192 slots x 0.83 MiB)
+0.34.484.650 I moe-cache: CUDA_MoE_Cache_Pool[blk.47.ffn_down_exps.weight     ] =  168.75 MiB  (192 slots x 0.88 MiB)
+0.34.485.770 I cmn  common_conte: the context does not support partial sequence removal
+0.34.492.793 I srv    load_model: speculative decoding will use checkpoints
+0.34.492.797 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 131072, kv_unified = 'false'
+0.34.493.198 I spec common_specu: no implementations specified for speculative decoding
+0.34.493.333 I slot   load_model: id  0 | task -1 | new slot, n_ctx = 131072
+0.34.493.500 I srv    load_model: prompt cache is disabled - use `--cache-ram N` to enable it
+0.34.493.503 I srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391
+0.34.493.503 I srv    load_model: context checkpoints enabled, max = 32, min spacing = 8192
+0.34.493.660 W srv          init: --cache-idle-slots requires --cache-ram, disabling
+0.34.506.734 I srv          init: init: chat template, example_format: '<|im_start|>system
+Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.
+
+You are a helpful assistant<|im_end|>
+<|im_start|>user
+Hello<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+Hi there<|im_end|>
+<|im_start|>user
+How are you?<|im_end|>
+<|im_start|>assistant
+<think>
+'
+0.34.507.660 I srv          init: init: chat template, thinking = 1
+0.34.507.667 I srv          init: preserve_reasoning kwarg: true
+0.34.507.668 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+0.34.507.805 I srv  llama_server: model loaded
+0.34.507.807 I srv  llama_server: listening on http://127.0.0.1:8081
+0.34.508.132 I srv  update_slots: all slots are idle
+0.34.910.087 I srv  update_slots: all slots are idle
+0.34.937.135 I srv  server_strea: conv_id= (empty=1)
+0.34.937.804 I srv   operator (): chat format: peg-native
+0.34.938.150 I slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+0.34.938.152 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.34.938.825 I slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> min-p -> ?xtc -> ?temp-ext -> dist 
+0.34.938.835 I slot launch_slot_: id  0 | task -1 | sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 20, top_p = 0.950, min_p = 0.050, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 1.000
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+0.34.938.838 I slot launch_slot_: id  0 | task 1 | processing task, is_child = 0
+0.34.938.874 I slot  operator (): id  0 | task 1 | new prompt, n_ctx_slot = 131072, n_keep = 0, task.n_tokens = 58
+0.34.938.880 I slot  operator (): id  0 | task 1 | cached n_tokens = 0, memory_seq_rm [0, end)
+0.34.943.995 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.002 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.005 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.008 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.011 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.014 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.020 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.023 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.026 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.029 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.032 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.034 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.037 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.039 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.042 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.044 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.047 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.050 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.052 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.054 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.057 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.059 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.062 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.064 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.066 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.069 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.072 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.074 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.077 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.079 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.082 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.085 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.087 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.090 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.093 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.095 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.097 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.100 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.102 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.104 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.107 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.109 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.111 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.113 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.116 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.118 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.120 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.34.944.122 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.798.765 I slot  operator (): id  0 | task 1 | cached n_tokens = 42, memory_seq_rm [42, end)
+0.35.835.631 I slot create_check: id  0 | task 1 | created context checkpoint 1 of 32 (pos_min = 41, pos_max = 41, n_tokens = 42, size = 112.571 MiB)
+0.35.836.904 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.912 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.917 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.921 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.927 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.930 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.934 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.937 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.941 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.944 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.948 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.951 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.954 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.958 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.962 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.966 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.970 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.974 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.977 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.980 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.983 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.987 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.990 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.993 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.836.997 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.000 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.003 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.007 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.010 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.013 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.016 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.019 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.022 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.025 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.028 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.030 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.033 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.036 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.039 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.042 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.045 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.048 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.050 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.053 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.056 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.059 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.061 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.35.837.064 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.050.980 I slot  operator (): id  0 | task 1 | cached n_tokens = 54, memory_seq_rm [54, end)
+0.36.051.287 I slot init_sampler: id  0 | task 1 | init sampler, took 0.17 ms, tokens: text = 58, total = 58
+0.36.088.250 I slot create_check: id  0 | task 1 | created context checkpoint 2 of 32 (pos_min = 53, pos_max = 53, n_tokens = 54, size = 112.571 MiB)
+0.36.090.199 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.208 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.213 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.217 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.221 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.226 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.230 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.247 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.252 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.256 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.260 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.264 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.269 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.273 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.277 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.281 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.285 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.289 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.293 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.297 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.301 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.305 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.309 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.313 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.316 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.321 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.325 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.328 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.331 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.335 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.338 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.342 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.345 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.348 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.352 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.355 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.358 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.362 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.365 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.368 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.371 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.374 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.377 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.380 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.382 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.386 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.388 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.090.391 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.112.131 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=0 domain=1 outcome=0 reason=1
+0.36.112.136 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=1 domain=1 outcome=0 reason=1
+0.36.112.137 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=2 domain=1 outcome=0 reason=1
+0.36.112.137 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=3 domain=1 outcome=0 reason=1
+0.36.112.137 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=4 domain=1 outcome=0 reason=1
+0.36.112.138 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=5 domain=1 outcome=0 reason=1
+0.36.112.138 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=6 domain=1 outcome=0 reason=1
+0.36.112.139 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=7 domain=1 outcome=0 reason=1
+0.36.112.140 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=8 domain=1 outcome=0 reason=1
+0.36.112.141 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=9 domain=1 outcome=0 reason=1
+0.36.112.141 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=10 domain=1 outcome=0 reason=1
+0.36.112.142 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=11 domain=1 outcome=0 reason=1
+0.36.112.142 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=12 domain=1 outcome=0 reason=1
+0.36.112.143 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=13 domain=1 outcome=0 reason=1
+0.36.112.143 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=14 domain=1 outcome=0 reason=1
+0.36.112.143 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=15 domain=1 outcome=0 reason=1
+0.36.112.144 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=16 domain=1 outcome=0 reason=1
+0.36.112.144 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=17 domain=1 outcome=0 reason=1
+0.36.112.145 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=18 domain=1 outcome=0 reason=1
+0.36.112.145 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=19 domain=1 outcome=0 reason=1
+0.36.112.146 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=20 domain=1 outcome=0 reason=1
+0.36.112.146 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=21 domain=1 outcome=0 reason=1
+0.36.112.146 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=22 domain=1 outcome=0 reason=1
+0.36.112.147 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=23 domain=1 outcome=0 reason=1
+0.36.112.147 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=24 domain=1 outcome=0 reason=1
+0.36.112.148 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=25 domain=1 outcome=0 reason=1
+0.36.112.148 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=26 domain=1 outcome=0 reason=1
+0.36.112.148 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=27 domain=1 outcome=0 reason=1
+0.36.112.149 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=28 domain=1 outcome=0 reason=1
+0.36.112.149 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=29 domain=1 outcome=0 reason=1
+0.36.112.150 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=30 domain=1 outcome=0 reason=1
+0.36.112.150 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=31 domain=1 outcome=0 reason=1
+0.36.112.150 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=32 domain=1 outcome=0 reason=1
+0.36.112.151 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=33 domain=1 outcome=0 reason=1
+0.36.112.151 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=34 domain=1 outcome=0 reason=1
+0.36.112.152 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=35 domain=1 outcome=0 reason=1
+0.36.112.152 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=36 domain=1 outcome=0 reason=1
+0.36.112.153 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=37 domain=1 outcome=0 reason=1
+0.36.112.153 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=38 domain=1 outcome=0 reason=1
+0.36.112.153 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=39 domain=1 outcome=0 reason=1
+0.36.112.154 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=40 domain=1 outcome=0 reason=1
+0.36.112.154 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=41 domain=1 outcome=0 reason=1
+0.36.112.154 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=42 domain=1 outcome=0 reason=1
+0.36.112.155 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=43 domain=1 outcome=0 reason=1
+0.36.112.155 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=44 domain=1 outcome=0 reason=1
+0.36.112.156 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=45 domain=1 outcome=0 reason=1
+0.36.112.156 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=46 domain=1 outcome=0 reason=1
+0.36.112.156 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=47 domain=1 outcome=0 reason=2
+0.36.190.269 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.279 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.282 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.286 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.289 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.292 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.296 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.299 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.302 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.305 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.309 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.312 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.316 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.318 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.322 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.325 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.328 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.331 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.334 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.337 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.340 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.343 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.346 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.348 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.351 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.354 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.356 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.359 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.361 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.364 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.366 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.369 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.371 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.374 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.376 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.378 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.381 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.383 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.386 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.389 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.391 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.393 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.396 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.398 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.401 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.403 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.405 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.190.408 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.36.196.931 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=0 domain=1 outcome=1 reason=0
+0.36.196.935 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=1 domain=1 outcome=1 reason=0
+0.36.196.936 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=2 domain=1 outcome=1 reason=0
+0.36.196.936 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=3 domain=1 outcome=1 reason=0
+0.36.196.938 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=4 domain=1 outcome=1 reason=0
+0.36.196.938 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=5 domain=1 outcome=1 reason=0
+0.36.196.938 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=6 domain=1 outcome=1 reason=0
+0.36.196.939 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=7 domain=1 outcome=1 reason=0
+0.36.196.939 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=8 domain=1 outcome=1 reason=0
+0.36.196.940 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=9 domain=1 outcome=1 reason=0
+0.36.196.940 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=10 domain=1 outcome=1 reason=0
+0.36.196.941 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=11 domain=1 outcome=1 reason=0
+0.36.196.942 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=12 domain=1 outcome=1 reason=0
+0.36.196.942 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=13 domain=1 outcome=1 reason=0
+0.36.196.943 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=14 domain=1 outcome=1 reason=0
+0.36.196.943 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=15 domain=1 outcome=1 reason=0
+0.36.196.944 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=16 domain=1 outcome=1 reason=0
+0.36.196.944 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=17 domain=1 outcome=1 reason=0
+0.36.196.944 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=18 domain=1 outcome=1 reason=0
+0.36.196.945 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=19 domain=1 outcome=1 reason=0
+0.36.196.945 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=20 domain=1 outcome=1 reason=0
+0.36.196.946 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=21 domain=1 outcome=1 reason=0
+0.36.196.946 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=22 domain=1 outcome=1 reason=0
+0.36.196.947 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=23 domain=1 outcome=1 reason=0
+0.36.196.947 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=24 domain=1 outcome=1 reason=0
+0.36.196.948 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=25 domain=1 outcome=1 reason=0
+0.36.196.948 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=26 domain=1 outcome=1 reason=0
+0.36.196.948 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=27 domain=1 outcome=1 reason=0
+0.36.196.949 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=28 domain=1 outcome=1 reason=0
+0.36.196.949 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=29 domain=1 outcome=1 reason=0
+0.36.196.950 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=30 domain=1 outcome=1 reason=0
+0.36.196.950 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=31 domain=1 outcome=1 reason=0
+0.36.196.951 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=32 domain=1 outcome=1 reason=0
+0.36.196.951 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=33 domain=1 outcome=1 reason=0
+0.36.196.951 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=34 domain=1 outcome=1 reason=0
+0.36.196.952 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=35 domain=1 outcome=1 reason=0
+0.36.196.952 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=36 domain=1 outcome=1 reason=0
+0.36.196.953 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=37 domain=1 outcome=1 reason=0
+0.36.196.953 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=38 domain=1 outcome=1 reason=0
+0.36.196.953 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=39 domain=1 outcome=1 reason=0
+0.36.196.954 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=40 domain=1 outcome=1 reason=0
+0.36.196.954 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=41 domain=1 outcome=1 reason=0
+0.36.196.955 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=42 domain=1 outcome=1 reason=0
+0.36.196.955 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=43 domain=1 outcome=1 reason=0
+0.36.196.956 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=44 domain=1 outcome=1 reason=0
+0.36.196.956 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=45 domain=1 outcome=1 reason=0
+0.36.196.956 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=46 domain=1 outcome=1 reason=0
+0.36.196.957 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=47 domain=1 outcome=1 reason=0
+0.39.215.438 I slot print_timing: id  0 | task 1 | n_gen =    100, tg =  32.71 t/s, tg_3s =  33.04 t/s
+0.41.225.584 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.593 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.596 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.600 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.603 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.606 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.609 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.612 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.616 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.619 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.622 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.625 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.628 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.630 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.634 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.637 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.640 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.643 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.646 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.649 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.651 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.654 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.657 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.660 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.662 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.665 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.668 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.671 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.673 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.676 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.679 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.681 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.684 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.686 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.689 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.691 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.694 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.697 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.699 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.702 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.704 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.706 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.709 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.711 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.713 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.715 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.718 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.225.720 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.41.232.653 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=0 domain=1 outcome=1 reason=0
+0.41.232.658 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=1 domain=1 outcome=1 reason=0
+0.41.232.658 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=2 domain=1 outcome=1 reason=0
+0.41.232.660 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=3 domain=1 outcome=1 reason=0
+0.41.232.660 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=4 domain=1 outcome=1 reason=0
+0.41.232.660 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=5 domain=1 outcome=1 reason=0
+0.41.232.661 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=6 domain=1 outcome=1 reason=0
+0.41.232.661 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=7 domain=1 outcome=1 reason=0
+0.41.232.662 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=8 domain=1 outcome=1 reason=0
+0.41.232.662 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=9 domain=1 outcome=1 reason=0
+0.41.232.663 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=10 domain=1 outcome=1 reason=0
+0.41.232.663 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=11 domain=1 outcome=1 reason=0
+0.41.232.663 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=12 domain=1 outcome=1 reason=0
+0.41.232.664 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=13 domain=1 outcome=1 reason=0
+0.41.232.664 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=14 domain=1 outcome=1 reason=0
+0.41.232.665 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=15 domain=1 outcome=1 reason=0
+0.41.232.665 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=16 domain=1 outcome=1 reason=0
+0.41.232.666 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=17 domain=1 outcome=1 reason=0
+0.41.232.666 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=18 domain=1 outcome=1 reason=0
+0.41.232.666 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=19 domain=1 outcome=1 reason=0
+0.41.232.667 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=20 domain=1 outcome=1 reason=0
+0.41.232.667 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=21 domain=1 outcome=1 reason=0
+0.41.232.668 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=22 domain=1 outcome=1 reason=0
+0.41.232.668 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=23 domain=1 outcome=1 reason=0
+0.41.232.668 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=24 domain=1 outcome=1 reason=0
+0.41.232.669 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=25 domain=1 outcome=1 reason=0
+0.41.232.669 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=26 domain=1 outcome=1 reason=0
+0.41.232.670 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=27 domain=1 outcome=1 reason=0
+0.41.232.670 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=28 domain=1 outcome=1 reason=0
+0.41.232.670 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=29 domain=1 outcome=1 reason=0
+0.41.232.671 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=30 domain=1 outcome=1 reason=0
+0.41.232.671 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=31 domain=1 outcome=1 reason=0
+0.41.232.672 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=32 domain=1 outcome=1 reason=0
+0.41.232.672 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=33 domain=1 outcome=1 reason=0
+0.41.232.672 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=34 domain=1 outcome=1 reason=0
+0.41.232.673 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=35 domain=1 outcome=1 reason=0
+0.41.232.673 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=36 domain=1 outcome=1 reason=0
+0.41.232.674 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=37 domain=1 outcome=1 reason=0
+0.41.232.674 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=38 domain=1 outcome=1 reason=0
+0.41.232.674 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=39 domain=1 outcome=1 reason=0
+0.41.232.675 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=40 domain=1 outcome=1 reason=0
+0.41.232.675 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=41 domain=1 outcome=1 reason=0
+0.41.232.676 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=42 domain=1 outcome=1 reason=0
+0.41.232.676 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=43 domain=1 outcome=1 reason=0
+0.41.232.676 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=44 domain=1 outcome=1 reason=0
+0.41.232.677 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=45 domain=1 outcome=1 reason=0
+0.41.232.677 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=46 domain=1 outcome=1 reason=0
+0.41.232.677 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=47 domain=1 outcome=1 reason=0
+0.42.216.640 I slot print_timing: id  0 | task 1 | n_gen =    250, tg =  41.31 t/s, tg_3s =  49.98 t/s
+0.45.218.981 I slot print_timing: id  0 | task 1 | n_gen =    418, tg =  46.18 t/s, tg_3s =  55.96 t/s
+0.45.837.651 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.660 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.663 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.666 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.669 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.673 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.675 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.679 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.682 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.685 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.688 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.692 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.695 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.698 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.701 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.703 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.706 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.709 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.712 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.715 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.718 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.721 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.724 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.726 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.729 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.731 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.734 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.737 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.739 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.742 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.745 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.747 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.750 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.752 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.755 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.758 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.760 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.762 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.765 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.767 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.770 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.772 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.774 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.776 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.779 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.781 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.783 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.837.785 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.45.841.654 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=0 domain=1 outcome=1 reason=0
+0.45.841.655 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=1 domain=1 outcome=1 reason=0
+0.45.841.656 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=2 domain=1 outcome=1 reason=0
+0.45.841.657 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=3 domain=1 outcome=1 reason=0
+0.45.841.657 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=4 domain=1 outcome=1 reason=0
+0.45.841.658 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=5 domain=1 outcome=1 reason=0
+0.45.841.658 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=6 domain=1 outcome=1 reason=0
+0.45.841.659 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=7 domain=1 outcome=1 reason=0
+0.45.841.659 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=8 domain=1 outcome=1 reason=0
+0.45.841.660 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=9 domain=1 outcome=1 reason=0
+0.45.841.660 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=10 domain=1 outcome=1 reason=0
+0.45.841.661 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=11 domain=1 outcome=1 reason=0
+0.45.841.661 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=12 domain=1 outcome=1 reason=0
+0.45.841.662 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=13 domain=1 outcome=1 reason=0
+0.45.841.662 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=14 domain=1 outcome=1 reason=0
+0.45.841.663 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=15 domain=1 outcome=1 reason=0
+0.45.841.663 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=16 domain=1 outcome=1 reason=0
+0.45.841.664 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=17 domain=1 outcome=1 reason=0
+0.45.841.664 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=18 domain=1 outcome=1 reason=0
+0.45.841.664 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=19 domain=1 outcome=1 reason=0
+0.45.841.665 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=20 domain=1 outcome=1 reason=0
+0.45.841.665 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=21 domain=1 outcome=1 reason=0
+0.45.841.665 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=22 domain=1 outcome=1 reason=0
+0.45.841.666 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=23 domain=1 outcome=1 reason=0
+0.45.841.666 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=24 domain=1 outcome=1 reason=0
+0.45.841.667 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=25 domain=1 outcome=1 reason=0
+0.45.841.667 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=26 domain=1 outcome=1 reason=0
+0.45.841.668 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=27 domain=1 outcome=1 reason=0
+0.45.841.668 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=28 domain=1 outcome=1 reason=0
+0.45.841.669 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=29 domain=1 outcome=1 reason=0
+0.45.841.669 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=30 domain=1 outcome=1 reason=0
+0.45.841.669 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=31 domain=1 outcome=1 reason=0
+0.45.841.670 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=32 domain=1 outcome=1 reason=0
+0.45.841.670 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=33 domain=1 outcome=1 reason=0
+0.45.841.670 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=34 domain=1 outcome=1 reason=0
+0.45.841.671 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=35 domain=1 outcome=1 reason=0
+0.45.841.671 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=36 domain=1 outcome=1 reason=0
+0.45.841.672 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=37 domain=1 outcome=1 reason=0
+0.45.841.672 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=38 domain=1 outcome=1 reason=0
+0.45.841.672 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=39 domain=1 outcome=1 reason=0
+0.45.841.673 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=40 domain=1 outcome=1 reason=0
+0.45.841.673 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=41 domain=1 outcome=1 reason=0
+0.45.841.674 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=42 domain=1 outcome=1 reason=0
+0.45.841.674 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=43 domain=1 outcome=1 reason=0
+0.45.841.674 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=44 domain=1 outcome=1 reason=0
+0.45.841.675 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=45 domain=1 outcome=1 reason=0
+0.45.841.675 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=46 domain=1 outcome=1 reason=0
+0.45.841.676 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=47 domain=1 outcome=1 reason=0
+0.48.219.218 I slot print_timing: id  0 | task 1 | n_gen =    573, tg =  47.55 t/s, tg_3s =  51.66 t/s
+0.50.991.517 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.525 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.529 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.532 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.535 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.538 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.541 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.545 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.547 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.551 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.554 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.557 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.560 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.563 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.567 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.570 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.573 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.576 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.579 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.582 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.585 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.588 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.591 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.594 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.596 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.599 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.602 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.605 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.608 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.610 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.613 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.616 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.618 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.621 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.623 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.626 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.628 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.631 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.633 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.636 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.638 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.641 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.643 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.645 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.647 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.650 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.652 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.991.654 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.50.998.842 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=0 domain=1 outcome=1 reason=0
+0.50.998.846 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=1 domain=1 outcome=1 reason=0
+0.50.998.847 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=2 domain=1 outcome=1 reason=0
+0.50.998.849 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=3 domain=1 outcome=1 reason=0
+0.50.998.849 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=4 domain=1 outcome=1 reason=0
+0.50.998.850 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=5 domain=1 outcome=1 reason=0
+0.50.998.850 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=6 domain=1 outcome=1 reason=0
+0.50.998.851 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=7 domain=1 outcome=1 reason=0
+0.50.998.851 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=8 domain=1 outcome=1 reason=0
+0.50.998.852 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=9 domain=1 outcome=1 reason=0
+0.50.998.852 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=10 domain=1 outcome=1 reason=0
+0.50.998.853 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=11 domain=1 outcome=1 reason=0
+0.50.998.853 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=12 domain=1 outcome=1 reason=0
+0.50.998.853 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=13 domain=1 outcome=1 reason=0
+0.50.998.854 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=14 domain=1 outcome=1 reason=0
+0.50.998.854 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=15 domain=1 outcome=1 reason=0
+0.50.998.855 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=16 domain=1 outcome=1 reason=0
+0.50.998.855 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=17 domain=1 outcome=1 reason=0
+0.50.998.856 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=18 domain=1 outcome=1 reason=0
+0.50.998.856 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=19 domain=1 outcome=1 reason=0
+0.50.998.856 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=20 domain=1 outcome=1 reason=0
+0.50.998.857 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=21 domain=1 outcome=1 reason=0
+0.50.998.857 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=22 domain=1 outcome=1 reason=0
+0.50.998.858 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=23 domain=1 outcome=1 reason=0
+0.50.998.858 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=24 domain=1 outcome=1 reason=0
+0.50.998.858 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=25 domain=1 outcome=1 reason=0
+0.50.998.859 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=26 domain=1 outcome=1 reason=0
+0.50.998.859 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=27 domain=1 outcome=1 reason=0
+0.50.998.859 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=28 domain=1 outcome=1 reason=0
+0.50.998.860 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=29 domain=1 outcome=1 reason=0
+0.50.998.860 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=30 domain=1 outcome=1 reason=0
+0.50.998.861 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=31 domain=1 outcome=1 reason=0
+0.50.998.861 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=32 domain=1 outcome=1 reason=0
+0.50.998.861 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=33 domain=1 outcome=1 reason=0
+0.50.998.862 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=34 domain=1 outcome=1 reason=0
+0.50.998.862 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=35 domain=1 outcome=1 reason=0
+0.50.998.863 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=36 domain=1 outcome=1 reason=0
+0.50.998.863 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=37 domain=1 outcome=1 reason=0
+0.50.998.863 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=38 domain=1 outcome=1 reason=0
+0.50.998.864 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=39 domain=1 outcome=1 reason=0
+0.50.998.864 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=40 domain=1 outcome=1 reason=0
+0.50.998.865 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=41 domain=1 outcome=1 reason=0
+0.50.998.865 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=42 domain=1 outcome=1 reason=0
+0.50.998.865 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=43 domain=1 outcome=1 reason=0
+0.50.998.866 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=44 domain=1 outcome=1 reason=0
+0.50.998.866 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=45 domain=1 outcome=1 reason=0
+0.50.998.867 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=46 domain=1 outcome=1 reason=0
+0.50.998.867 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=47 domain=1 outcome=1 reason=0
+0.51.227.738 I slot print_timing: id  0 | task 1 | n_gen =    720, tg =  47.81 t/s, tg_3s =  48.86 t/s
+0.54.244.742 I slot print_timing: id  0 | task 1 | n_gen =    872, tg =  48.24 t/s, tg_3s =  50.38 t/s
+0.55.956.665 I moe-placement: layer=0 semantic_group=0 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.673 I moe-placement: layer=1 semantic_group=1 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.676 I moe-placement: layer=2 semantic_group=2 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.680 I moe-placement: layer=3 semantic_group=3 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.683 I moe-placement: layer=4 semantic_group=4 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.686 I moe-placement: layer=5 semantic_group=5 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.689 I moe-placement: layer=6 semantic_group=6 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.692 I moe-placement: layer=7 semantic_group=7 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.696 I moe-placement: layer=8 semantic_group=8 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.699 I moe-placement: layer=9 semantic_group=9 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.702 I moe-placement: layer=10 semantic_group=10 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.705 I moe-placement: layer=11 semantic_group=11 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.708 I moe-placement: layer=12 semantic_group=12 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.711 I moe-placement: layer=13 semantic_group=13 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.714 I moe-placement: layer=14 semantic_group=14 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.717 I moe-placement: layer=15 semantic_group=15 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.720 I moe-placement: layer=16 semantic_group=16 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.723 I moe-placement: layer=17 semantic_group=17 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.726 I moe-placement: layer=18 semantic_group=18 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.729 I moe-placement: layer=19 semantic_group=19 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.732 I moe-placement: layer=20 semantic_group=20 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.735 I moe-placement: layer=21 semantic_group=21 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.737 I moe-placement: layer=22 semantic_group=22 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.740 I moe-placement: layer=23 semantic_group=23 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.743 I moe-placement: layer=24 semantic_group=24 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.745 I moe-placement: layer=25 semantic_group=25 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.748 I moe-placement: layer=26 semantic_group=26 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.751 I moe-placement: layer=27 semantic_group=27 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.753 I moe-placement: layer=28 semantic_group=28 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.756 I moe-placement: layer=29 semantic_group=29 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.759 I moe-placement: layer=30 semantic_group=30 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.761 I moe-placement: layer=31 semantic_group=31 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.764 I moe-placement: layer=32 semantic_group=32 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.766 I moe-placement: layer=33 semantic_group=33 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.769 I moe-placement: layer=34 semantic_group=34 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.771 I moe-placement: layer=35 semantic_group=35 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.774 I moe-placement: layer=36 semantic_group=36 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.776 I moe-placement: layer=37 semantic_group=37 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.779 I moe-placement: layer=38 semantic_group=38 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.781 I moe-placement: layer=39 semantic_group=39 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.783 I moe-placement: layer=40 semantic_group=40 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.786 I moe-placement: layer=41 semantic_group=41 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.788 I moe-placement: layer=42 semantic_group=42 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.790 I moe-placement: layer=43 semantic_group=43 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.793 I moe-placement: layer=44 semantic_group=44 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.795 I moe-placement: layer=45 semantic_group=45 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.797 I moe-placement: layer=46 semantic_group=46 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.956.800 I moe-placement: layer=47 semantic_group=47 domain=1 owner=CUDA0 placed=1 operations=36
+0.55.963.834 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=0 domain=1 outcome=1 reason=0
+0.55.963.839 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=1 domain=1 outcome=1 reason=0
+0.55.963.840 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=2 domain=1 outcome=1 reason=0
+0.55.963.841 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=3 domain=1 outcome=1 reason=0
+0.55.963.841 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=4 domain=1 outcome=1 reason=0
+0.55.963.842 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=5 domain=1 outcome=1 reason=0
+0.55.963.842 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=6 domain=1 outcome=1 reason=0
+0.55.963.843 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=7 domain=1 outcome=1 reason=0
+0.55.963.843 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=8 domain=1 outcome=1 reason=0
+0.55.963.843 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=9 domain=1 outcome=1 reason=0
+0.55.963.844 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=10 domain=1 outcome=1 reason=0
+0.55.963.844 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=11 domain=1 outcome=1 reason=0
+0.55.963.845 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=12 domain=1 outcome=1 reason=0
+0.55.963.845 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=13 domain=1 outcome=1 reason=0
+0.55.963.846 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=14 domain=1 outcome=1 reason=0
+0.55.963.846 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=15 domain=1 outcome=1 reason=0
+0.55.963.846 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=16 domain=1 outcome=1 reason=0
+0.55.963.847 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=17 domain=1 outcome=1 reason=0
+0.55.963.847 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=18 domain=1 outcome=1 reason=0
+0.55.963.848 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=19 domain=1 outcome=1 reason=0
+0.55.963.848 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=20 domain=1 outcome=1 reason=0
+0.55.963.848 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=21 domain=1 outcome=1 reason=0
+0.55.963.849 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=22 domain=1 outcome=1 reason=0
+0.55.963.849 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=23 domain=1 outcome=1 reason=0
+0.55.963.850 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=24 domain=1 outcome=1 reason=0
+0.55.963.850 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=25 domain=1 outcome=1 reason=0
+0.55.963.850 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=26 domain=1 outcome=1 reason=0
+0.55.963.851 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=27 domain=1 outcome=1 reason=0
+0.55.963.851 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=28 domain=1 outcome=1 reason=0
+0.55.963.852 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=29 domain=1 outcome=1 reason=0
+0.55.963.852 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=30 domain=1 outcome=1 reason=0
+0.55.963.852 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=31 domain=1 outcome=1 reason=0
+0.55.963.853 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=32 domain=1 outcome=1 reason=0
+0.55.963.853 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=33 domain=1 outcome=1 reason=0
+0.55.963.854 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=34 domain=1 outcome=1 reason=0
+0.55.963.854 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=35 domain=1 outcome=1 reason=0
+0.55.963.855 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=36 domain=1 outcome=1 reason=0
+0.55.963.855 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=37 domain=1 outcome=1 reason=0
+0.55.963.855 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=38 domain=1 outcome=1 reason=0
+0.55.963.856 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=39 domain=1 outcome=1 reason=0
+0.55.963.856 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=40 domain=1 outcome=1 reason=0
+0.55.963.857 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=41 domain=1 outcome=1 reason=0
+0.55.963.857 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=42 domain=1 outcome=1 reason=0
+0.55.963.858 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=43 domain=1 outcome=1 reason=0
+0.55.963.858 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=44 domain=1 outcome=1 reason=0
+0.55.963.858 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=45 domain=1 outcome=1 reason=0
+0.55.963.859 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=46 domain=1 outcome=1 reason=0
+0.55.963.859 I moe-grouped-plan: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=47 domain=1 outcome=1 reason=0
+0.57.147.941 I slot print_timing: id  0 | task 1 | prompt eval time =    1249.94 ms /    58 tokens (   21.55 ms per token,    46.40 tokens per second)
+0.57.147.947 I slot print_timing: id  0 | task 1 |        eval time =   20959.12 ms /  1024 tokens (   20.49 ms per token,    48.81 tokens per second)
+0.57.147.947 I slot print_timing: id  0 | task 1 |       total time =   22209.06 ms /  1082 tokens
+0.57.147.948 I slot print_timing: id  0 | task 1 |    graphs reused =       1018
+0.57.149.094 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=0 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.099 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=1 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.100 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=2 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.101 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=3 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.102 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=4 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.103 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=5 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.104 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=6 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.105 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=7 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.106 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=8 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.107 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=9 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.108 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=10 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.109 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=11 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.110 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=12 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.111 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=13 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.113 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=14 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.114 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=15 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.115 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=16 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.116 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=17 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.117 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=18 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.118 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=19 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.123 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=20 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.124 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=21 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.125 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=22 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.126 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=23 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.127 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=24 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.128 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=25 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.129 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=26 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.130 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=27 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.131 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=28 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.132 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=29 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.133 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=30 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.134 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=31 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.135 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=32 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.136 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=33 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.137 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=34 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.138 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=35 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.138 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=36 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.139 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=37 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.140 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=38 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.141 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=39 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.142 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=40 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.143 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=41 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.144 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=42 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.145 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=43 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.146 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=44 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.147 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=45 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.148 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=46 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.149 I moe-grouped-owner-group: owner=0000019208090440 device=0 physical=0 generation=1 semantic_group=47 domain=1 ready=1023 submitted=1023 completed=1023
+0.57.149.575 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=0 semantic_group=0 domain=1 tensor=blk.0.ffn_down_exps.weight hits=7735 misses=2495 h2d_bytes=5429120000
+0.57.149.576 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=1 semantic_group=1 domain=1 tensor=blk.1.ffn_down_exps.weight hits=8803 misses=1427 h2d_bytes=2155340800
+0.57.149.577 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=2 semantic_group=2 domain=1 tensor=blk.2.ffn_down_exps.weight hits=8746 misses=1484 h2d_bytes=2925260800
+0.57.149.578 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=3 semantic_group=3 domain=1 tensor=blk.3.ffn_down_exps.weight hits=9855 misses=375 h2d_bytes=739200000
+0.57.149.580 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=4 semantic_group=4 domain=1 tensor=blk.4.ffn_down_exps.weight hits=9702 misses=528 h2d_bytes=1040793600
+0.57.149.581 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=5 semantic_group=5 domain=1 tensor=blk.5.ffn_down_exps.weight hits=9458 misses=772 h2d_bytes=1521766400
+0.57.149.582 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=6 semantic_group=6 domain=1 tensor=blk.6.ffn_down_exps.weight hits=9053 misses=1177 h2d_bytes=2320102400
+0.57.149.583 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=7 semantic_group=7 domain=1 tensor=blk.7.ffn_down_exps.weight hits=9026 misses=1204 h2d_bytes=2619904000
+0.57.149.585 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=8 semantic_group=8 domain=1 tensor=blk.8.ffn_down_exps.weight hits=9628 misses=602 h2d_bytes=909260800
+0.57.149.586 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=9 semantic_group=9 domain=1 tensor=blk.9.ffn_down_exps.weight hits=9745 misses=485 h2d_bytes=956032000
+0.57.149.587 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=10 semantic_group=10 domain=1 tensor=blk.10.ffn_down_exps.weight hits=9562 misses=668 h2d_bytes=1008947200
+0.57.149.589 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=11 semantic_group=11 domain=1 tensor=blk.11.ffn_down_exps.weight hits=9706 misses=524 h2d_bytes=1032908800
+0.57.149.590 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=12 semantic_group=12 domain=1 tensor=blk.12.ffn_down_exps.weight hits=9341 misses=889 h2d_bytes=1524812800
+0.57.149.591 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=13 semantic_group=13 domain=1 tensor=blk.13.ffn_down_exps.weight hits=9446 misses=784 h2d_bytes=1184153600
+0.57.149.593 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=14 semantic_group=14 domain=1 tensor=blk.14.ffn_down_exps.weight hits=9555 misses=675 h2d_bytes=1468800000
+0.57.149.594 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=15 semantic_group=15 domain=1 tensor=blk.15.ffn_down_exps.weight hits=10016 misses=214 h2d_bytes=421836800
+0.57.149.595 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=16 semantic_group=16 domain=1 tensor=blk.16.ffn_down_exps.weight hits=9851 misses=379 h2d_bytes=824704000
+0.57.149.596 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=17 semantic_group=17 domain=1 tensor=blk.17.ffn_down_exps.weight hits=9541 misses=689 h2d_bytes=1605094400
+0.57.149.597 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=18 semantic_group=18 domain=1 tensor=blk.18.ffn_down_exps.weight hits=9250 misses=980 h2d_bytes=2132480000
+0.57.149.599 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=19 semantic_group=19 domain=1 tensor=blk.19.ffn_down_exps.weight hits=9692 misses=538 h2d_bytes=1060505600
+0.57.149.600 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=20 semantic_group=20 domain=1 tensor=blk.20.ffn_down_exps.weight hits=9671 misses=559 h2d_bytes=958796800
+0.57.149.601 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=21 semantic_group=21 domain=1 tensor=blk.21.ffn_down_exps.weight hits=9593 misses=637 h2d_bytes=1190425600
+0.57.149.602 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=22 semantic_group=22 domain=1 tensor=blk.22.ffn_down_exps.weight hits=9139 misses=1091 h2d_bytes=2374016000
+0.57.149.603 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=23 semantic_group=23 domain=1 tensor=blk.23.ffn_down_exps.weight hits=9737 misses=493 h2d_bytes=971801600
+0.57.149.605 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=24 semantic_group=24 domain=1 tensor=blk.24.ffn_down_exps.weight hits=9661 misses=569 h2d_bytes=1121612800
+0.57.149.606 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=25 semantic_group=25 domain=1 tensor=blk.25.ffn_down_exps.weight hits=9757 misses=473 h2d_bytes=1101900800
+0.57.149.607 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=26 semantic_group=26 domain=1 tensor=blk.26.ffn_down_exps.weight hits=9605 misses=625 h2d_bytes=1232000000
+0.57.149.609 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=27 semantic_group=27 domain=1 tensor=blk.27.ffn_down_exps.weight hits=9684 misses=546 h2d_bytes=1271961600
+0.57.149.610 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=28 semantic_group=28 domain=1 tensor=blk.28.ffn_down_exps.weight hits=9345 misses=885 h2d_bytes=2061696000
+0.57.149.611 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=29 semantic_group=29 domain=1 tensor=blk.29.ffn_down_exps.weight hits=9476 misses=754 h2d_bytes=1756518400
+0.57.149.612 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=30 semantic_group=30 domain=1 tensor=blk.30.ffn_down_exps.weight hits=9579 misses=651 h2d_bytes=1116595200
+0.57.149.613 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=31 semantic_group=31 domain=1 tensor=blk.31.ffn_down_exps.weight hits=9982 misses=248 h2d_bytes=539648000
+0.57.149.615 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=32 semantic_group=32 domain=1 tensor=blk.32.ffn_down_exps.weight hits=9814 misses=416 h2d_bytes=820019200
+0.57.149.616 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=33 semantic_group=33 domain=1 tensor=blk.33.ffn_down_exps.weight hits=9496 misses=734 h2d_bytes=1597184000
+0.57.149.617 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=34 semantic_group=34 domain=1 tensor=blk.34.ffn_down_exps.weight hits=9248 misses=982 h2d_bytes=1935718400
+0.57.149.618 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=35 semantic_group=35 domain=1 tensor=blk.35.ffn_down_exps.weight hits=9736 misses=494 h2d_bytes=1150822400
+0.57.149.619 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=36 semantic_group=36 domain=1 tensor=blk.36.ffn_down_exps.weight hits=9782 misses=448 h2d_bytes=676659200
+0.57.149.621 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=37 semantic_group=37 domain=1 tensor=blk.37.ffn_down_exps.weight hits=9711 misses=519 h2d_bytes=1129344000
+0.57.149.622 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=38 semantic_group=38 domain=1 tensor=blk.38.ffn_down_exps.weight hits=9402 misses=828 h2d_bytes=1801728000
+0.57.149.623 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=39 semantic_group=39 domain=1 tensor=blk.39.ffn_down_exps.weight hits=9879 misses=351 h2d_bytes=691891200
+0.57.149.624 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=40 semantic_group=40 domain=1 tensor=blk.40.ffn_down_exps.weight hits=9916 misses=314 h2d_bytes=731494400
+0.57.149.625 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=41 semantic_group=41 domain=1 tensor=blk.41.ffn_down_exps.weight hits=9855 misses=375 h2d_bytes=816000000
+0.57.149.627 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=42 semantic_group=42 domain=1 tensor=blk.42.ffn_down_exps.weight hits=9775 misses=455 h2d_bytes=990080000
+0.57.149.628 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=43 semantic_group=43 domain=1 tensor=blk.43.ffn_down_exps.weight hits=9879 misses=351 h2d_bytes=763776000
+0.57.149.629 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=44 semantic_group=44 domain=1 tensor=blk.44.ffn_down_exps.weight hits=9838 misses=392 h2d_bytes=913203200
+0.57.149.630 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=45 semantic_group=45 domain=1 tensor=blk.45.ffn_down_exps.weight hits=9835 misses=395 h2d_bytes=920192000
+0.57.149.631 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=46 semantic_group=46 domain=1 tensor=blk.46.ffn_down_exps.weight hits=9784 misses=446 h2d_bytes=970496000
+0.57.149.632 I moe-grouped-owner-transfer: owner=0000019208090440 device=0 physical=0 generation=1 group=47 semantic_group=47 domain=1 tensor=blk.47.ffn_down_exps.weight hits=9655 misses=575 h2d_bytes=1530880000
+0.57.150.144 I moe-grouped-owner: owner=0000019208090440 device=0 physical=0 pci=0000:01:00.0 generation=1 decode_grouped=49104 decode_legacy=0 grouped_main=49104 grouped_draft=0 grouped_mtp=0 legacy_main=0 legacy_draft=0 legacy_mtp=0 direct=240 captures=240 replays=48624 ready=49104 submitted=49104 completed=49104 prepare_error=0 finish_error=0 populated_slots=9216/9216 populated_payload_bytes=18859622400/18859622400 payload_allocation_bytes=18859631796 slot_auxiliary_bytes=0 fixed_auxiliary_bytes=0 metadata_bytes=922368 host_staging_bytes=0 route_accesses=491040 unique_accesses=491040 cache_hits=458545 cache_misses=32495 vacant_fills=9216 replacement_fills=23279 invalidation_refills=0 source_direct_registered_bytes=0 source_pageable_staged_bytes=0 source_mapped_bytes=66017484800 source_device_bytes=0 source_prepack_bytes=0 source_device_prefetch_bytes=0 prefetch_calls=0 prefetch_proposed_bytes=0 prefetch_copied_bytes=0 prefetch_used_bytes=0 prefetch_wrong_bytes=0 prefetch_late_bytes=0 prefetch_dropped_bytes=0 demand_materialized_bytes=0 reset_generation_replace=0 reset_generation_reject=0 reset_clock=0 reset_legacy_handoff=48 reset_host_staged_handoff=0
+0.57.150.243 I moe-cache: 144 caches  hits=66636  misses=22998  evictions=603  hit-rate=74.34%
+0.57.151.382 I slot      release: id  0 | task 1 | stop processing: n_tokens = 1081, truncated = 0
+0.57.151.395 I srv  update_slots: all slots are idle
+1.47.226.637 I srv  update_slots: all slots are idle

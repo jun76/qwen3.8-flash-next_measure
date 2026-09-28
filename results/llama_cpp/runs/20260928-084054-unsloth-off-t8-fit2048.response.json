@@ -1,0 +1,37 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "reasoning_content": "The user wants a block-breaker game (Breakout/Arkanoid). Language: Japanese. I should make a single HTML file, arcade cabinet styled with a distinct display face + readable body face.\n\nFor a game, the most characteristic thing to lead with is the game itself — an arcade cabinet framing, a CRT-ish screen, glowing phosphor pixels, chunky type, not a generic hero.\n\nDesign direction: retro arcade / CRT phosphor. A near-black background with one neon accent would be the obvious CRT cliché, so I'll steer away from that. Instead: use a richer palette — deep indigo-navy cabinet with multiple accent colors (amber, cyan, magenta, lime) — a layered background with scanlines, subtle grid, ambient glow. Multiple accents, not a single neon.\n\nTypography: display face — something chunky/arcade. Google Fonts: \"Bungee\" for the wordmark (very characteristic of arcade signage) and body \"Space Grotesk\" for readable UI text. I'll use Bungee for the title/logo only, and Space Grotesk for the rest. Score digits: use \"Space Mono\" or JetBrains Mono for tabular numerals in the HUD, plus \"Bungee\" for headings and \"Space Grotesk\" body. Japanese text will fall back to a Japanese font stack: \"Hiragino Sans\", \"Noto Sans JP\". Good.\n\nGame features (rich, complete):\n- Canvas-based Breakout with:\n  - Paddle with mouse/touch/keyboard control\n  - Ball with speed increase, angle based on paddle hit position\n  - Multiple block rows with different colors/HP, some multi-hit bricks with crack visuals\n  - Power-ups falling: expand paddle, multiball, slow ball, laser?, extra life. Keep it fun: 拡張, multi ball, slow, laser, 残機+1\n  - Particles on brick break, screen shake, ball trails, glow\n  - Levels: multiple layouts (procedural + designed), progression\n  - Score, combo multiplier, lives, level indicator, high score in localStorage\n  - Pause, restart, start overlay, game over/win overlay\n  - Sound via WebAudio (subtle blips) with mute toggle\n  - CRT effects: scanlines overlay, vignette, slight chromatic feel — via CSS on canvas container.\n- Side panel: HUD stats (score, high score, level, combo, lives), power-up legend (a small legend grid is appropriate), controls.\n- Ambient background: layered gradients, subtle animated dot grid, floating brick shapes slowly (ambient).\n\nLayout: an asymmetric two-column — left/main = arcade screen inside a cabinet frame with a marquee header across the top; right = stats/legend rail. Header as an arcade marquee with logo on the left. Cabinet chrome: bezel with screws, marquee lights.\n\nFor a game the most characteristic opening is the game's start screen inside the cabinet: attract-mode \"INSERT COIN\" style, the marquee with the game title, and the playfield immediately visible — no generic marketing hero. I'll open with the marquee bar + immediate playfield.\n\nMotion & micro-interactions: marquee bulbs pulsing, score digits ticking/flashing on change, hover effects on buttons (offset shadow, press), paddle cursor hint, block shimmer on screen, background drifting, power-up legend chips glow on collect.\n\nLet me write the code carefully.\n\nCanvas size: logical 800x600? Let's do a responsive canvas with fixed internal resolution 720x540 (4:3) or 800x600. I'll use W=800,H=600 and CSS scale to fit container with aspect-ratio.\n\nImplementation plan:\n\n```js\nconst W=800,H=600;\n```\n\nGame state:\n- state: 'attract' | 'playing' | 'paused' | 'over' | 'clear' | 'win'\n- paddle: {x, w, h, targetX, laser cooldown}\n- balls: [{x,y,vx,vy,r, stuck}]\n- bricks: [{x,y,w,h,hp,maxHp,color,points,alive, indestructible?}]\n- powerups falling\n- particles\n- lasers\n- score, lives, level, combo (combo resets after N seconds without brick hit), mult multiplier\n- screen shake\n\nBall-brick collision: simple AABB with axis resolution. Use swept-ish approach: move ball in small steps to avoid tunneling (substep by speed). Do substeps: steps = ceil(speed/4).\n\nBrick grid: rows of bricks, brick width based on columns. Layouts defined as string arrays for levels; use characters:\n- '.' empty\n- '1'..'"
+      }
+    }
+  ],
+  "created": 1790552493,
+  "model": "qwen3.8-flash-next-iq3_s-llamacpp-mtp",
+  "system_fingerprint": "b11160-a3c12db9d",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 1024,
+    "prompt_tokens": 58,
+    "total_tokens": 1082,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-pILMsd6LcvXpqLI8LrYGdBN5ufip15qe",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 58,
+    "prompt_ms": 2169.342,
+    "prompt_per_token_ms": 37.40244827586207,
+    "prompt_per_second": 26.736217710254998,
+    "predicted_n": 1024,
+    "predicted_ms": 36314.072,
+    "predicted_per_token_ms": 35.4976265884653,
+    "predicted_per_second": 28.170897496705958
+  }
+}

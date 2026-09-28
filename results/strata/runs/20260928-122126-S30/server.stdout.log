@@ -1,0 +1,27 @@
+loading the model (the first start takes a minute or two) ...
+ready: http://127.0.0.1:8082/v1  (OpenAI: /v1/chat/completions, Anthropic: /v1/messages, context 262144 tokens)
+       open http://127.0.0.1:8082/ in a browser to chat; close this window to stop the model
+[strata] reading the prompt: 8685 tokens, 4 s so far
+[strata] reading the prompt: 8685 tokens, 7 s so far
+[strata] reading the prompt: 8685 tokens, 10 s so far
+[strata] reading the prompt: 8685 tokens, 13 s so far
+[strata] reading the prompt: 8685 tokens, 15 s so far
+[strata] thinking: 77 of max 2048 tokens, 86.8 tok/s, 16 s
+[strata] answering: 159 of max 2048 tokens, 83.3 tok/s, 17 s
+[strata] writing a tool call: write: 248 of max 2048 tokens, 84.6 tok/s, 18 s
+[strata] writing a tool call: write: 343 of max 2048 tokens, 86.4 tok/s, 19 s
+[strata] writing a tool call: write: 451 of max 2048 tokens, 90.4 tok/s, 20 s
+[strata] writing a tool call: write: 558 of max 2048 tokens, 93.2 tok/s, 21 s
+[strata] writing a tool call: write: 692 of max 2048 tokens, 98.8 tok/s, 22 s
+[strata] writing a tool call: write: 826 of max 2048 tokens, 103.0 tok/s, 23 s
+[strata] writing a tool call: write: 938 of max 2048 tokens, 103.7 tok/s, 24 s
+[strata] writing a tool call: write: 1049 of max 2048 tokens, 104.3 tok/s, 25 s
+[strata] writing a tool call: write: 1128 of max 2048 tokens, 101.9 tok/s, 26 s
+[strata] writing a tool call: write: 1255 of max 2048 tokens, 103.9 tok/s, 27 s
+[strata] writing a tool call: write: 1376 of max 2048 tokens, 105.2 tok/s, 28 s
+[strata] writing a tool call: write: 1504 of max 2048 tokens, 106.5 tok/s, 29 s
+[strata] writing a tool call: write: 1594 of max 2048 tokens, 105.2 tok/s, 30 s
+[strata] writing a tool call: write: 1696 of max 2048 tokens, 105.0 tok/s, 31 s
+[strata] writing a tool call: write: 1818 of max 2048 tokens, 105.9 tok/s, 32 s
+[strata] writing a tool call: write: 1949 of max 2048 tokens, 107.2 tok/s, 33 s
+[strata] done: 2048 tokens in 34 s (107.7 tok/s) (length, cancel=False)

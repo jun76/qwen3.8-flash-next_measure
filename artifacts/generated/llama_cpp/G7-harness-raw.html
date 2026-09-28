@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ブロック崩し</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+  h1 { margin: 8px 0 0; font-size: 22px; letter-spacing: 2px; }
+  canvas {
+    max-width: 96vw;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.6);
+    touch-action: none;
+    cursor: none;
+  }
+  .help { font-size: 13px; color: #8b949e; margin-bottom: 12px; }
+  kbd {
+    background: #21262d; border: 1px solid #30363d; border-radius: 4px;
+    padding: 1px 6px; font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<h1>🧱 ブロック崩し</h1>
+<canvas id="game" width="800" height="600"></canvas>
+<p class="help">
+  マウス / <kbd>←</kbd><kbd>→</kbd> / タッチでパドル移動 ・
+  <kbd>スペース</kbd>またはクリックで発射 ・ <kbd>P</kbd>で一時停止
+</p>
+<script>
+(() => {
+  const canvas = document.getElementById('game');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const HUD_H = 44;
+  const BALL_R = 8;
+
+  // ---- 音 ----
+  let audio;
+  function beep(freq, dur = 0.08, vol = 0.03) {
+    try {
+      audio = audio || new (window.AudioContext || window.webkitAudioContext)();
+      const o = audio.createOscillator(), g = audio.createGain();
+      o.type = 'square';
+      o.frequency.value = freq;
+      g.gain.value = vol;
+      o.connect(g); g.connect(audio.destination);
+      o.start();
+      g.gain.exponentialRampToValueAtTime(0.0001, audio.currentTime + dur);
+      o.stop(audio.currentTime + dur);
+    } catch (e) { /* 音が出なくても無視 */ }
+  }
+
+  // ---- ゲーム状態 ----
+  let score, lives, level, state, pauseTimer, state, shake;
+  let paddle, ball, blocks, rows;
+  const keys = { left: false, right: false };
+
+  function startLevel() {
+    rows = Math.min(4 + level, 8);
+    const cols = 10, bw = 70, bh = 22, gap = 6;
+    const left = (W - (cols * bw + (cols - 1) * gap)) / 2;
+    const top = HUD_H + 36;
+    blocks = [];
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        blocks.push({
+          x: left + c * (bw + gap),
+          y: top + r * (bh + gap),
+          w: bw, h: bh,
+          row: r,
+          alive: true
+        });
+      }
+    }
+    paddle = { w: Math.max(70, 110 - level * 5), x: W / 2, y: H - 30, speed: 9 };
+    resetBall();
+  }
+
+  function resetBall() {
+    ball = { x: paddle.x, y: paddle.y - BALL_R - 2, vx: 0, vy: 0, speed: 5 + level * 0.5 };
+    state = 'aim';
+  }
+
+  function newGame() {
+    score = 0; lives = 3; level = 1; shake = 0;
+    startLevel();
+  }
+
+  function launch() {
+    const ang = -Math.PI / 2 + (Math.random() * 0.7 - 0.35);
+    ball.vx = Math.cos(ang) * ball.speed;
+    ball.vy = Math.sin(ang) * ball.speed;
+    state = 'play';
+    beep(440, 0.06);
+  }
+
+  // ---- 入力 ----
+  function movePaddleTo(clientX) {
+    const rect = canvas.getBoundingClientRect();
+    const x = (clientX - rect.left) * (W / rect.width);
+    paddle.x = Math.max(paddle.w / 2, Math.min(W - paddle.w / 2, x));
+  }
+  canvas.addEventListener('mousemove', e => movePaddleTo(e.clientX));
+  canvas.addEventListener('mousedown', () => {
+    if (state === 'aim') launch();
+    else if (state === 'gameover') newGame();
+  });
+  canvas.addEventListener('touchmove', e => {
+    e.preventDefault();
+    movePaddleTo(e.touches[0].clientX);
+  }, { passive: false });
+  canvas.addEventListener('touchstart', e => {
+    e.preventDefault();
+    movePaddleTo(e.touches[0].clientX);
+    if (state === 'aim') launch();
+    else if (state === 'gameover') newGame();
+  }, { passive: false });
+
+  let paused = false;
+  addEventListener('keydown', e => {
+    if (e.code === 'ArrowLeft') keys.left = true;
+    if (e.code === 'ArrowRight') keys.right = true;
+    if (e.code === 'Space') {
+      e.preventDefault();
+      if (state === 'aim') launch();
+      else if (state === 'gameover') newGame();
+    }
+    if (e.key === 'p' || e.key === 'P') paused = !paused;
+    if (e.key === 'r' || e.key === 'R') { if (state === 'gameover') newGame(); }
+  });
+  addEventListener('keyup', e => {
+    if (e.code === 'ArrowLeft') keys.left = false;
+    if (e.code === 'ArrowRight') keys.right = false;
+  });
+
+  // ---- 更新 ----
+  function clampBallAngle() {
+    // 水平に近すぎる軌道を防止
+    const sp = Math.hypot(ball.vx, ball.vy);
+    const minVy = sp * 0.25;
+    if (Math.abs(ball.vy) < minVy) {
+      const dir = ball.vy >= 0 ? 1 : -1;
+      ball.vy = dir * minVy;
+      const maxVx = Math.sqrt(sp * sp - ball.vy * ball.vy);
+      ball.vx = (ball.vx >= 0 ? 1 : -1) * maxVx;
+    }
+  }
+
+  function update() {
+    if (state === 'gameover' || paused) return;
+
+    if (state === 'levelup') {
+      if (--pauseTimer <= 0) { level++; startLevel(); }
+      return;
+    }
+
+    // パドル移動(キーボード)
+    if (keys.left) paddle.x -= paddle.speed;
+    if (keys.right) paddle.x += paddle.speed;
+    paddle.x = Math.max(paddle.w / 2, Math.min(W - paddle.w / 2, paddle.x));
+
+    if (state === 'aim') {
+      ball.x = paddle.x;
+      ball.y = paddle.y - BALL_R - 2;
+      return;
+    }
+
+    // ボール移動
+    ball.x += ball.vx;
+    ball.y += ball.vy;
+    if (shake > 0) shake--;
+
+    // 壁
+    if (ball.x - BALL_R < 0)          { ball.x = BALL_R;       ball.vx = -ball.vx;  beep(300, 0.04, 0.02); }
+    if (ball.x + BALL_R > W)          { ball.x = W - BALL_R;   ball.vx = -ball.vx;  beep(300, 0.04, 0.02); }
+    if (ball.y - BALL_R < HUD_H)      { ball.y = HUD_H + BALL_R; ball.vy = -ball.vy; beep(300, 0.04, 0.02); }
+
+    // パドル
+    if (ball.vy > 0 &&
+        ball.y + BALL_R >= paddle.y && ball.y - BALL_R <= paddle.y + 12 &&
+        ball.x >= paddle.x - paddle.w / 2 - BALL_R && ball.x <= paddle.x + paddle.w / 2 + BALL_R) {
+      const off = Math.max(-1, Math.min(1, (ball.x - paddle.x) / (paddle.w / 2)));
+      const ang = off * (Math.PI / 3); // 最大60度
+      const sp = Math.hypot(ball.vx, ball.vy);
+      ball.vx = Math.sin(ang) * sp;
+      ball.vy = -Math.cos(ang) * sp;
+      ball.y = paddle.y - BALL_R;
+      beep(220, 0.05, 0.03);
+    }
+
+    // ブロック(1フレームに1つまで)
+    for (const b of blocks) {
+      if (!b.alive) continue;
+      const cx = Math.max(b.x, Math.min(ball.x, b.x + b.w));
+      const cy = Math.max(b.y, Math.min(ball.y, b.y + b.h));
+      const dx = ball.x - cx, dy = ball.y - cy;
+      if (dx * dx + dy * dy <= BALL_R * BALL_R) {
+        b.alive = false;
+        score += (rows - b.row) * 10;
+        beep(500 + (rows - b.row) * 90, 0.06, 0.035);
+        if (Math.abs(dx) > Math.abs(dy)) {
+          ball.vx = dx >= 0 ? Math.abs(ball.vx) : -Math.abs(ball.vx);
+          ball.x += dx >= 0 ? 2 : -2;
+        } else {
+          ball.vy = dy >= 0 ? Math.abs(ball.vy) : -Math.abs(ball.vy);
+          ball.y += dy >= 0 ? 2 : -2;
+        }
+        // 少しずつ加速
+        const sp = Math.min(ball.speed + 6, Math.hypot(ball.vx, ball.vy) * 1.015);
+        const cur = Math.hypot(ball.vx, ball.vy);
+        ball.vx *= sp / cur; ball.vy *= sp / cur;
+        clampBallAngle();
+        break;
+      }
+    }
+
+    // 落下
+    if (ball.y - BALL_R > H) {
+      lives--;
+      shake = 12;
+      beep(120, 0.3, 0.05);
+      if (lives <= 0) { state = 'gameover'; }
+      else { resetBall(); }
+    }
+
+    // 面クリア
+    if (blocks.every(b => !b.alive)) {
+      state = 'levelup';
+      pauseTimer = 90;
+      beep(660, 0.15, 0.05);
+      setTimeout(() => beep(880, 0.2, 0.05), 160);
+    }
+  }
+
+  // ---- 描画 ----
+  function blockColor(row) {
+    return `hsl(${18 + row * 28}, 80%, 55%)`;
+  }
+
+  function draw() {
+    ctx.save();
+    if (shake > 0) ctx.translate((Math.random() - 0.5) * shake, (Math.random() - 0.5) * shake);
+
+    // 背景
+    const bg = ctx.createLinearGradient(0, 0, 0, H);
+    bg.addColorStop(0, '#10161f');
+    bg.addColorStop(1, '#1a2233');
+    ctx.fillStyle = bg;
+    ctx.fillRect(-20, -20, W + 40, H + 40);
+
+    // HUD
+    ctx.fillStyle = 'rgba(0,0,0,0.45)';
+    ctx.fillRect(0, 0, W, HUD_H);
+    ctx.fillStyle = '#e6edf3';
+    ctx.font = 'bold 17px "Segoe UI", sans-serif';
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'left';
+    ctx.fillText(`スコア ${score}`, 16, HUD_H / 2);
+    ctx.textAlign = 'center';
+    ctx.fillText(`レベル ${level}`, W / 2, HUD_H / 2);
+    ctx.textAlign = 'right';
+    ctx.fillText('残機 ' + '●'.repeat(Math.max(0, lives)), W - 16, HUD_H / 2);
+
+    // ブロック
+    for (const b of blocks) {
+      if (!b.alive) continue;
+      ctx.fillStyle = blockColor(b.row);
+      ctx.fillRect(b.x, b.y, b.w, b.h);
+      ctx.fillStyle = 'rgba(255,255,255,0.25)';
+      ctx.fillRect(b.x, b.y, b.w, 4);
+      ctx.strokeStyle = 'rgba(0,0,0,0.35)';
+      ctx.strokeRect(b.x + 0.5, b.y + 0.5, b.w - 1, b.h - 1);
+    }
+
+    // パドル
+    const px = paddle.x - paddle.w / 2;
+    const pg = ctx.createLinearGradient(0, paddle.y, 0, paddle.y + 12);
+    pg.addColorStop(0, '#79c0ff');
+    pg.addColorStop(1, '#388bfd');
+    ctx.fillStyle = pg;
+    ctx.beginPath();
+    ctx.roundRect(px, paddle.y, paddle.w, 12, 6);
+    ctx.fill();
+
+    // ボール
+    ctx.save();
+    ctx.shadowColor = '#ffd166';
+    ctx.shadowBlur = 14;
+    ctx.fillStyle = '#ffd166';
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, BALL_R, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    ctx.restore(); // シェイク解除
+
+    // オーバーレイ
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    if (state === 'aim') {
+      ctx.fillStyle = 'rgba(230,237,243,0.85)';
+      ctx.font = 'bold 22px "Segoe UI", sans-serif';
+      ctx.fillText('スペース / クリックで発射!', W / 2, H * 0.62);
+    } else if (state === 'levelup') {
+      ctx.fillStyle = 'rgba(0,0,0,0.55)';
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = '#7ee787';
+      ctx.font = 'bold 40px "Segoe UI", sans-serif';
+      ctx.fillText(`レベル ${level} クリア!`, W / 2, H / 2 - 20);
+      ctx.fillStyle = '#e6edf3';
+      ctx.font = '20px "Segoe UI", sans-serif';
+      ctx.fillText(`次のレベルへ…`, W / 2, H / 2 + 30);
+    } else if (state === 'gameover') {
+      ctx.fillStyle = 'rgba(0,0,0,0.65)';
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = '#ff7b72';
+      ctx.font = 'bold 44px "Segoe UI", sans-serif';
+      ctx.fillText('ゲームオーバー', W / 2, H / 2 - 40);
+      ctx.fillStyle = '#e6edf3';
+      ctx.font = 'bold 24px "Segoe UI", sans-serif';
+      ctx.fillText(`最終スコア ${score}`, W / 2, H / 2 + 8);
+      ctx.font = '18px "Segoe UI", sans-serif';
+      ctx.fillText('スペース / クリックで再スタート', W / 2, H / 2 + 48);
+    }
+    if (paused && state !== 'gameover') {
+      ctx.fillStyle = 'rgba(0,0,0,0.55)';
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = '#e6edf3';
+      ctx.font = 'bold 36px "Segoe UI", sans-serif';
+      ctx.fillText('一時停止', W / 2, H / 2);
+      ctx.font = '18px "Segoe UI", sans-serif';
+      ctx.fillText('P で再開', W / 2, H / 2 + 36);
+    }
+  }
+
+  // ---- メインループ ----
+  function frame() {
+    update();
+    draw();
+    requestAnimationFrame(frame);
+  }
+
+  newGame();
+  frame();
+})();
+</script>
+</body>
+</html>

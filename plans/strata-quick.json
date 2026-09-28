@@ -1,0 +1,26 @@
+{
+  "engine": "strata",
+  "description": "One fresh-process fixed-length request for S01 and S31.",
+  "cases": [
+    {
+      "id": "S01",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-114115-S01/harness-2048.request.json",
+          "historical_run": 1
+        }
+      ]
+    },
+    {
+      "id": "S31",
+      "requests": [
+        {
+          "name": "harness-2048",
+          "request_file": "results/strata/runs/20260928-122320-S31/harness-2048.request.json",
+          "historical_run": 31
+        }
+      ]
+    }
+  ]
+}

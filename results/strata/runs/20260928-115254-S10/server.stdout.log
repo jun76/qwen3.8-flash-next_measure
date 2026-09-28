@@ -1,0 +1,29 @@
+loading the model (the first start takes a minute or two) ...
+ready: http://127.0.0.1:8082/v1  (OpenAI: /v1/chat/completions, Anthropic: /v1/messages, context 262144 tokens)
+       open http://127.0.0.1:8082/ in a browser to chat; close this window to stop the model
+[strata] reading the prompt: 8685 tokens, 4 s so far
+[strata] reading the prompt: 8685 tokens, 7 s so far
+[strata] reading the prompt: 8685 tokens, 10 s so far
+[strata] reading the prompt: 8685 tokens, 13 s so far
+[strata] reading the prompt: 8685 tokens, 15 s so far
+[strata] thinking: 37 of max 2048 tokens, 41.4 tok/s, 16 s
+[strata] thinking: 112 of max 2048 tokens, 58.6 tok/s, 17 s
+[strata] thinking: 209 of max 2048 tokens, 71.4 tok/s, 18 s
+[strata] thinking: 320 of max 2048 tokens, 81.2 tok/s, 19 s
+[strata] answering: 404 of max 2048 tokens, 81.7 tok/s, 20 s
+[strata] writing a tool call: write: 489 of max 2048 tokens, 81.9 tok/s, 21 s
+[strata] writing a tool call: write: 571 of max 2048 tokens, 81.5 tok/s, 22 s
+[strata] writing a tool call: write: 664 of max 2048 tokens, 82.8 tok/s, 23 s
+[strata] writing a tool call: write: 757 of max 2048 tokens, 83.9 tok/s, 24 s
+[strata] writing a tool call: write: 853 of max 2048 tokens, 85.1 tok/s, 25 s
+[strata] writing a tool call: write: 965 of max 2048 tokens, 87.3 tok/s, 26 s
+[strata] writing a tool call: write: 1092 of max 2048 tokens, 90.6 tok/s, 27 s
+[strata] writing a tool call: write: 1193 of max 2048 tokens, 91.3 tok/s, 28 s
+[strata] writing a tool call: write: 1309 of max 2048 tokens, 93.0 tok/s, 29 s
+[strata] writing a tool call: write: 1380 of max 2048 tokens, 91.5 tok/s, 30 s
+[strata] writing a tool call: write: 1501 of max 2048 tokens, 93.3 tok/s, 31 s
+[strata] writing a tool call: write: 1613 of max 2048 tokens, 94.2 tok/s, 32 s
+[strata] writing a tool call: write: 1711 of max 2048 tokens, 94.4 tok/s, 33 s
+[strata] writing a tool call: write: 1811 of max 2048 tokens, 94.7 tok/s, 34 s
+[strata] writing a tool call: write: 1929 of max 2048 tokens, 95.8 tok/s, 35 s
+[strata] done: 2048 tokens in 36 s (97.3 tok/s) (length, cancel=False)
